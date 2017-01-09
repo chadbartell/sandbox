@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Admin</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Nunito:400,300,700" rel="stylesheet" id="fontFamilySrc" />
+	<link href="../assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../assets/css/animate.min.css" rel="stylesheet" />
+	<link href="../assets/css/style.css" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="../assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css" rel="stylesheet" />
+    <link href="../assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" />
+    <!-- <link href="../assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />	 -->
+	<!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+    
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!--[if lt IE 9]>
+	    <script src="../assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<!-- begin #page-loader -->
+	<!-- <div id="page-loader" class="page-loader fade in"><span class="spinner">Loading...</span></div> -->
+	<!-- end #page-loader -->
+
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-container page-header-fixed page-sidebar-fixed page-with-two-sidebar page-with-footer">
+		
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="javascript:;">Home</a></li>
+				<li class="active">Dashboard</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header">Dashboard <small>header small text goes here...</small></h1>
+			<!-- end page-header -->
+			
+			
+            <!-- begin #footer -->
+            <div id="footer" class="footer">
+                <span class="pull-right">
+                    <a href="javascript:;" class="btn-scroll-to-top" data-click="scroll-top">
+                        <i class="fa fa-arrow-up"></i> <span class="hidden-xs">Back to Top</span>
+                    </a>
+                </span>
+                &copy; 2015 <b>Source Admin</b> All Right Reserved
+            </div>
+            <!-- end #footer -->
+		</div>
+		<!-- end #content -->
+		
+		<!-- begin #sidebar-right -->
+		<div id="sidebar-right" class="sidebar sidebar-right">
+			<!-- begin sidebar scrollbar -->
+			<div data-scrollbar="true" data-height="100%">
+				<!-- begin sidebar-nav -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="width-half active"><a href="#today" data-toggle="tab">Today</a></li>
+                    <li class="width-half"><a href="#notifications" data-toggle="tab">Notifications</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="today">
+                        <ul class="nav">
+                            <li class="nav-date">
+                                Sunday, May 31 st
+                            </li>
+                            <li class="divider"></li>
+                            <li class="nav-header">Stocks</li>
+                            <li>
+                                <ul class="stock-list">
+                                    <li>
+                                        <div class="name">AAPL</div>
+                                        <div class="value">130.28</div>
+                                        <div class="percentage"><span class="label label-inverse">- 1.14%</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="name">DOWJ</div>
+                                        <div class="value">18010.68</div>
+                                        <div class="percentage"><span class="label label-inverse">- 0.64%</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="name">SBUX</div>
+                                        <div class="value">51.96</div>
+                                        <div class="percentage"><span class="label label-success">+ 0.29%</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="name">NKE</div>
+                                        <div class="value">18010.68</div>
+                                        <div class="percentage"><span class="label label-inverse">- 0.62%</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="name">YHOO</div>
+                                        <div class="value">42.94</div>
+                                        <div class="percentage"><span class="label label-inverse">- 0.31%</span></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="nav-header">Calendar</li>
+                            <li>
+                                <div id="schedule-calendar"></div>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="nav-header">Latest Post</li>
+                            <li>
+                                <ul class="nav-post">
+                                    <li>
+                                        <div class="image">
+                                            <img src="../assets/img/latest_post_1.jpg" alt="" />
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">Mauris ac condimentum erat. Curabitur porta pretium ultricies.</div>
+                                            <div class="time">Today, 8.12am</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="image">
+                                            <img src="../assets/img/latest_post_2.jpg" alt="" />
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">Cras pretium ipsum vel nulla laoreet malesuada sed at turpis.</div>
+                                            <div class="time">Yesterday, 11.42pm</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="image">
+                                            <img src="../assets/img/latest_post_3.jpg" alt="" />
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">Ut sit amet vulputate ante. Nunc quis convallis arcu.</div>
+                                            <div class="time">Posted on 3 days ago</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="notifications">
+                        <ul class="nav">
+                            <li class="nav-header">Mailbox</li>
+                            <li>
+                                <ul class="notification-list">
+                                    <li>
+                                        <div class="media"><i class="fa fa-check"></i></div>
+                                        <div class="info">
+                                            <div class="title"><a href="javascript:;">PHP version updated</a></div>
+                                            <div class="time">Yesterday, 6.06pm</div>
+                                            <div class="desc">Donec tristique malesuada nibh quis lobortis. Quisque viverra faucibus hendrerit.</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media"><i class="fa fa-bug text-danger"></i></div>
+                                        <div class="info">
+                                            <div class="title"><a href="javascript:;">10 Unknown mysql query detected</a></div>
+                                            <div class="time">Yesterday, 12.05am</div>
+                                            <div class="desc">Integer fermentum arcu et dolor sodales, quis laoreet justo aliquam.</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media"><img src="../assets/img/user_2.jpg" alt="" /></div>
+                                        <div class="info">
+                                            <div class="title"><a href="javascript:;">New email from David</a></div>
+                                            <div class="time">Just now</div>
+                                            <div class="desc">Nunc metus orci, lobortis eu luctus quis, dictum mollis ante.</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media"><img src="../assets/img/user_4.jpg" alt="" /></div>
+                                        <div class="info">
+                                            <div class="title"><a href="javascript:;">New email from Terry</a></div>
+                                            <div class="time">Today, 12.05am</div>
+                                            <div class="desc">Integer fermentum arcu et dolor sodales, quis laoreet justo aliquam.</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media"><img src="../assets/img/user_3.jpg" alt="" /></div>
+                                        <div class="info">
+                                            <div class="title"><a href="javascript:;">New email from Tom (2)</a></div>
+                                            <div class="time">Yesterday, 5.23pm</div>
+                                            <div class="desc">Integer fermentum arcu et dolor sodales, quis laoreet justo aliquam.</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="nav-header">Activities Log</li>
+                            <li>
+                                <ul class="notification-list">
+                                    <li>
+                                        <div class="media"><i class="fa fa-cog"></i></div>
+                                        <div class="info">
+                                            <div class="title"><a href="javascript:;">Your scheduled post has been published</a></div>
+                                            <div class="time">Just now</div>
+                                            <div class="desc">Aenean lobortis libero libero, vitae imperdiet dolor dictum id.</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media"><i class="fa fa-shield"></i></div>
+                                        <div class="info">
+                                            <div class="title"><a href="javascript:;">Turn on the firewall</a></div>
+                                            <div class="time">Today, 7.08am</div>
+                                            <div class="desc">Donec at augue in mi egestas luctus fermentum et ex.</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media"><i class="fa fa-user-plus"></i></div>
+                                        <div class="info">
+                                            <div class="title"><a href="javascript:;">Added 2 admin user</a></div>
+                                            <div class="time">Today, 6.40am</div>
+                                            <div class="desc">Quisque elementum urna placerat mi vestibulum lacinia.</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </div>
+                </div>
+				<!-- end sidebar-nav -->
+			</div>
+			<!-- end sidebar scrollbar -->
+		</div>
+		<div class="sidebar-bg sidebar-right"></div>
+		<!-- end #sidebar-right -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/plugins/jquery/jquery-1.9.1.min.js"></script>
+	<script src="../assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+	<script src="../assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+	<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="../assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="../assets/crossbrowserjs/respond.min.js"></script>
+	<![endif]-->
+	<script src="../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="../assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js"></script>
+	<script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+	<script src="../assets/plugins/flot/jquery.flot.min.js"></script>
+	<script src="../assets/plugins/flot/jquery.flot.time.min.js"></script>
+	<script src="../assets/plugins/flot/jquery.flot.resize.min.js"></script>
+	<script src="../assets/plugins/flot/jquery.flot.pie.min.js"></script>
+	<script src="../assets/plugins/flot/jquery.flot.stack.min.js"></script>
+	<script src="../assets/plugins/flot/jquery.flot.crosshair.min.js"></script>
+	<script src="../assets/plugins/flot/jquery.flot.categories.js"></script>
+	<script src="../assets/plugins/flot/CurvedLines/curvedLines.js"></script>
+    <script src="../assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../assets/plugins/jquery-jvectormap/jquery-jvectormap-world-merc-en.js"></script>
+	<!-- <script src="../assets/plugins/gritter/js/jquery.gritter.js"></script> -->
+    <script src="../assets/js/page-index.demo.js"></script>
+    <script src="../assets/js/demo.js"></script>
+    <script src="../assets/js/apps.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+	<script>
+		$(document).ready(function() {
+		    App.init();
+		    Demo.init();
+		    PageDemo.init();
+		});
+	</script>
+</body>
+</html>

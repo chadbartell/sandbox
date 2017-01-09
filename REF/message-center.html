@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!-- Spell Checked and Validated 02/14 -->
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SILICUS</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="less/style.css" rel="stylesheet">
+    
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">    
+</head>
+
+<body class="">
+
+    <div class="row top-header bbl">
+    	<div class="col-sm-4">
+    		<div class="pll ptm pbs"><img src="img/logo_large.png" class="mts mbs" alt="Silicus Logo" title="Silicus Encloud"/></div>
+    	</div>
+    	<div class="col-sm-8">
+        
+            
+                <div class="text-center">
+                
+                    <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+
+                        <ul class="nav navbar-top-links navbar-right">
+            
+                            <li class="dropdown">
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <span class="hidden-sm hidden-xs">
+                                        <span class="m-r-sm text-muted welcome-message">Welcome, John Doe</span> <i class="fa fa-chevron-down"></i> 
+                                    </span>
+                                    <span class="hidden-md hidden-lg">
+                                        <i class="fa fa-user"></i>
+                                    </span> 
+                                </a>
+                                <ul class="dropdown-menu dropdown-user-menu">
+                                    <li>
+                                        <a href="">
+                                            <div>
+                                                 EDIT PROFILE
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- if access -->
+                                    <li>
+                                        <a href="">
+                                            <div>
+                                                 EDIT COMPANY
+                                            </div>
+                                        </a>
+                                    </li>                                    
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="">
+                                            <div>
+                                                <i class="fa fa-sign-out fa-fw"></i> LOGOUT
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                           
+                            <li class="dropdown">
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-messages">
+                                    <li>
+                                        <div class="dropdown-messages-box">
+                                            <a href="profile.html" class="pull-left">
+                                                <i class="fa  fa-envelope fa-2x"></i>
+                                            </a>
+                                            <div>
+                                                <strong>From: </strong> John Silicus. <br>
+                                                <strong>Sub: </strong> We resolved ticket 123111. <br>
+                                                <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="dropdown-messages-box">
+                                            <a href="profile.html" class="pull-left">
+                                                <i class="fa  fa-envelope fa-2x"></i>
+                                            </a>
+                                            <div>
+                                                <small class="pull-right text-navy">5h ago</small>
+                                                <strong>From: </strong> John Silicus. <br>
+                                                <strong>Sub: </strong> We resolved ticket 1234. <br>
+                                                <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="dropdown-messages-box">
+                                            <a href="profile.html" class="pull-left">
+                                                <i class="fa  fa-envelope fa-2x"></i>
+                                            </a>
+                                            <div>
+                                                <strong>From: </strong> John Silicus. <br>
+                                                <strong>Sub: </strong> We resolved ticket 3322. <br>
+                                                <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="text-center link-block">
+                                            <a href="message-center.html">
+                                                <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>                            
+                            
+                            <li class="dropdown">
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-bell"></i>  <span class="label label-primary">3</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-alerts">
+                                    <li>
+                                        <a href="">
+                                            <div>
+                                                <i class="fa fa-exclamation-triangle fa-fw"></i> ALERT on Subscription Zeno 3
+                                                <span class="pull-right text-muted small">CPU above threshold</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="">
+                                            <div>
+                                                <i class="fa fa-exclamation-triangle fa-fw"></i> ALERT on Subscription Zeon 8
+                                                <span class="pull-right text-muted small">Memory above threshold</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="">
+                                            <div>
+                                                <i class="fa fa-exclamation-triangle fa-fw"></i> ALERT on Subscription Zeon 6
+                                                <span class="pull-right text-muted small">CPU above threshold</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="text-center link-block">
+                                            <a href="notifications.html">
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+            
+                    </nav>
+                </div><!-- pad -->
+            
+            
+    	</div>        
+    </div>
+
+    <div id="wrapper">
+<!-- START LEFT MENU -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+					<li><a href="index.html"><i class="fa fa-dashboard"></i> <span class="nav-label">DASHBOARD</span></a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-medkit"></i> <span class="nav-label">SERVICE HEALTH </span></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-bar-chart"></i> <span class="nav-label">REPORTS</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#" class="active">Live</a></li>
+                            <li><a href="#">Historical</a></li>
+                        </ul>
+                    </li>                    
+                    <li>
+                        <a href="service-desk.html"><i class="fa fa-user-md"></i> <span class="nav-label">SERVICE DESK</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-credit-card"></i> <span class="nav-label">BILLING</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                        	<li><a href="pay-now.html" class="active">Pay Now</a></li>
+                            <li><a href="#" class="active">Subscriptions</a></li>
+                            <li><a href="#">Invoices</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                        </ul>
+                    </li>                    
+                    <li class="active">
+                        <a href="message-center.html"><i class="fa fa-envelope"></i> <span class="nav-label">MESSAGE CENTER</span><span class="label label-warning pull-right">16</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-user"></i> <span class="nav-label">MY ACCOUNT</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="account-profile.htmls" class="active">My Profile</a></li>
+                            <li><a href="account-company.html">Company Profile</a></li>
+                        </ul>
+                    </li>
+                    <!-- admin role only -->
+                    <li>
+                        <a href="index.html"><i class="fa fa-cogs"></i> <span class="nav-label">ADMIN</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#" class="active">Edit Users</a></li>
+                        </ul>
+                    </li>                    
+                </ul>
+
+            </div>
+        </nav>
+
+
+<!-- END LEFT MENU -->
+    
+    
+
+
+
+
+
+<!--   START OF CONTENT AREA -->
+
+
+
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar  " role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            
+        </div>
+		<span class="label label-primary pull-right">Walt Disney Corp</span>
+        </nav>
+        </div>
+        
+        
+        
+            <div class="row wrapper border-bottom white-bg page-heading border-bottom">
+                <div class="col-sm-12">
+                    <h1>Message Center</h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <strong>Messages</strong>
+                        </li>
+                    </ol>                   
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+        <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content mailbox-content">
+                        <div class="file-manager">
+                            <div class="space-25"></div>
+                            <h5>Folders</h5>
+                            <ul class="folder-list m-b-md" style="padding: 0">
+                                <li><a href="mailbox.html"> <i class="fa fa-inbox "></i> Inbox <span class="label label-warning pull-right">16</span> </a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-folder"></i> Archives</a></li>
+                            </ul>                           
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 animated fadeInRight">
+            
+            
+            
+            
+            <div class="mail-box-header">
+
+                <form method="get" action="index.html" class="pull-right mail-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control input-sm" name="search" placeholder="Search messages">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <h2>
+                    Inbox (16)
+                </h2>
+                <div class="mail-tools tooltip-demo m-t-md">
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
+                        <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
+
+                    </div>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="Refresh inbox"><i class="fa fa-refresh"></i> Refresh</button>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move To Archives">Archive Selected </button>
+
+                </div>
+            </div>
+                <div class="mail-box">
+
+                <table class="table table-hover table-mail">
+                <tbody>
+                <!-- unread -->
+                <tr class="unread">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="mail_detail.html">John Silicus</a></td>
+                    <td class="mail-subject"><a href="mail_detail.html">Server 1 down</a></td>
+                    <!-- used for utility.. message importance or file attatch -->
+                    <td class=""><i class="fa fa-paperclip"></i></td>
+                    <td class="text-right mail-date">6.10 AM</td>
+                </tr>
+                <tr class="unread">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="mail_detail.html">Mary Silicus</a></td>
+                    <td class="mail-subject"><a href="mail_detail.html">Server maintenance </a></td>
+                    <td class=""> <i class="fa fa-exclamation-circle text-danger"></i></td>
+                    <td class="text-right mail-date">8.22 PM</td>
+                </tr>
+                <!-- read -->
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="mail_detail.html">Mark Silicus</a> </td>
+                    <td class="mail-subject"><a href="mail_detail.html">Server 5 has been restored</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Jan 16</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="mail_detail.html">Mary Silicus</a></td>
+                    <td class="mail-subject"><a href="mail_detail.html">Server Maintenance</a></td>
+                    <td class=""> <i class="fa fa-exclamation-circle text-danger"></i></td>
+                    <td class="text-right mail-date">Mar 22</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="mail_detail.html">Eric Silicus</a> </td>
+                    <td class="mail-subject"><a href="mail_detail.html">Lorem ipsum dolor noretek imit set.</a></td>
+                    <td class=""><i class="fa fa-paperclip"></i></td>
+                    <td class="text-right mail-date">December 22</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="mail_detail.html">Monica Silicus</a></td>
+                    <td class="mail-subject"><a href="mail_detail.html">The standard chunk of Lorem Ipsum used.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Jun 12</td>
+                </tr>
+
+                </tbody>
+                </table>
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="footer">
+                <div class="pull-right">
+                    Viewing: 
+                </div>
+                <div>
+                	<strong>&copy; Copyright</strong> 2000 - <script>document.write(new Date().getFullYear())</script> Silicus Technologies
+                </div>
+            </div>
+
+        </div>
+        </div>
+        
+        
+        
+        
+        
+        
+  <!-- ADD TICKET MODAL -->      
+        
+                            <div class="modal inmodal fade" id="add-ticket" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">ADD TICKET</h4>
+                                            <small class="font-bold">Fill out the form to add a ticket to the system.</small>
+                                        </div>
+                                        <div class="modal-body">
+                                        	<form >
+                                                <div class="row">
+                                                    <div class="col-md-4 text-right">
+                                                    	<div class="form-group">
+                                                    		<label>Ticket #</label> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                    	<div class="form-group">
+                                                    		<input type="text" value="33222" disabled class="form-control">
+                                                        </div>
+                                                    </div>                                                
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4 text-right">
+                                                    	<div class="form-group">
+                                                    		<label>Title</label> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                    	<div class="form-group">
+                                                            <input type="text" class="form-control">                                                            
+                                                        </div>
+                                                    </div>                                                
+                                                </div>  
+                                                <div class="row">
+                                                    <div class="col-md-4 text-right">
+                                                    	<div class="form-group">
+                                                    		<label>Type</label> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                    	<div class="form-group">
+                                                            <select class="form-control m-b" name="account">
+                                                                    <option selected>Select One</option>
+                                                                    <option>Incident</option>
+                                                                    <option>Change Request</option>
+                                                            </select>                                                              
+                                                        </div>
+                                                    </div>                                                
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4 text-right">
+                                                    	<div class="form-group">
+                                                    		<label>Severity</label> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                    	<div class="form-group">
+                                                            <select class="form-control m-b" name="account">
+                                                                    <option selected>Low</option>
+                                                                    <option>Medium</option>
+                                                                    <option>High</option>
+                                                            </select>                                                              
+                                                        </div>
+                                                    </div>                                                
+                                                </div>                                                
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-4 text-right">
+                                                    	<div class="form-group">
+                                                    		<label>Description</label> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                    	<div class="form-group">
+                                                            <textarea class="full-width" rows="4"></textarea>                                                     
+                                                        </div>
+                                                    </div>                                                
+                                                </div>
+                                                
+                                                
+                                                                                            
+											</form>
+
+
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save and Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    
+    <!-- FooTable -->
+    <script src="js/plugins/footable/footable.all.min.js"></script>    
+    
+    <!-- FLOT.  remove if not using chart -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="js/plugins/flot/jquery.flot.time.js"></script>
+    <script src="js/demo/flot-demo.js"></script>
+
+</body>
+
+</html>
