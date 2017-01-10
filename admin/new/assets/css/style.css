@@ -1,44 +1,1192 @@
-/*
-by Chad Bartell, inspired by: Sean Ngu
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
 
-::  1.0 General Reset and Initial Setup
+::  0.0  Dummy Styles
 -------------------------------------------
-    1.1 Resets and Overrides
+    0.1  Colors
 
+::  1.0  General Reset & Setup
+-------------------------------------------
+    1.1  Reset and overrides
+    1.2  Pace Loader
+    1.3  Boxed Layout Setting
+    
+::  2.0  Header
+-------------------------------------------
+    2.1  Navbar Element
+    2.2  Navbar Header
+    2.3  Navbar Brand
+    2.4  Navbar Form
+    2.5  Navbar User
+    2.6  Navbar Theme - Default
+    2.7  Navbar Theme - Inverse
+    2.8  Navbar Theme - Purple
+    2.9  Navbar Theme - Primary
+    2.10 Navbar Theme - Success
+    2.11 Navbar Theme - Lime
+    2.12 Navbar Theme - Warning
+    2.13 Navbar Theme - Danger
+    2.14 Navbar Theme - Grey
+    
+::  3.0  Sidebar
+-------------------------------------------
+    3.1  Sidebar Element
+    3.2  Sidebar - Minified Version Setting
+    3.3  Sidebar - Right Sidebar Setting
+    3.4  Sidebar - Page with Two Sidebar Setting
+    3.5  Sidebar - Page with Top Menu Setting
+    3.6  Sidebar - Badge & Label Setting
+    3.7  Sidebar Widget - User Profile
+    3.8  Sidebar Widget - Project
+    3.9  Sidebar Widget - Tabs
+    3.10 Sidebar Widget - Calendar
+    3.11 Sidebar Widget - Notification List
+    3.12 Sidebar Widget - Stock List
+    3.13 Sidebar Widget - Latest Post
+    3.14 Sidebar Theme - Light
+    3.15 Sidebar Theme - Success
+    3.16 Sidebar Theme - Lime
+    3.17 Sidebar Theme - Warning
+    3.18 Sidebar Theme - Danger
+    3.19 Sidebar Theme - Primary
+    3.20 Sidebar Theme - Grey
+    3.21 Sidebar Theme - Purple
+    
+::  4.0  Content Setting
+-------------------------------------------
+    4.1  Content Element
+         4.1.1 Content Element - Breadcrumb
+         4.1.2 Content Element - Page Header
+    4.2  Content Setting - Page Sidebar Minified
+    4.3  Content Setting - Page with Right Sidebar
+    4.4  Content Setting - Page with Footer
+    4.5  Content Setting - Page without Sidebar
+    
+::  5.0  Footer Setting
+-------------------------------------------
+    5.1  Footer Element
+    5.2  Footer Setting - Page with Fixed Footer
+    5.3  Footer Setting - Page Sidebar Minified
+    5.4  Footer Setting - Page with Right Sidebar
+    5.5  Footer Setting - Page with Two Sidebar
+    5.6  Footer Setting - Page without Sidebar
+    
+::  6.0  Top Menu Setting
+-------------------------------------------
+    6.1  Top Menu Element
+    6.2  Top Menu Sub Menu Setting
+    6.3  Top Menu Left & Right Control Setting
+    
+::  7.0 Predefined CSS Setting
+-------------------------------------------
+    7.1  Predefined Classes
+    
+::  8.0 UI Elements Setting
+-------------------------------------------
+    8.1  Progress Bar Setting
+    8.2  Label & Badge Setting
+    8.3  Form Element Setting
+    8.4  Carousel Setting
+    8.5  Dropdown Setting
+    8.6  Dropdown Notification Setting
+    8.7  Typography Setting
+    8.8  Description List Setting
+    8.9  Blockquote Setting
+    8.10 Panel Setting
+    8.11 Panel Loading Element Setting
+    8.12 Spinner Small Setting
+    8.13 Button Element Setting
+    8.14 Button Group Setting
+    8.15 Button Theme Setting
+         8.15.1 Button Default
+         8.15.2 Button Danger
+         8.15.3 Button Warning
+         8.15.4 Button Lime
+         8.15.5 Button Success
+         8.15.6 Button Info
+         8.15.7 Button Primary
+         8.15.8 Button Purple
+         8.15.9 Button Inverse
+         8.15.10 Button Grey
+         8.15.11 Button White
+    8.16 Alert Setting
+    8.17 Thumbnail Setting
+    8.18 Default Link Setting
+    8.19 Pagination Setting
+    8.20 Pager Setting
+    8.21 Jumbotron Setting
+    8.22 List Group Setting
+    8.23 Well Setting
+    8.24 Nav Tabs & Pills Setting
+    8.25 Accordion Setting
+    8.26 Modal Setting
+    8.27 Popover Setting
+    8.28 Section Container Setting
+    8.29 Form Header Setting
+    8.30 Table Setting
+    8.31 Background Cover Setting
+    
+::  9.0 Plugins
+-------------------------------------------
+    9.1  Plugin - Gritter Notification Setting
+    9.2  Plugin - Parsley Validation Setting
+    9.3  Plugin - DataTables Setting
+         9.3.1 Plugin - DataTables Extension - Fixed Columns
+         9.3.2 Plugin - DataTables Extension - Fixed Header
+         9.3.3 Plugin - DataTables Extension - KeyTable
+         9.3.4 Plugin - DataTables Extension - Responsive
+         9.3.5 Plugin - DataTables Extension - Buttons
+         9.3.6 Plugin - DataTables Extension - RowReorder
+         9.3.7 Plugin - DataTables Extension - KeyTable
+         9.3.8 Plugin - DataTables Extension - AutoFill
+         9.3.9 Plugin - DataTables Extension - Scroll
+         9.3.10 Plugin - DataTables Extension - Select
+    9.4  Plugin - Vector Map Setting
+    9.5  Plugin - Flot Chart Setting
+    9.6  Plugin - Slimscroll Setting
+    9.7  Plugin - Datetimepicker Setting
+    9.8  Plugin - DateRange Picker Setting
+    9.9  Plugin - Colorpicker Setting
+    9.10 Plugin - Timepicker Setting
+    9.11 Plugin - Select2 Setting
+    9.12 Plugin - Datepicker Setting
+    9.13 Plugin - Ionrangeslider Setting
+    9.14 Plugin - Autocomplete Setting
+    9.15 Plugin - Strength JS Setting
+    9.16 Plugin - Bootstrap Select Setting
+    9.17 Plugin - jQuery TagIt Setting
+    9.18 Plugin - Powerange Slider Setting
+    9.19 Plugin - Bootstrap Wizard Setting
+    9.20 Plugin - SummerNote Setting
+    9.21 Plugin - Morris Chart Setting
+    9.22 Plugin - Fullcalendar Setting
+    9.23 Plugin - Sparkline Setting
+    9.24 Plugin - jQuery Vector Map Setting
+    
+::  10.0  Pages
+-------------------------------------------
+    10.1  Page - 404 Error Setting
+    10.2  Page - Coming Soon Setting
+    10.3  Page - Gallery Setting
+    10.4  Page - Invoice Setting
+    10.5  Page - Login & Register Setting
+    10.6  Page - Search Result Setting
+    10.7  Page - Timeline Setting
+    10.8  Page - Email Inbox Setting
+    10.9  Page - Email Detail Setting
+    10.10 Page - Email Compose Setting
+    
+::  11.0 Widgets
+-------------------------------------------
+    11.1  Widget - Basic Element Setting
+    11.2  Widget - Loader Setting
+    11.3  Widget - Stat Setting
+    11.4  Widget - Blog Setting
+    11.5  Widget - Gallery List Setting
+    11.6  Widget - Image Setting
+    11.7  Widget - Chart Setting
+    11.8  Widget - Chat History Setting
+    11.9  Widget - Todolist Setting
+    11.10 Widget - Task List Setting
+    11.11 Widget - Theme Panel Setting
 
-
-
+::  12.0 Update - v1.1
+-------------------------------------------
+    12.1 Widget - Stat Progress
+    12.2 Panel - Option
+    12.3 Plugins - Chart JS Custom Tooltip
+    12.4 Chart Summary Setting
+    12.5 Feeds Setting
+    12.6 Chats Setting
+    12.7 Project Summary Setting
+    12.8 Sidebar Highlight Theme - Purple
+    12.9 Sidebar Highlight Theme - Primary
+    12.10 Sidebar Highlight Theme - Info
+    12.11 Sidebar Highlight Theme - Lime
+    12.12 Sidebar Highlight Theme - Warning
+    12.13 Sidebar Highlight Theme - Danger
+    12.14 Sidebar Highlight Theme - Grey
+    12.15 Sidebar Highlight Theme - Light
+    12.16 Sidebar Highlight Theme - Inverse
+    
+::  13.0 Update - v1.2
+-------------------------------------------
+    13.1 Font Family - Open Sans
+    13.2 Font Family - Roboto
+    13.3 Font Family - Lato
+    13.4 Font Family - Helvetica, Arial
 */
 
 
+/* -------------------------------
+   0.0 Dummy Styles
+------------------------------- */
+
+/* 0.1 Colors */
+
+.pink {
+    background-color: pink;
+}
+
+.blue {
+    background-color: #c0d0ff;
+}
+
+.gray {
+    background-color: #d5d8da;
+}
 
 
 /* -------------------------------
-    1.0 General reset & Initial Setup
+   1.0 General reset & setup
 ------------------------------- */
 
-/* 1.1 Reset and Overrides */ 
+/* 1.1 Reset and overrides */
 
 html,
 body,
 .page-container {
     height: 100%;
 }
-
 body {
-    font-family: 'Raleway', sans-serif;
-    font-weight: regular;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
     font-size: 13px;
-    background-color: #d5d8da;
-    color: #30373e;
 }
-
-/************* revision *************/
-/* page-header-fixed styles deleted */
-/************* revision *************/
-
+.page-header-fixed {
+    padding-top: 56px;
+}
+.page-with-top-menu.page-header-fixed {
+    padding-top: 100px;
+}
+@media (max-width: 767px) {
+    .page-header-fixed {
+        padding-top: 94px;
+    }
+    .page-with-top-menu.page-header-fixed {
+        padding-top: 94px;
+    }
+}
 .container,
 .container-fluid {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+
+/* 1.2 Pace Loader */
+
+
+
+
+/* 1.3 Boxed Layout Setting */
+
+
+
+
+
+/* -------------------------------
+   2.0 Header
+------------------------------- */
+
+/* 2.1 Navbar Element */
+
+
+
+
+/* 2.2 Navbar Header */
+
+
+
+
+/* 2.3 Navbar Brand */
+        
+
+
+
+/* 2.4 Navbar Form */
+
+
+
+
+/* 2.5 Navbar User */
+        
+
+
+
+/* 2.6 Navbar Theme - Default */
+
+
+
+
+/* 2.7 Navbar Theme - Inverse */
+
+
+
+
+/* 2.8 Navbar Theme - Purple */
+
+
+
+
+/* 2.9 Navbar Theme - Primary */
+
+
+
+
+/* 2.10 Navbar Theme - Success */
+
+
+
+
+/* 2.11 Navbar Theme - Lime */
+
+
+
+
+/* 2.12 Navbar Theme - Warning */
+        
+
+
+
+/* 2.13 Navbar Theme - Danger */
+
+
+
+
+/* 2.14 Navbar Theme - Grey */
+
+
+
+
+
+/* -------------------------------
+   3.0 Sidebar
+------------------------------- */
+
+/* 3.1 Sidebar Element */
+
+.sidebar {
+    position: absolute;
+    top: 50px;
+    bottom: 0; 
+    width: 250px;
+}
+
+/*.sidebar,
+.sidebar-bg {
+    position: absolute;
+    left: 0;
+    top: 56px;
+    background: #3C454D;
+    width: 250px;
+    font-size: 13px;
+    font-weight: 300;
+    z-index: 1010;
+}
+*/
+
+
+/* 3.2 Sidebar - Minified Version Setting */
+
+
+
+
+/* 3.3 Sidebar - Right Sidebar Setting */
+
+
+
+
+/* 3.4 Sidebar - Page with Two Sidebar Setting */
+
+
+
+
+/* 3.5 Sidebar - Page with Top Menu Setting */
+
+
+
+
+/* 3.6 Sidebar - Badge & Label Setting */
+
+
+
+
+/* 3.7 Sidebar Widget - User Profile */
+
+
+
+
+/* 3.8 Sidebar Widget - Project */
+
+
+
+
+/* 3.9 Sidebar Widget - Tabs */
+
+
+
+
+/* 3.10 Sidebar Widget - Calendar */
+
+
+
+
+/* 3.11 Sidebar Widget - Notification List */
+
+
+
+
+/* 3.12 Sidebar Widget - Stock List */
+
+
+
+
+/* 3.13 Sidebar Widget - Latest Post */
+
+
+
+
+/* 3.14 Sidebar Theme - Light */
+
+
+
+
+/* 3.15 Sidebar Theme - Success */
+
+
+
+
+/* 3.16 Sidebar Theme - Lime */
+
+
+
+
+/* 3.17 Sidebar Theme - Warning */
+
+
+
+
+/* 3.18 Sidebar Theme - Danger */
+
+
+
+
+/* 3.19 Sidebar Theme - Primary */
+
+
+
+
+/* 3.20 Sidebar Theme - Grey */
+
+
+
+
+/* 3.21 Sidebar Theme - Purple */
+
+
+
+
+
+/* -------------------------------
+   4.0 Content Setting
+------------------------------- */
+
+/* 4.1 Content Element */
+
+#content {
+    margin-left: 250px;
+    padding: 25px;
+    min-height: 100%;
+    position: relative;
+}
+
+
+
+/* 4.1.1 Content Element - Breadcrumb */
+
+
+
+
+/* 4.1.2 Content Element - Page Header */
+
+
+
+
+/* 4.2 Content Setting - Page Sidebar Minified */
+
+
+
+
+/* 4.3 Content Setting - Page with Right Sidebar */
+
+
+
+
+/* 4.4 Content Setting - Page with Footer */
+
+
+
+
+/* 4.5 Content Setting - Page without Sidebar */
+
+
+
+
+
+/* -------------------------------
+   5.0 Footer Setting
+------------------------------- */
+
+/* 5.1 Footer Element */
+
+
+
+
+/* 5.2 Footer Setting - Page with Fixed Footer */
+
+
+
+
+
+/* -------------------------------
+   6.0 Top Menu Setting
+------------------------------- */
+
+/* 6.1 Top Menu Element */
+
+
+
+
+/* 6.2 Top Menu Sub Menu Setting */
+
+
+
+
+/* 6.3 Top Menu Left & Right Control Setting */
+
+
+
+
+
+/* -------------------------------
+   7.0 Predefined CSS Setting
+------------------------------- */
+
+/* 7.1 Predefined Classes */
+
+
+
+
+/* -------------------------------
+   8.0 UI Elements Setting
+------------------------------- */
+
+/* 8.1 Progress Bar Setting */
+
+
+
+
+/* 8.2 Label & Badge Setting */
+
+
+
+
+/* 8.3 Form Element Setting */
+
+
+
+
+/* 8.4 Carousel Setting */
+
+
+
+
+/* 8.5 Dropdown Setting */
+        
+
+
+
+/* 8.6 Dropdown Notification Setting */
+
+
+
+
+/* 8.7 Typography Setting */
+
+
+
+
+/* 8.8 Description List Setting */
+
+
+
+
+/* 8.9 Blockquote Setting */
+
+
+
+
+/* 8.10 Panel Setting */
+
+
+
+
+/* 8.11 Panel Loading Element Setting */
+
+
+
+
+/* 8.12 Spinner Small Setting */
+
+
+
+
+/* 8.13 Button Element Setting */
+
+
+
+
+/* 8.14 Button Group Setting */
+
+
+
+
+/* 8.15 Button Theme Setting */
+
+
+/* 8.15.1 Button Default */
+
+
+
+
+/* 8.15.2 Button Danger */
+
+
+
+
+/* 8.15.3 Button Warning */
+
+
+
+
+/* 8.15.4 Button Lime */
+
+
+
+
+/* 8.15.5 Button Success */
+
+
+
+
+/* 8.15.6 Button Info */
+
+
+
+
+/* 8.15.7 Button Primary */
+
+
+
+
+/* 8.15.8 Button Purple */
+
+
+
+
+/* 8.15.9 Button Inverse */
+
+
+
+
+/* 8.15.10 Button Grey */
+
+
+
+
+/* 8.15.11 Button White */
+
+
+
+
+/* 8.16 Alert Setting */
+
+
+
+
+/* 8.17 Thumbnail Setting */
+
+
+
+
+/* 8.18 Default Link Setting */
+
+
+
+
+/* 8.19 Pagination Setting */
+
+
+
+
+/* 8.20 Pager Setting */
+
+
+
+
+/* 8.21 Jumbotron Setting */
+
+
+
+
+/* 8.22 List Group Setting */
+
+
+
+
+/* 8.23 Well Setting */
+
+
+
+
+/* 8.24 Nav Tabs & Pills Setting */
+
+
+
+
+/* 8.25 Accordion Setting */
+
+
+
+
+/* 8.26 Modal Setting */
+
+
+
+
+/* 8.27 Popover Setting */
+
+
+
+
+/* 8.28 Section Container Setting */
+
+
+
+
+/* 8.29 Form Header Setting */
+
+
+
+
+/* 8.30 Table Setting */
+
+
+
+
+/* 8.31 Background Cover Setting */
+
+
+
+
+/* -------------------------------
+   9.0 Plugins
+------------------------------- */
+
+/* 9.1 Plugin - Gritter Notification Setting */
+
+
+
+
+/* 9.2 Plugin - Parsley Validation Setting */
+                
+
+
+
+/* 9.3 Plugin - DataTables Setting */
+
+
+
+
+/* 9.3.1 Plugin - DataTables Extension - Fixed Columns */
+
+
+
+
+/* 9.3.2 Plugin - DataTables Extension - Fixed Header */
+
+
+
+
+/* 9.3.3 Plugin - DataTables Extension - KeyTable */
+
+
+
+
+/* 9.3.4 Plugin - DataTables Extension - Responsive */
+
+
+
+
+/* 9.3.5 Plugin - DataTables Extension - Buttons */
+
+
+
+
+/* 9.3.6 Plugin - DataTables Extension - RowReorder */
+
+
+
+
+/* 9.3.7 DataTables Extension - KeyTable */
+
+
+
+
+/* 9.3.8 Plugin - DataTables Extension - AutoFill */
+
+
+
+
+/* 9.3.9 Plugin - DataTables Extension - Scroll */
+
+
+
+
+/* 9.3.10 Plugin - DataTables Extension - Select */
+
+
+
+
+/* 9.4 Plugin - Vector Map Setting */
+
+
+
+
+/* 9.5 Plugin - Flot Chart Setting */
+
+
+
+
+/* 9.6 Plugin - Slimscroll Setting */
+            
+
+
+
+/* 9.7 Plugin - Datetimepicker Setting */
+
+
+
+
+/* 9.8 Plugin - DateRange Picker Setting */
+
+
+
+
+/* 9.9 Colorpicker Setting */
+
+
+
+
+/* 9.10 Plugin - Timepicker Setting */
+
+
+
+
+/* 9.11 Plugin - Select2 Setting */
+
+
+
+
+/* 9.12 Plugin - Datepicker Setting */
+
+
+
+
+/* 9.13 Plugin - Ionrangeslider Setting */
+
+
+
+
+/* 9.14 Plugin - Autocomplete Setting */
+
+
+
+
+/* 9.15 Plugin - Strength JS Setting */
+
+
+
+
+/* 9.16 Plugin - Bootstrap Select Setting */
+
+
+
+
+/* 9.17 Plugin - jQuery TagIt Setting */
+
+
+
+
+/* 9.18 Plugin - Powerange Slider Setting */
+
+
+
+
+/* 9.19 Plugin - Bootstrap Wizard Setting */
+
+
+
+
+/* 9.20 Plugin - SummerNote Setting */
+
+
+
+
+/* 9.21 Plugin - Morris Chart Setting */
+
+
+
+
+/* 9.22 Plugin - Fullcalendar Setting */
+
+
+
+
+/* 9.23 Plugin - Sparkline Setting */
+
+
+
+
+/* 9.24 Plugin - jQuery Vector Map Setting */
+
+
+
+
+
+/* -------------------------------
+   10.0 Pages
+------------------------------- */
+
+/* 10.1 Page - 404 Error Setting */
+
+
+
+
+/* 10.2 Page - Coming Soon Setting */
+
+
+
+
+/* 10.3 Page - Gallery Setting */
+
+
+
+
+/* 10.4 Page - Invoice Setting */
+
+
+
+
+/* 10.5 Page - Login & Register Setting */
+
+
+
+
+/* 10.6 Page - Search Result Setting */
+
+
+
+
+/* 10.7 Page - Timeline Setting */
+
+
+
+
+/* 10.8 Page - Email Inbox Setting */
+
+
+
+
+
+/* 10.9 Page - Email Detail Setting */
+
+
+
+
+/* 10.10 Page - Email Compose Setting */
+
+
+
+
+
+/* -------------------------------
+   11.0 Widgets
+------------------------------- */
+
+/* 11.1 Widget - Basic Element Setting */
+
+
+
+
+/* 11.2 Widget - Loader Setting */
+
+
+
+
+/* 11.3 Widget - Stat Setting */
+
+
+
+
+/* 11.4 Widget - Blog Setting */
+
+
+
+
+/* 11.5 Widget - Gallery List Setting */
+
+
+
+
+/* 11.6 Widget - Image Setting */
+
+
+
+
+/* 11.7 Widget - Chart Setting */
+
+
+
+
+/* 11.8 Widget - Chat History Setting */
+
+
+
+
+/* 11.9 Widget - Todolist Setting */
+
+
+
+
+/* 11.10 Widget - Task List Setting */
+
+
+
+
+/* 11.11 Widget - Theme Panel Setting */
+
+
+
+
+
+/* -------------------------------
+   12.0 Update - v1.1
+------------------------------- */
+
+/* 12.1 Widget - Stat Progress */
+
+
+
+
+/* 12.2 Panel - Option */
+
+
+
+
+/* 12.3 Plugins - Chart JS Custom Tooltip */
+
+
+
+
+/* 12.4 Chart Summary Setting */
+
+
+
+
+/* 12.5 Feeds Setting */
+
+
+
+
+/* 12.6 Chats Setting */
+
+
+
+
+/* 12.7 Project Summary Setting */
+
+
+
+
+/* 12.8 Sidebar Highlight Theme - Purple */
+
+
+
+
+/* 12.9 Sidebar Highlight Theme - Primary */
+
+
+
+
+/* 12.10 Sidebar Highlight Theme - Info */
+
+
+
+
+/* 12.11 Sidebar Highlight Theme - Lime */
+
+
+
+
+/* 12.12 Sidebar Highlight Theme - Warning */
+
+
+
+
+/* 12.13 Sidebar Highlight Theme - Danger */
+
+
+
+
+/* 12.14 Sidebar Highlight Theme - Grey */
+
+
+
+
+/* 12.15 Sidebar Highlight Theme - Light */
+
+
+
+
+/* 12.16 Sidebar Highlight Theme - Inverse */
+
+
+
+
+
+/* -------------------------------
+   13.0 Update - v1.2
+------------------------------- */
+
+/* 13.1 Font Family - Open Sans  */
+
+
+
+
+/* 13.2 Font Family - Roboto  */
+
+
+
+
+/* 13.3 Font Family - Lato  */
+
+
+
+
+/* 13.4 Font Family - Helvetica, Arial  */
+
