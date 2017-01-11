@@ -10,6 +10,7 @@
 	<!-- ==================== BEGIN BASE CSS STYLE ==================== -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:light,regular,medium,bold" />
 	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="assets/css/style.css">
 
@@ -27,25 +28,108 @@
 <body>
 
 	<!-- begin #page-container -->
-	<div id="page-container">
-		<div id="header" class="pink navbar">
-			header here
+	<div id="page-container" class="page-container">
+		
+		<!-- begin #header -->
+		<div id="header" class="pink header navbar navbar-default">
+			<div class="fluid-container gray">
+				<!-- begin mobile sidebar expand / collapse button -->
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">logo here</a>
+					<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- end mobile sidebar expand / collapse button -->
+
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<form class="navbar-form">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="enter keyword...">
+								<button type="submit" class="btn"><i class="fa fa-search"></i></button>
+							</div>
+						</form>
+					</li>
+			
+				</ul>
+			</div>
 		</div>
+		<!-- end #header -->
+
+		<!-- begin #sidebar -->
+			<div id="sidebar" class="blue sidebar">
+				sidebar here
+			</div>
+		<!-- end #sidebar -->
+
+		<!-- begin #content -->
+			<div id="content" class="gray content">
+
+				<!-- begin breadcrumb -->
+					<div class="breadcrumb pull-right">
+						<li><a href="#">Home</a></li>
+						<li class="active">Dashboard</li>
+					</div>
+				<!-- end breadcrumb -->
+
+				<!-- begin page-header -->
+				<h1 class="page-header">Dashboard <small>header small text goes here...</small></h1>
+				<!-- end page-header -->
+				
+				<!-- begin row -->
+				<div class="row">
+					<!-- begin col-3 -->
+					<div class="col-md-3">
+						<!-- begin widget -->
+						<div class="widget">
+							WIDGET
+						</div>
+						<!-- end widget -->
+					</div>
+					<!-- end col-3 -->
+					<!-- begin col-3 -->
+					<div class="col-md-3">
+						<!-- begin widget -->
+						<div class="widget">
+							WIDGET
+						</div>
+						<!-- end widget -->
+					</div>
+					<!-- end col-3 -->
+					<!-- begin col-3 -->
+					<div class="col-md-3">
+						<!-- begin widget -->
+						<div class="widget">
+							WIDGET
+						</div>
+						<!-- end widget -->
+					</div>
+					<!-- end col-3 -->
+					<!-- begin col-3 -->
+					<div class="col-md-3">
+						<!-- begin widget -->
+						<div class="widget">
+							WIDGET
+						</div>
+						<!-- end widget -->
+					</div>
+					<!-- end col-3 -->
+				</div>
+				<!-- end row -->
+
+
+
+				content here
+			</div>
+		<!-- end #content -->
 	</div>
 
 	<!-- end #page-container -->
 
-	<!-- begin #sidebar -->
-		<div id="sidebar" class="blue sidebar">
-			sidebar here
-		</div>
-	<!-- end #sidebar -->
-
-	<!-- begin #content -->
-		<div id="content" class="gray">
-			content here
-		</div>
-	<!-- end #content -->
+	
 
 	<!-- ==================== BEGIN BASE JS ==================== -->
 	<script src="assets/plugins/jquery/jquery-1.9.1.min.js"></script>
@@ -58,6 +142,33 @@
 	<![endif]-->
 
 	<!-- ==================== END BASE JS ==================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js"></script>
+	<!-- <script src="assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.time.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.resize.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.pie.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.stack.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.crosshair.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.categories.js"></script>
+	<script src="assets/plugins/flot/CurvedLines/curvedLines.js"></script>
+    <script src="assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="assets/plugins/jquery-jvectormap/jquery-jvectormap-world-merc-en.js"></script> -->
+	<script src="assets/plugins/gritter/js/jquery.gritter.js"></script>
+    <script src="assets/js/page-index.demo.js"></script>
+    <script src="assets/js/demo.js"></script>
+    <script src="assets/js/apps.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+	<script>
+		$(document).ready(function() {
+		    App.init();
+		    Demo.init();
+		    PageDemo.init();
+		});
+	</script>
 
 </body>
 

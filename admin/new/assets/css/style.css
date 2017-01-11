@@ -293,12 +293,51 @@ body {
 ------------------------------- */
 
 /* 2.1 Navbar Element */
+.navbar {
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        margin: 0;
+    }
+    .navbar-right {
+        float: right;
+    }
+    .navbar-nav > li {
+        float: left;
+    }
+    .navbar-nav > li + li {
+        margin-left: 15px;
+    }
+    .navbar-nav > li > a {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .navbar-toggle {
+        border: none;
+        padding: 16px 15px;
+        margin: 0;
+        background: none;
+        border-radius: 0;
+    }
+    .navbar-nav > li > a.has-notify:before {
+        top: 11px;
+        right: 4px;
+    }
+}
 
 
 
 
 /* 2.2 Navbar Header */
-
+@media (max-width: 767px){
+    .navbar-header {
+        width: auto;
+        border-bottom: 2px solid #eaedef;
+    }
+}
 
 
 
@@ -308,6 +347,44 @@ body {
 
 
 /* 2.4 Navbar Form */
+.navbar-form {
+    margin: 11px 0;
+    position: relative;
+}
+.navbar-form .form-control {
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    border-radius: 34px;
+    padding-right: 33px;
+}
+.navbar-form .btn {
+    background: none;
+    border: none;
+    color: #606D79;
+    position: absolute !important;
+    right: 15px;
+    top: 0 !important;
+    line-height: 22px;
+
+}
+@media (max-width: 767px) {
+    .navbar-form {
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 8px 0;
+    }
+    .navbar-form .form-control {
+        font-size: 12px;
+        height: 30px;
+    }
+    .navbar-form .btn {
+        top: 8px !important;
+        line-height: 18px;
+        right: 0;
+    }
+}
 
 
 
@@ -318,7 +395,11 @@ body {
 
 
 /* 2.6 Navbar Theme - Default */
-
+@media (max-width: 767px) {
+    .navbar-default .navbar-toggle .icon-bar {
+        background: #333;
+    }
+}
 
 
 
@@ -376,18 +457,35 @@ body {
     width: 250px;
 }
 
-/*.sidebar,
-.sidebar-bg {
-    position: absolute;
-    left: 0;
-    top: 56px;
-    background: #3C454D;
-    width: 250px;
-    font-size: 13px;
-    font-weight: 300;
-    z-index: 1010;
+@media (max-width: 767px) {
+    .sidebar {
+        top: 0;
+        left: -250px;
+        z-index: 1040;
+        animation: sidebarSlideOutLeft .2s;
+        -webkit-animation: sidebarSlideOutLeft .2s;
+    }
+
+    @keyframes sidebarSlideOutLeft {
+        from { left: 0px; }
+        to { left: -250; }
+    }
+
+    @keyframes sidebarSlideInLeft {
+        from { left: -250px; }
+        to { left: 0; }
+    }
+  
+
+    .page-sidebar-toggled .sidebar {
+        left: 0;
+        animation: sidebarSlideInLeft .2s;
+        -webkit-animation: sidebarSlideInLeft .2s;
+    }
+
 }
-*/
+
+
 
 
 /* 3.2 Sidebar - Minified Version Setting */
@@ -497,21 +595,46 @@ body {
 
 /* 4.1 Content Element */
 
-#content {
+.content {
     margin-left: 250px;
     padding: 25px;
     min-height: 100%;
     position: relative;
 }
 
+@media (max-width: 767px) {
+    .content {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+    }
+}
 
 
 /* 4.1.1 Content Element - Breadcrumb */
+.breadcrumb {
+    padding: 0;
+    margin: 3px 0 20px;
+    background: none;
 
+}
 
 
 
 /* 4.1.2 Content Element - Page Header */
+
+.page-header {
+    font-size: 20px;
+    margin: 0 0 20px;
+    padding: 0;
+    position: relative;
+}
+
+.page-header small {
+    font-size: 14px;
+}
+
+
 
 
 
@@ -1029,6 +1152,14 @@ body {
 ------------------------------- */
 
 /* 11.1 Widget - Basic Element Setting */
+
+.widget {
+    background: #fff;
+    display: block;
+    min-height: 100px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
 
 
 
