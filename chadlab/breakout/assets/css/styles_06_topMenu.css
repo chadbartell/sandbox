@@ -1,0 +1,234 @@
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
+   
+::  6.0  Top Menu Setting
+-------------------------------------------
+    6.1  Top Menu Element
+    6.2  Top Menu Sub Menu Setting
+    6.3  Top Menu Left & Right Control Setting
+    
+
+
+
+/* -------------------------------
+   6.0 Top Menu Setting
+------------------------------- */
+
+/* 6.1 Top Menu Element */
+
+.top-menu {
+    background: #3C454D;
+    height: 44px;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    z-index: 1020;
+}
+.top-menu .nav {
+    white-space: nowrap;
+}
+.top-menu .nav > li {
+    display: inline-block;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .top-menu {
+        position: relative;
+        top: 0;
+        height: auto;
+        display: none;
+    }
+    .top-menu .container,
+    .top-menu .container-fluid {
+        padding: 0;
+    }
+    .top-menu .nav > li {
+        display: block;
+    }
+    .top-menu .nav {
+        margin: 0 !important;
+    }
+}
+.top-menu .nav > li > a {
+    padding: 12px 20px;
+    color: #b1b5b8;
+    font-size: 13px;
+    line-height: 20px;
+}
+.top-menu .nav > li > a .badge,
+.top-menu .nav > li > a .label {
+    background: url(../img/transparent/black-0.2.png);
+    background: rgba(0,0,0,0.2);
+    font-size: 11px;
+    margin-left: 5px;
+    color: #fff;
+    color: rgba(255,255,255,0.6);
+}
+.top-menu .nav > li > a i {
+    float: left;
+    font-size: 14px;
+    margin-right: 10px;
+    line-height: 18px;
+    color: #fff;
+    color: rgba(255,255,255,0.2);
+    width: 14px;
+    text-align: center;
+}
+.top-menu .nav > li > a .caret {
+    color: #fff;
+    color: rgba(255,255,255,0.2);
+}
+@media (max-width: 767px) {
+    .top-menu .nav > li > a .caret {
+        float: right;
+        margin-top: 10px;
+    }
+}
+.top-menu .nav > li:hover > a,
+.top-menu .nav > li:focus > a,
+.top-menu .nav > li > a:hover,
+.top-menu .nav > li > a:focus {
+    background: #636a71;
+}
+
+
+/* 6.2 Top Menu Sub Menu Setting */
+
+.top-menu .nav .sub-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 220px;
+    top: 100%;
+    background: #30373e;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 13px;
+}
+.top-menu .sub-menu > li > a {
+    padding: 5px 20px;
+    display: block;
+    color: #8a8f94;
+    text-decoration: none;
+    position: relative;
+}
+.top-menu .nav .sub-menu > li > a .caret {
+    margin-top: 7px;
+}
+@media (max-width: 767px) {
+    .top-menu .nav .sub-menu {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+    .top-menu .sub-menu > li > a {
+        padding-left: 44px;
+    }
+}
+.top-menu .sub-menu .sub-menu {
+    background: url(../img/transparent/black-0.2.png);
+    background: rgba(0,0,0,0.2);
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.top-menu .sub-menu > li > a:hover,
+.top-menu .sub-menu > li > a:focus {
+    color: #fff;
+}
+.top-menu .nav > li.has-sub:hover > .sub-menu {
+    display: block;
+}
+@media (max-width: 767px) {
+    .top-menu .nav > li.has-sub:hover > .sub-menu {
+        display: none;
+    }
+}
+.top-menu .nav > li.active > a,
+.top-menu .nav > li.active > a:hover,
+.top-menu .nav > li.active > a:focus,
+.top-menu .sub-menu > li.active > a,
+.top-menu .sub-menu > li.active > a:hover,
+.top-menu .sub-menu > li.active > a:focus {
+    background: #24292e;
+    color: #fff;
+}
+.top-menu .nav > li.active > a i {
+    color: #1abc9c;
+}
+
+
+/* 6.3 Top Menu Left & Right Control Setting */
+
+.top-menu .nav > li.menu-control {
+    position: absolute;
+    top: 0;
+    width: 44px;
+    background: #3C454D;
+    height: 44px;
+}
+@media (max-width: 767px) {
+    .top-menu .nav > li.menu-control {
+        display: none !important;
+    }
+}
+.top-menu .nav > li.menu-control > a {
+    padding: 0;
+    text-align: center;
+    line-height: 44px;
+}
+.top-menu .nav > li.menu-control > a i {
+    float: none;
+    margin: 0;
+    font-size: 20px;
+    display: block;
+    line-height: 44px;
+    color: #fff;
+    width: auto;
+}
+.top-menu .nav > li.menu-control.menu-control-left {
+    left: -50px;
+}
+.top-menu .nav > li.menu-control.menu-control-right {
+    right: -50px;
+}
+@keyframes slideInLeft {
+    from { left: -50px; }
+    to { left: 0; }
+}
+@-webkit-keyframes slideInLeft {
+    from { left: -50px; }
+    to { left: 0; }
+}
+.top-menu .nav > li.menu-control.menu-control-left.show {
+    -webkit-animation: slideInLeft .2s;
+    animation: slideInLeft .2s;
+    left: 0;
+}
+@keyframes slideInRight {
+    from { right: -50px; }
+    to { right: 0; }
+}
+@-webkit-keyframes slideInRight {
+    from { right: -50px; }
+    to { right: 0; }
+}
+.top-menu .nav > li.menu-control.menu-control-right.show {
+    -webkit-animation: slideInRight .2s;
+    animation: slideInRight .2s;
+    right: 0;
+}
+.top-menu .nav > li.menu-control.menu-control-left > a {
+    -webkit-box-shadow: 5px 0 8px -3px rgba(0,0,0,0.5);
+    box-shadow: 5px 0 8px -3px rgba(0,0,0,0.5);
+}
+.top-menu .nav > li.menu-control.menu-control-right > a {
+    -webkit-box-shadow: -5px 0 8px -3px rgba(0,0,0,0.5);
+    box-shadow: -5px 0 8px -3px rgba(0,0,0,0.5);
+}
+

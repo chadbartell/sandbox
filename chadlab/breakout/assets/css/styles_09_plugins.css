@@ -1,0 +1,1766 @@
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
+
+::  9.0 Plugins
+-------------------------------------------
+    9.1  Plugin - Gritter Notification Setting
+    9.2  Plugin - Parsley Validation Setting
+    9.3  Plugin - DataTables Setting
+         9.3.1 Plugin - DataTables Extension - Fixed Columns
+         9.3.2 Plugin - DataTables Extension - Fixed Header
+         9.3.3 Plugin - DataTables Extension - KeyTable
+         9.3.4 Plugin - DataTables Extension - Responsive
+         9.3.5 Plugin - DataTables Extension - Buttons
+         9.3.6 Plugin - DataTables Extension - RowReorder
+         9.3.7 Plugin - DataTables Extension - KeyTable
+         9.3.8 Plugin - DataTables Extension - AutoFill
+         9.3.9 Plugin - DataTables Extension - Scroll
+         9.3.10 Plugin - DataTables Extension - Select
+    9.4  Plugin - Vector Map Setting
+    9.5  Plugin - Flot Chart Setting
+    9.6  Plugin - Slimscroll Setting
+    9.7  Plugin - Datetimepicker Setting
+    9.8  Plugin - DateRange Picker Setting
+    9.9  Plugin - Colorpicker Setting
+    9.10 Plugin - Timepicker Setting
+    9.11 Plugin - Select2 Setting
+    9.12 Plugin - Datepicker Setting
+    9.13 Plugin - Ionrangeslider Setting
+    9.14 Plugin - Autocomplete Setting
+    9.15 Plugin - Strength JS Setting
+    9.16 Plugin - Bootstrap Select Setting
+    9.17 Plugin - jQuery TagIt Setting
+    9.18 Plugin - Powerange Slider Setting
+    9.19 Plugin - Bootstrap Wizard Setting
+    9.20 Plugin - SummerNote Setting
+    9.21 Plugin - Morris Chart Setting
+    9.22 Plugin - Fullcalendar Setting
+    9.23 Plugin - Sparkline Setting
+    9.24 Plugin - jQuery Vector Map Setting
+   
+/* -------------------------------
+   9.0 Plugins
+------------------------------- */
+
+/* 9.1 Plugin - Gritter Notification Setting */
+
+#gritter-notice-wrapper {
+    width: 300px;
+}
+.gritter-item-wrapper .gritter-item {
+    font-family: 'Nunito', sans-serif;
+    padding: 5px 45px 5px 15px;
+}
+.gritter-item-wrapper .gritter-with-image {
+    width: 190px;
+}
+.gritter-item-wrapper .gritter-title {
+    color: #fff;
+    padding-bottom: 0;
+    text-shadow: none;
+    font-size: 14px;
+    font-weight: normal;
+}
+.gritter-item-wrapper .gritter-item p {
+    text-shadow: none;
+    color: #b1b5b8;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 5px;
+}
+.gritter-item-wrapper .gritter-close {
+    display: block !important;
+    background: none;
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    height: auto;
+    background: url(../img/transparent/white-0.1.png);
+    background: rgba(255,255,255,0.1);
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+.gritter-item-wrapper .gritter-close:hover,
+.gritter-item-wrapper .gritter-close:focus {
+    background: url(../img/transparent/white-0.3.png);
+    background: rgba(255,255,255,0.3);
+}
+.gritter-item-wrapper .gritter-close:before {
+    content: '\f00d';
+    font-family: FontAwesome;
+    font-size: 12px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+    line-height: 12px;
+    text-align: center;
+    position: absolute;
+    color: #fff;
+    text-indent: 0;
+}
+.gritter-item-wrapper .gritter-top,
+.gritter-item-wrapper .gritter-item,
+.gritter-item-wrapper .gritter-bottom {
+    background: url(../img/transparent/black-0.9.png);
+    background: rgba(39, 44, 49, 0.9);
+}
+.gritter-item-wrapper .gritter-top {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+.gritter-item-wrapper .gritter-bottom {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+.gritter-item-wrapper .gritter-image {
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+.gritter-item-wrapper.gritter-light .gritter-item, 
+.gritter-item-wrapper.gritter-light .gritter-bottom, 
+.gritter-item-wrapper.gritter-light .gritter-top {
+    background: url(../img/transparent/black-0.9.png);
+    background: rgba(239, 240, 241, 0.95);
+}
+.gritter-item-wrapper.gritter-light .gritter-close {
+    background: url(../img/transparent/black-0.1.png);
+    background: rgba(0,0,0,0.1);
+}
+.gritter-item-wrapper.gritter-light .gritter-close:hover,
+.gritter-item-wrapper.gritter-light .gritter-close:focus {
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.3);
+}
+.gritter-item-wrapper.gritter-light .gritter-title,
+.gritter-item-wrapper.gritter-light .gritter-close:before,
+.gritter-item-wrapper.gritter-light p {
+    color: #30373e;
+}
+
+
+/* 9.2 Plugin - Parsley Validation Setting */
+			    
+input.parsley-error, 
+select.parsley-error, 
+textarea.parsley-error {
+    border: 2px solid #F04B46 !important;
+    background: #fff;
+    color: #30373F;
+}
+input.parsley-error:focus, 
+select.parsley-error:focus, 
+textarea.parsley-error:focus {
+    border-color: #c03c38 !important;
+}
+input.parsley-success, 
+select.parsley-success, 
+textarea.parsley-success {
+    border: 2px solid #17B6A4 !important;
+    background: #fff;
+    color: #30373F;
+}
+input.parsley-success:focus, 
+select.parsley-success:focus, 
+textarea.parsley-success:focus {
+    border-color: #129283 !important;
+}
+.parsley-errors-list {
+    margin: 0;
+    font-size: 13px;
+    font-weight: normal;
+}
+.parsley-errors-list > li {
+    margin-top: 10px;
+    color: #c03c38;   
+}
+.radio .parsley-error {
+    min-height: 0px;
+}
+.radio .parsley-error + .parsley-errors-list.filled > li,
+.checkbox .parsley-error + .parsley-errors-list.filled > li {
+    margin-top: 3px;
+}
+
+
+/* 9.3 Plugin - DataTables Setting */
+
+.dataTables_wrapper table.dataTable thead th {
+    padding: 12px 30px 10px 20px;
+    white-space: nowrap;
+    border-top: none;
+}
+.without-pagination .dataTables_wrapper .dataTables_info {
+    padding-top: 0 !important;
+}
+.dataTables_scroll:before,
+.dataTables_scroll:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.dataTables_scrollBody {
+    margin-bottom: 20px !important;
+}
+.dataTables_empty {
+    text-align: center;
+}
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper div.dataTables_length select {
+    border: 2px solid;
+    border-color: #bec3c6;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #30373F;
+    display: inline-block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.dataTables_wrapper div.dataTables_length label {
+    margin-bottom: 15px;
+}
+.panel > .table-responsive > .dataTables_wrapper div.dataTables_length label,
+.panel > .dataTables_wrapper div.dataTables_length label {
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.dataTables_length,
+div.dataTables_info {
+    float: left;
+}
+.dataTables_wrapper .dataTables_filter input {
+    margin-left: 15px;
+}
+.dataTables_wrapper div.dataTables_filter label {
+    margin-bottom: 15px;
+}
+.panel > .table-responsive > .dataTables_wrapper div.dataTables_filter label,
+.panel > .dataTables_wrapper div.dataTables_filter label {
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.panel-body div.dataTables_length label {
+    margin: 0 0 20px;
+}
+.panel-body div.dataTables_filter label {
+    margin: 0 0 20px;
+}
+.dataTables_filter input:focus,
+div.dataTables_length select:focus {
+    border-color: #8d9aa5;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+.dataTables_wrapper table.dataTable {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+}
+.dataTables_wrapper:before,
+.dataTables_wrapper:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.panel .dataTables_wrapper {
+    margin-bottom: 20px;
+}
+.panel div.dataTables_paginate {
+    margin-right: 20px !important;
+    margin-bottom: -5px;
+}
+.panel div.dataTables_info {
+    margin-left: 20px;
+}
+@media (max-width: 767px) {
+    .dataTables_length,
+    div.dataTables_info {
+        float: none;
+    }
+    .panel > .table-responsive > .dataTables_wrapper div.dataTables_length label,
+    .panel > .dataTables_wrapper div.dataTables_length label {
+        margin: 20px 0 0;
+    }
+    div.dataTables_wrapper div.dataTables_info {
+        margin: 0;
+        padding-top: 0 !important;
+    }
+    div.dataTables_wrapper div.dataTables_paginate {
+        margin: 10px 20px 0 !important;
+        text-align: center;
+    }
+    div.dataTables_wrapper div.dataTables_paginate .pagination {
+        display: block;
+        white-space: initial !important;
+    }
+    div.dataTables_wrapper div.dataTables_paginate .pagination > li > a {
+        float: none;
+        margin-bottom: 5px;
+        display: inline-block;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+    div.dataTables_wrapper div.dataTables_paginate .pagination > li + li a {
+        margin-left: 5px;
+    }
+}
+
+
+/* 9.3.1 Plugin - DataTables Extension - Fixed Columns */
+
+table.DTFC_Cloned tr.even {
+    background: none !important;
+}
+div.dataTables_scrollHead .table,
+.DTFC_LeftWrapper div.DTFC_LeftHeadWrapper table,
+.DTFC_RightWrapper div.DTFC_RightHeadWrapper table {
+    margin-bottom: 0 !important;
+}
+.dataTables_scrollBody .table thead > tr > th,
+.DTFC_LeftBodyLiner .table thead > tr > th {
+    border-bottom: none !important;
+}
+.DTFC_LeftWrapper table.table-bordered.dataTable th:last-child {
+    border-right-width: 1px !important;
+}
+.dataTables_scrollBody,
+.DTFC_LeftBodyLiner {
+    border-bottom: 2px solid #ebeced;
+}
+.dataTables_wrapper .dataTables_scrollBody table.dataTable,
+.dataTables_wrapper .DTFC_LeftBodyLiner table.dataTable,
+.dataTables_scroll + .dataTables_info {
+    margin-bottom: 0 !important;
+}
+.dataTables_wrapper .dataTables_scrollBody table.dataTable > tbody > tr > td,
+.dataTables_wrapper .DTFC_LeftWrapper table.dataTable > tbody > tr > td  {
+    border-bottom: none !important;
+}
+
+
+/* 9.3.2 Plugin - DataTables Extension - Fixed Header */
+
+.FixedHeader_Cloned table.dataTable thead th, 
+.FixedHeader_Cloned table.dataTable thead td {
+    padding: 12px 20px 10px;
+}
+
+
+/* 9.3.3 Plugin - DataTables Extension - KeyTable */
+
+table.KeyTable th.focus, 
+table.KeyTable td.focus {
+    outline: 2px dashed #aab3ba !important;
+    outline-offset: -2px !important;
+}
+
+
+/* 9.3.4 Plugin - DataTables Extension - Responsive */
+
+table.dataTable.dtr-inline.collapsed tbody td:first-child, 
+table.dataTable.dtr-inline.collapsed tbody th:first-child {
+    padding-left: 50px !important;
+}
+table.dataTable.dtr-inline.collapsed tbody td:first-child:before, 
+table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
+    left: 13px !important;
+    height: 18px !important;
+    width: 18px !important;
+    line-height: 16px !important;
+    font-size: 16px !important;
+    border: 2px solid #aab3ba !important;
+    background: #fff !important;
+    color: #aab3ba !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.table-responsive .dataTables_wrapper > .row {
+    margin: 0;
+}
+.table-responsive .dataTables_wrapper > .row > [class*="col-"] {
+    padding: 0;
+}
+
+
+/* 9.3.5 Plugin - DataTables Extension - Buttons */
+
+.dt-buttons.btn-group {
+    margin-top: 15px;
+    float: left;
+    margin-left: 20px;
+}
+@media (max-width: 767px) {
+    .dt-buttons.btn-group {
+        float: none;
+        text-align: center;
+        display: block;
+        margin: 15px 0px -5px;
+    }
+    .dt-buttons.btn-group > .btn {
+        float: none;
+        margin-bottom: 5px;
+        -webkit-border-radius: 4px !important;
+        -moz-border-radius: 4px !important;
+        border-radius: 4px !important;
+    }
+    .dt-buttons.btn-group > .btn + .btn {
+        border-left: none;
+        margin-left: 5px;
+    }
+}
+
+
+/* 9.3.6 Plugin - DataTables Extension - RowReorder */
+
+table.dt-rowReorder-float {
+    outline: 2px dashed #bec3c6 !important;
+    outline-offset: -3px !important;
+    background: #fff !important;
+    opacity: 0.95 !important;
+}
+tr.dt-rowReorder-moving {
+    outline: 2px dashed #bec3c6 !important;
+    outline-offset: -3px !important;
+}
+
+
+/* 9.3.7 DataTables Extension - KeyTable */
+
+table.dataTable th.focus, 
+table.dataTable td.focus {
+    position: relative;
+    z-index: 1000;
+    outline: 3px solid #3C454D !important;
+}
+
+
+/* 9.3.8 Plugin - DataTables Extension - AutoFill */
+
+div.dt-autofill-background {
+    z-index: 1040 !important;
+}
+div.dt-autofill-list {
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    z-index: 1050 !important;
+}
+
+
+/* 9.3.9 Plugin - DataTables Extension - Scroll */
+
+div.DTS div.dataTables_scrollBody {
+    background: #fff !important;
+}
+
+
+/* 9.3.10 Plugin - DataTables Extension - Select */
+
+table.dataTable tbody tr.selected, 
+table.dataTable tbody th.selected, 
+table.dataTable tbody td.selected,
+table.dataTable tbody tr.selected a, 
+table.dataTable tbody th.selected a, 
+table.dataTable tbody td.selected a {
+    color: initial !important;
+}
+table.dataTable tbody > tr.selected, 
+table.dataTable tbody > tr > .selected {
+    background: #ffc !important;
+}
+
+
+/* 9.4 Plugin - Vector Map Setting */
+
+.mapTooltip {
+    position: fixed;
+    background: url(../img/transparent/black-0.8.png);
+    background: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    padding: 6px 10px;
+    z-index: 1000;
+    max-width: 200px;
+    display: none;
+    color: #fff;
+}
+.zoomIn, .zoomOut {
+    background-color:#3C454D;
+    -webkit-box-shadow: 0 1px #24292e;
+    box-shadow: 0 1px #24292e;
+    color: #fff;
+    padding: 3px 10px;
+    line-height: 1.42857143;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    min-width: 30px;
+    text-align: center;
+    -webkit-user-select: none; // For Webkit
+    -khtml-user-select: none;
+    -moz-user-select: none; // For Mozilla
+    -o-user-select: none;
+    user-select: none; // Default
+}
+.zoomIn:hover,
+.zoomIn:focus,
+.zoomOut:hover,
+.zoomOut:focus {
+    background: #30373e;
+    outline: none;
+    -webkit-box-shadow: 0 1px #181c1f;
+    box-shadow: 0 1px #181c1f;
+}
+.zoomOut {
+    top: 45px;
+}
+.map {
+    position: relative;
+}
+
+
+/* 9.5 Plugin - Flot Chart Setting */
+
+.legend > div {
+    padding: 4px !important;
+    border-radius: 4px !important;
+    background: #ebeced !important;
+}
+.legend .legendColorBox {
+    padding: 6px 0 6px 6px !important;
+}
+.legend .legendColorBox > div {
+    border: none !important;
+}
+.legend .legendColorBox > div > div {
+    border-radius: 40px !important;
+}
+.legend .legendLabel {
+    padding: 3px 6px 3px 3px !important;
+    color: #30373e !important;
+    font-size: 11px !important;
+}
+.legend table > tbody > tr + tr > td.legendColorBox,
+.legend table > tbody > tr + tr > td.legendLabel {
+    padding-top: 0px !important;
+}
+.flot-tooltip {
+    position: absolute;
+    display: none;
+    border: 0;
+    padding: 6px 10px 7px;
+    color: #fff;
+    font-size: 11px;
+    background: url(../img/transparent/black-0.8.png);
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    z-index: 10000 !important;
+}
+
+
+/* 9.6 Plugin - Slimscroll Setting */
+		    
+.slimScrollBar {
+    width: 5px !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+
+/* 9.7 Plugin - Datetimepicker Setting */
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 8px !important;
+    width: 20em !important;
+}
+.datepicker table tr td.active:hover, 
+.datepicker table tr td.active:hover:hover, 
+.datepicker table tr td.active.disabled:hover, 
+.datepicker table tr td.active.disabled:hover:hover, 
+.datepicker table tr td.active:focus, 
+.datepicker table tr td.active:hover:focus, 
+.datepicker table tr td.active.disabled:focus, 
+.datepicker table tr td.active.disabled:hover:focus, 
+.datepicker table tr td.active:active, 
+.datepicker table tr td.active:hover:active, 
+.datepicker table tr td.active.disabled:active, 
+.datepicker table tr td.active.disabled:hover:active, 
+.datepicker table tr td.active.active, 
+.datepicker table tr td.active:hover.active, 
+.datepicker table tr td.active.disabled.active, 
+.datepicker table tr td.active.disabled:hover.active, 
+.open .dropdown-toggle.datepicker table tr td.active, 
+.open .dropdown-toggle.datepicker table tr td.active:hover, 
+.open .dropdown-toggle.datepicker table tr td.active.disabled, 
+.open .dropdown-toggle.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td span.active:hover, 
+.datepicker table tr td span.active:hover:hover, 
+.datepicker table tr td span.active.disabled:hover, 
+.datepicker table tr td span.active.disabled:hover:hover, 
+.datepicker table tr td span.active:focus, 
+.datepicker table tr td span.active:hover:focus, 
+.datepicker table tr td span.active.disabled:focus, 
+.datepicker table tr td span.active.disabled:hover:focus, 
+.datepicker table tr td span.active:active, 
+.datepicker table tr td span.active:hover:active, 
+.datepicker table tr td span.active.disabled:active, 
+.datepicker table tr td span.active.disabled:hover:active, 
+.datepicker table tr td span.active.active, 
+.datepicker table tr td span.active:hover.active, 
+.datepicker table tr td span.active.disabled.active, 
+.datepicker table tr td span.active.disabled:hover.active, 
+.open .dropdown-toggle.datepicker table tr td span.active, 
+.open .dropdown-toggle.datepicker table tr td span.active:hover, 
+.open .dropdown-toggle.datepicker table tr td span.active.disabled, 
+.open .dropdown-toggle.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active:hover, 
+.datepicker table tr td span.active:hover:hover, 
+.datepicker table tr td span.active.disabled:hover, 
+.datepicker table tr td span.active.disabled:hover:hover, 
+.datepicker table tr td span.active:focus, 
+.datepicker table tr td span.active:hover:focus, 
+.datepicker table tr td span.active.disabled:focus, 
+.datepicker table tr td span.active.disabled:hover:focus, 
+.datepicker table tr td span.active:active, 
+.datepicker table tr td span.active:hover:active, 
+.datepicker table tr td span.active.disabled:active, 
+.datepicker table tr td span.active.disabled:hover:active, 
+.datepicker table tr td span.active.active, 
+.datepicker table tr td span.active:hover.active, 
+.datepicker table tr td span.active.disabled.active, 
+.datepicker table tr td span.active.disabled:hover.active, 
+.open .dropdown-toggle.datepicker table tr td span.active, 
+.open .dropdown-toggle.datepicker table tr td span.active:hover, 
+.open .dropdown-toggle.datepicker table tr td span.active.disabled, 
+.open .dropdown-toggle.datepicker table tr td span.active.disabled:hover {
+    background: #2184DA !important;
+    border-color: #2184DA !important;
+    color: #fff !important;
+    text-shadow: none !important !important;
+}
+.bootstrap-datetimepicker-widget table td span {
+    color: #30373e !important;
+    background: #ebeced !important;
+    margin: 0 auto !important;
+}
+.bootstrap-datetimepicker-widget table td.day:hover, 
+.bootstrap-datetimepicker-widget table td.hour:hover, 
+.bootstrap-datetimepicker-widget table td.minute:hover, 
+.bootstrap-datetimepicker-widget table td.second:hover {
+    background: #ebeced !important;
+}
+.datepicker {
+    padding: 0 0 5px !important;
+}
+.timepicker {
+    padding: 0 5px !important;
+}
+.collapse .timepicker-picker,
+.collapsing .timepicker-picker,
+.collapse .timepicker-minutes,
+.collapsing .timepicker-minutes {
+    margin-top: 8px !important;
+}
+.timepicker-picker .table-condensed t> tr > td {
+    width: auto !important;
+    padding: 0 !important;
+}
+.bootstrap-datetimepicker-widget table td.seperator {
+    width: 50px !important;
+}
+.timepicker-picker .table-condensed t> tr > td .btn {
+    display: block !important;
+    width: auto !important;
+}
+.timepicker-picker .table-condensed t> tr > td .btn span {
+    background: none;
+}
+.timepicker-picker .table-condensed .btn span:hover,
+.timepicker-picker .table-condensed .btn span:focus {
+    background: #ebeced !important;
+}
+.bootstrap-datetimepicker-widget .picker-switch {
+    padding: 0 !important;
+}
+.bootstrap-datetimepicker-widget table td span:hover {
+    background: #dadcdd;
+}
+.datepicker table tr td.today, 
+.datepicker table tr td.today:hover, 
+.datepicker table tr td.today.disabled, 
+.datepicker table tr td.today.disabled:hover {
+    background: #FFE2BA !important;
+}
+.timepicker,
+.bootstrap-datetimepicker-widget a[data-action] {
+    padding: 0 !important;
+}
+.datepicker-months .table-condensed,
+.datepicker-months .table-condensed thead,
+.datepicker-months .table-condensed tbody,
+.datepicker-months .table-condensed ttr,
+.datepicker-months .table-condensed ttr td,
+.datepicker-years .table-condensed,
+.datepicker-years .table-condensed thead,
+.datepicker-years .table-condensed tbody,
+.datepicker-years .table-condensed ttr,
+.datepicker-years .table-condensed ttr td,
+.datepicker-decades .table-condensed,
+.datepicker-decades .table-condensed thead,
+.datepicker-decades .table-condensed tbody,
+.datepicker-decades .table-condensed ttr,
+.datepicker-decades .table-condensed ttr td {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+}
+.datepicker-months .table-condensed ttr td:before,
+.datepicker-months .table-condensed ttr td:after,
+.datepicker-years .table-condensed ttr td:before,
+.datepicker-years .table-condensed ttr td:after,
+.datepicker-decades .table-condensed ttr td:before,
+.datepicker-decades .table-condensed ttr td:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.datepicker table tr td span {
+    width: 22% !important;
+    margin: 3.5px !important;
+    font-size: 13px;
+}
+.datepicker-months .table-condensed ttr td,
+.datepicker-years .table-condensed ttr td,
+.datepicker-decades .table-condensed ttr td {
+    margin: 0 -4px -2px !important;
+}
+.datepicker-months .table-condensed thead tr,
+.datepicker-years .table-condensed thead tr,
+.datepicker-decades .table-condensed thead tr {
+    display: table !important;
+    width: 100% !important;
+}
+.datepicker-months .table-condensed > t> tr > td,
+.datepicker-years .table-condensed > t> tr > td,
+.datepicker-decades .table-condensed > t> tr > td {
+    padding: 0 !important;
+}
+.bootstrap-datetimepicker-widget table td span {
+    line-height: 40px !important;
+    height: 40px !important;
+}
+.bootstrap-datetimepicker-widget table td {
+    height: auto !important;
+    line-height: auto !important;
+    width: auto !important;
+}
+.timepicker-picker .table-condensed t> tr > td.separator {
+    padding: 0 !important;
+}
+.bootstrap-datetimepicker-widget .datepicker-decades span.decade {
+    line-height: 15px !important;
+    padding-top: 5px !important;
+}
+
+
+/* 9.8 Plugin - DateRange Picker Setting */
+
+.daterangepicker .ranges li {
+    color: #30373e;
+}
+.daterangepicker .ranges li.active, 
+.daterangepicker .ranges li:hover {
+    background: #3C454D !important;
+    border-color: #3C454D !important;
+}
+.daterangepicker td.active, 
+.daterangepicker td.active:hover {
+    background: #2184DA !important;
+    border-color: #2184DA !important;
+}
+.daterangepicker td.in-range {
+    background: #ebeced !important;
+}
+.daterangepicker .ranges .input-mini {
+    background: #ebeced !important;
+    border-width: 2px !important;
+    border-color: #ebeced !important;
+}
+.daterangepicker .ranges .input-mini:focus {
+    border-color: #8d9aa5 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+.daterangepicker .calendar th, 
+.daterangepicker .calendar td {
+    font-family: 'Nunito', sans-serif !important;
+}
+.daterangepicker .calendar {
+    border: none !important;
+}
+.daterangepicker .calendar-date,
+.daterangepicker .calendar.single .calendar-date {
+    border: 2px solid #ebeced !important;
+}
+@media (max-width: 767px) {
+    .daterangepicker .calendar,
+    .daterangepicker .ranges {
+        float: none !important;
+        width: auto !important;
+    }
+    .daterangepicker .ranges {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .daterangepicker .ranges .range_inputs > div {
+        width: 50%;
+    }
+}
+
+
+/* 9.9 Colorpicker Setting */
+
+.colorpicker {
+    padding: 8px !important;
+}
+.colorpicker:before {
+    border-bottom-color: rgba(0,0,0,0.05) !important;
+}
+.colorpicker-hue, .colorpicker-alpha {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+.colorpicker-color {
+    float: left;
+    width: 100%;
+}
+
+
+/* 9.10 Plugin - Timepicker Setting */
+
+.input-group.bootstrap-timepicker .bootstrap-timepicker-widget + .form-control {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.bootstrap-timepicker-widget.dropdown-menu .form-control {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.bootstrap-timepicker-widget.dropdown-menu {
+    width: 200px;
+}
+.bootstrap-timepicker-widget.dropdown-menu:before {
+    border: none !important;
+}
+.bootstrap-timepicker-widget table td a:hover,
+.bootstrap-timepicker-widget table td a:focus {
+    background: #ebeced !important;
+    border-color: #ebeced !important;
+}
+
+
+/* 9.11 Plugin - Select2 Setting */
+
+.select2-container .select2-selection--single {
+    height: 34px !important;
+    padding: 6px 12px !important;
+    border: 2px solid #bec3c6 !important;
+    color: #30373F !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #30373F !important;
+    line-height: 18px !important;
+    padding: 0 !important;
+}
+.select2.select2-container,
+.select2 span {
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-width: 5px !important;
+    left: 0 !important;
+    margin: 0 !important;
+    top: 15px !important;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-width: 5px !important;
+    top: 10px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    right: 12px !important;
+    top: 0 !important;
+    width: 10px !important;
+}
+.select2-search--dropdown {
+    padding: 12px 12px 7px !important;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field,
+.select2-container--default .select2-selection--multiple {
+    border-width: 2px !important;
+    border-color: #ebeced !important;
+    background: #ebeced !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+    padding: 6px 12px !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    padding: 0 !important;
+    margin-top: -5px !important;
+}
+.select2-container .select2-search--inline .select2-search__field {
+    padding: 0 !important;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+    display: block !important;
+}
+.form-input-flat .select2-container .select2-selection--single,
+.form-input-flat .select2-container--default .select2-search--dropdown .select2-search__field,
+.form-input-flat .select2-container--default .select2-selection--multiple {
+    background: #ebeced !important;
+    border-color: #ebeced !important;
+}
+.select2-container--default .select2-results__group {
+    padding: 6px 12px;
+}
+.select2-results__option {
+    padding: 6px 12px;
+}
+.select2-container--open .select2-dropdown--below {
+    border-top: none !important;
+}
+.select2-container--open .select2-dropdown--above {
+    border-bottom: none !important;
+}
+.select2-container--default .select2-results__option .select2-results__option {
+    padding: 8px 12px 8px 18px !important;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background: #ebeced !important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background: #2184DA !important;
+}
+.select2-dropdown {
+    border: 2px solid #bec3c6 !important;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+    outline: none !important;
+    border-color: #8d9aa5 !important;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 2px solid #8d9aa5 !important;
+}
+.select2.select2-container:focus,
+.select2 span:focus,
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, 
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple,
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--single, 
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
+    outline: none !important;
+    border-color: #8d9aa5 !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background: #888f95 !important;
+    color: #fff !important;
+    border: none !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    background: #6d7277 !important;
+    float: right !important;
+    margin-right: -5px !important;
+    font-size: 14px !important;
+    margin-left: 5px !important;
+    line-height: 17px !important;
+    height: 18px !important;
+    padding: 0 5px !important;
+    -webkit-border-radius: 0 4px 4px 0 !important;
+    -moz-border-radius: 0 4px 4px 0 !important;
+    border-radius: 0 4px 4px 0 !important;
+    color: #fff !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
+    background: #525659 !important;
+    color: #fff !important;
+}
+
+
+/* 9.12 Plugin - Datepicker Setting */
+
+.datepicker-inline,
+.datepicker-inline .table-condensed {
+    width: 100% !important;
+}
+.datepicker.dropdown-menu {
+    width: 280px;
+    border: none !important;
+    -webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.25) !important;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25) !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+    font-family: 'Nunito', sans-serif !important;
+    padding: 8px;
+}
+.datepicker table {
+    width: 100% !important;
+}
+.input-daterange .input-group-addon {
+    border-color: #ebeced !important;
+    text-shadow: none !important;
+}
+
+
+/* 9.13 Plugin - Ionrangeslider Setting */
+
+.irs-diapason {
+    background: #3C454D;
+}
+.irs-line-left,
+.irs-line-mid,
+.irs-line-right {
+    background: #EBECED !important;
+}
+.irs-line-left {
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+.irs-line-right {
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}
+.irs-from, .irs-to, .irs-single {
+    background: #3C454D !important;
+}
+.irs-grid-text {
+    color: #8d9aa5 !important;
+}
+.rangeSlider-success .irs-diapason {
+    background: #1ABC9C;
+}
+.rangeSlider-primary .irs-diapason {
+    background: #2184DA;
+}
+.rangeSlider-purple .irs-diapason {
+    background: #9b59b6;
+}
+.rangeSlider-lime .irs-diapason {
+    background: #65C56F;
+}
+.rangeSlider-info .irs-diapason {
+    background: #38AFD3;
+}
+.rangeSlider-warning .irs-diapason {
+    background: #fcaf41;
+}
+.rangeSlider-danger .irs-diapason {
+    background: #F04B46;
+}
+
+
+/* 9.14 Plugin - Autocomplete Setting */
+
+.ui-widget-content.ui-autocomplete {
+    border: none;
+    background: #fff;
+    -webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+.ui-widget {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    padding: 5px 0;
+}
+.ui-menu .ui-menu-item a {
+    font-weight: 300;
+    padding: 6px 12px;
+    line-height: 18px;
+}
+.ui-state-hover, 
+.ui-widget-content .ui-state-hover, 
+.ui-widget-header .ui-state-hover, 
+.ui-state-focus, 
+.ui-widget-content .ui-state-focus, 
+.ui-widget-header .ui-state-focus {
+    border: none;
+    margin: 0 !important;
+    font-weight: 300 !important;
+    background: #ebeced;
+    color: #30373F;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+
+/* 9.15 Plugin - Strength JS Setting */
+
+.strength_meter .veryweak{
+    color: #c03c38;
+}
+.strength_meter .weak{
+    color: #ca8c34;
+}
+.strength_meter .medium{
+    color: #519e59;
+}
+.strength_meter .strong{
+    color: #129283;
+}
+.strength_meter {
+    background: none !important;
+    width: auto !important;
+    height: auto !important;
+    float: right;
+}
+.strength_meter div {
+    font-weight: 300 !important;
+    color: #aab3ba;
+    width: auto !important;
+    background: none !important;
+    line-height: 18px !important;
+    height: auto !important;
+}
+.button_strength {
+    float: left;
+    color: #30373e;
+}
+
+
+/* 9.16 Plugin - Bootstrap Select Setting */
+
+.bootstrap-select.btn-group:not(.input-group-btn), 
+.bootstrap-select.btn-group[class*="span"] {
+    margin-bottom: 0 !important;
+}
+
+
+/* 9.17 Plugin - jQuery TagIt Setting */
+
+ul.tagit {
+    margin-bottom: 0;
+    border: 2px solid #bec3c6;
+    padding: 5px 12px 0 !important;
+    font-size: 0px;
+}
+ul.tagit:before,
+ul.tagit:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.form-input-flat ul.tagit {
+    background: #ebeced;
+    border-color: #ebeced;
+}
+ul.tagit input[type="text"] {
+    background: none;
+}
+ul.tagit li.tagit-choice-editable,
+ul.tagit li.tagit-new {
+    background: #888f95;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    line-height: 18px !important;
+    margin: 0px 5px 5px 0;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+ul.tagit li.tagit-new {
+    background: none;
+}
+ul.tagit .ui-state-default .ui-icon.ui-icon-close {
+    background: none;
+    text-indent: 3px !important;
+}
+ul.tagit li.tagit-choice .tagit-close:hover,
+ul.tagit li.tagit-choice .tagit-close:focus,
+ul.tagit .ui-state-default .ui-icon.ui-icon-close:hover,
+ul.tagit .ui-state-default .ui-icon.ui-icon-close:focus {
+    color: #fff;
+    text-decoration: none;
+}
+ul.tagit .ui-state-default .ui-icon.ui-icon-close:before {
+    content: '\x';
+}
+
+
+/* 9.18 Plugin - Powerange Slider Setting */
+
+.slider-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    min-height: 30px;
+    padding-top: 13px;
+}
+.slider-wrapper.slider-without-range {
+    padding-left: 0;
+    padding-right: 0;
+}
+.slider-wrapper.slider-vertical {
+    min-width: 30px;
+    padding-left: 13px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.slider-wrapper.slider-vertical.slider-without-range {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.slider-wrapper.slider-vertical .range-min {
+    bottom: -20px;
+    padding-bottom: 2px;
+}
+.slider-wrapper.slider-vertical .range-max {
+    top: -20px;
+    padding-top: 2px;
+}
+.slider-wrapper .range {
+    background: #aab3ba;
+}
+.slider-wrapper .range-quantity {
+    background: #17B6A4;
+}
+.slider-wrapper.slider-primary .range-quantity {
+    background: #2184DA;
+}
+.slider-wrapper.slider-purple .range-quantity {
+    background: #9b59b6;
+}
+.slider-wrapper.slider-lime .range-quantity {
+    background: #65C56F;
+}
+.slider-wrapper.slider-inverse .range-quantity {
+    background: #3C454D;
+}
+.slider-wrapper.slider-warning .range-quantity {
+    background: #fcaf41;
+}
+.slider-wrapper.slider-danger .range-quantity {
+    background: #ff5b57;
+}
+.slider-wrapper.slider-info .range-quantity {
+    background: #38AFD3;
+}
+.slider-wrapper.slider-grey .range-quantity {
+    background: #aab3ba;
+}
+
+
+/* 9.19 Plugin - Bootstrap Wizard Setting */
+
+.bwizard {
+    background: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    margin-bottom: 20px;
+}
+.bwizard-steps {
+    display: table !important;
+    width: 100%;
+    -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 3px solid #bec3c6;
+}
+.bwizard-steps:before,
+.bwizard-steps:after {
+    display: none;
+}
+.bwizard-steps > li,
+.bwizard-steps > li:first-child,
+.bwizard-steps > li:last-child {
+    float: none;
+    display: table-cell !important;
+    text-align: center;
+    padding: 10px 20px;
+    background: #eff0f1;
+}
+.bwizard-steps > li {
+    width: 20%;
+}
+.bwizard-steps.clickable > li:hover,
+.bwizard-steps.clickable > li:focus,
+.bwizard-steps.clickable li:hover:not(.active),
+.bwizard-steps.clickable li:focus:not(.active) {
+    background: #eff0f1 !important;
+}
+.bwizard-steps.clickable > li:hover a,
+.bwizard-steps.clickable > li:focus a,
+.bwizard-steps.clickable li:hover:not(.active) a,
+.bwizard-steps.clickable li:focus:not(.active) a {
+    color: #30373e !important;
+}
+.bwizard-steps > li .label {
+    display: block;
+    width: 36px;
+    height: 36px;
+    line-height: 32px;
+    border: 2px solid;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 16px;
+    margin: 5px auto;
+    color: #30373e;
+    font-weight: normal;
+    top: 0;
+}
+.bwizard-steps a {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+}
+.bwizard-steps a:hover,
+.bwizard-steps a:focus {
+    text-decoration: none;
+}
+.bwizard-steps a small {
+    font-size: 12px;
+    display: block;
+    line-height: 16px;
+    margin: 1px 0 5px 0;
+    color: #8a8f94;
+}
+.bwizard-steps li:before,
+.bwizard-steps li:after {
+    border: none !important;
+}
+.bwizard-steps > li.active,
+.bwizard-steps > li.active:hover,
+.bwizard-steps > li.active:focus {
+    background: #3C454D !important;
+}
+.bwizard-steps.clickable > li.active:hover a,
+.bwizard-steps.clickable > li.active:focus a,
+.bwizard-steps.clickable li.active:hover:not(.active) a,
+.bwizard-steps.clickable li.active:focus:not(.active) a {
+    color: #fff !important;
+}
+.bwizard-steps.clickable li:hover:not(.active) .label,
+.bwizard-steps.clickable li:focus:not(.active) .label {
+    color: #1abc9c;
+}
+.bwizard-steps .active .label {
+    border-color: #1abc9c;
+    background: #1abc9c;
+    color: #fff;
+}
+.bwizard-steps li.active:after {
+    top: 50%;
+    margin-top: -20px;
+    border-bottom: 20px inset transparent !important;
+    border-left: 20px solid #3C454D !important;
+    border-top: 20px inset transparent !important;
+}
+.bwizard-steps li.active:last-child:after {
+    border: none !important;
+}
+.bwizard .well {
+    background: #fff;
+    margin: 0 !important;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    padding: 30px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bwizard-steps li:first-child {
+    -webkit-border-radius: 6px 0 0 0 !important;
+    -moz-border-radius: 6px 0 0 0 !important;
+    border-radius: 6px 0 0 0 !important;
+}
+.bwizard-steps li:last-child {
+    -webkit-border-radius: 0 6px 0 0 !important;
+    -moz-border-radius: 0 6px 0 0 !important;
+    border-radius: 0 6px 0 0 !important;
+}
+.bwizard-buttons {
+    padding: 30px;
+    margin: 0;
+    background: #eff0f1;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    border-top: 3px solid #BEC3C6;
+}
+@media (min-width: 768px) {
+    .bwizard-buttons.pager > li > a {
+        font-size: 16px;
+        padding: 8px 26px;
+        border-radius: 40px;
+    }
+}
+@media (max-width: 1200px) {
+    .bwizard-steps > li {
+        padding: 10px 10px !important;
+    }
+    .bwizard-steps a {
+        font-size: 13px;
+    }
+    .bwizard-steps a small {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .bwizard-steps > li,
+    .bwizard-steps > li:first-child,
+    .bwizard-steps > li:last-child {
+        display: block !important;
+        width: auto;
+        text-align: left;
+    }
+    .bwizard-steps > li:first-child {
+        -webkit-border-radius: 6px 6px 0 0 !important;
+        -moz-border-radius: 6px 6px 0 0 !important;
+        border-radius: 6px 6px 0 0 !important;
+    }
+    .bwizard-steps > li:last-child {
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+    }
+    .bwizard-steps > li a {
+        line-height: 26px !important;
+    }
+    .bwizard-steps .label {
+        float: left;
+        margin: 0 !important;
+        margin-right: 10px !important;
+        width: 26px !important;
+        height: 26px !important;
+        line-height: 22px !important;
+    }
+    .bwizard-steps li:before,
+    .bwizard-steps li:after,
+    .bwizard-steps li.active:before,
+    .bwizard-steps li.active:after  {
+        content: '';
+        display: table !important;
+        border: none !important;
+        clear: both !important;
+        position: relative !important;
+        margin: 0 !important;
+    }
+    .bwizard .well,
+    .bwizard-buttons {
+        padding: 20px;
+    }
+}
+
+
+/* 9.20 Plugin - SummerNote Setting */
+
+.note-editor {
+    border: none !important;
+    margin: 0;
+    background: none !important;
+}
+.panel .note-editor {
+    -webkit-border-radius: 0 0 6px 6px !important;
+    -moz-border-radius: 0 0 6px 6px !important;
+    border-radius: 0 0 6px 6px !important;
+}
+.note-editor .note-toolbar .btn.btn-default {
+    color: #30373e;
+    background: #fff;
+    -webkit-box-shadow: 0 1px #b1b5b8;
+    box-shadow: 0 1px #b1b5b8;
+}
+.note-editor .note-toolbar .btn.btn-default:hover,
+.note-editor .note-toolbar .btn.btn-default:focus {
+    background: #bcbdbe;
+    outline: none;
+    -webkit-box-shadow: 0 1px #5e5e5f;
+    box-shadow: 0 1px #5e5e5f;
+}
+.note-popover .popover .popover-content, 
+.panel-heading.note-toolbar {
+    padding: 10px 20px 15px !important;
+}
+.panel .note-editor .panel-heading.note-toolbar {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+.panel-heading.note-toolbar {
+    background: #ebeced !important;
+}
+.note-editor .note-editing-area .note-editable {
+    padding: 20px !important;
+}
+
+
+/* 9.21 Plugin - Morris Chart Setting */
+
+.morris-hover.morris-default-style {
+    font-family: 'Nunito', sans-serif !important;
+    background: url(../img/transparent/black-0.9.png) !important;
+    background: rgba(255,255,255,0.95) !important;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25) !important;
+    border: none !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+}
+
+
+/* 9.22 Plugin - Fullcalendar Setting */
+
+.fullcalendar {
+    background: #fff;
+    border-radius: 5px;
+}
+.fullcalendar .fullcalendar-event,
+.fullcalendar .fullcalendar-container {
+    padding: 20px;
+}
+.fullcalendar .fullcalendar-event {
+    width: 220px;
+    background: #ebeced;
+}
+.fullcalendar > div:first-child {
+    border-radius: 5px 0 0 5px;
+}
+.fullcalendar > div:last-child {
+    border-radius: 0 5px 5px 0;
+}
+.fullcalendar .fullcalendar-event .fc-event {
+    padding: 8px 20px 8px 45px;
+    border-radius: 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    background: none;
+    border: none;
+    color: #30373e;
+    position: relative;
+    font-size: 13px;
+    font-weight: 300;
+    border-top: 2px solid #D4D5D6;
+    border-bottom: 2px solid #D4D5D6;
+    cursor: pointer;
+}
+.fullcalendar .fullcalendar-event .fc-event + .fc-event {
+    margin-top: -2px;
+}
+.fullcalendar .fullcalendar-event .fc-event:hover,
+.fullcalendar .fullcalendar-event .fc-event:focus {
+    background: #f9f9f9;
+}
+.fullcalendar .fullcalendar-event .fc-event .fc-event-icon {
+    position: absolute;
+    left: 20px;
+    top: 7px;
+    font-size: 14px;
+}
+.fullcalendar .fullcalendar-event .fc-event.ui-draggable-dragging {
+    border: 2px solid #ebeced;
+    border-radius: 5px;
+}
+.fullcalendar .fullcalendar-container .fc-view-container {
+    margin: 0 -20px -20px;
+}
+.fullcalendar .fullcalendar-container .fc td:first-child, 
+.fullcalendar .fullcalendar-container .fc th:first-child {
+    border-left: none !important;
+}
+.fullcalendar .fullcalendar-container .fc td:last-child, 
+.fullcalendar .fullcalendar-container .fc th:last-child {
+    border-right: none !important;
+}
+.fullcalendar .fc table {
+    font-size: 13px;
+}
+.fullcalendar table {
+    border: none !important;
+}
+.fullcalendar .fc th {
+    padding: 15px 0 5px !important;
+    border: none !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+}
+.fullcalendar .fc-widget-header {
+    border: none !important;
+    border-bottom: 1px solid #aab3ba !important;
+}
+.fullcalendar .fc-toolbar {
+    margin: 0;
+}
+.fullcalendar .fc-toolbar h2 {
+    font-weight: 300;
+    font-size: 24px;
+}
+.fullcalendar .fc-basic-view td.fc-day-number, 
+.fullcalendar .fc-basic-view td.fc-week-number span {
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.fullcalendar .fc-row.fc-week.fc-widget-content:last-child td {
+    border-bottom: none !important;
+}
+.fullcalendar .fc-state-default {
+    color: #30373e;
+    background: #fff;
+    outline: none;
+    box-shadow: none;
+    border-color: #bcbdbe;
+    text-shadow: none;
+}
+.fullcalendar .fc-state-active, .fc-state-down {
+    background: #bcbdbe;
+    color: #fff;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.fullcalendar .fc-state-active {
+    background: #F04B46;
+    border-color: #F04B46;
+}
+.fullcalendar .fc-day-grid-event,
+.fullcalendar .fc-day-grid-event:hover,
+.fullcalendar .fc-day-grid-event:focus,
+.fullcalendar .fc-view-container .fc-event,
+.fullcalendar .fc-view-container .fc-event:hover,
+.fullcalendar .fc-view-container .fc-event:focus {
+    margin: 1px 4px 0;
+    padding: 3px 5px 2px;
+    border: none;
+    font-size: 11px;
+    font-weight: 300;
+    background: #EBECED;
+    color: #30373e;
+}
+.fullcalendar .fc-view-container .fc-time-grid-container .fc-event,
+.fullcalendar .fc-view-container .fc-time-grid-container .fc-event:hover,
+.fullcalendar .fc-view-container .fc-time-grid-container .fc-event:focus {
+    margin: 5px -1px 4px 1px;
+}
+.fullcalendar .fc-ltr .fc-h-event.fc-not-start, 
+.fullcalendar .fc-rtl .fc-h-event.fc-not-end {
+    margin-left: 0 !important;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.fullcalendar .fc-unthemed .fc-today {
+    background: #FFFDF3;
+}
+.fullcalendar .fc-unthemed .fc-divider, 
+.fullcalendar .fc-unthemed .fc-popover .fc-header {
+    background: #aab3ba;
+}
+.fullcalendar hr.fc-divider {
+    padding: 0 0 1px;
+}
+.fullcalendar .fc-ltr .fc-time-grid .fc-event-container {
+    margin: 0px 5px 0px 3px;
+} 
+.fullcalendar .fc-scroller,
+.fullcalendar .fc-time-grid-container {
+    height: auto !important;
+}
+.fullcalendar .fc-row .fc-content-skeleton td, 
+.fullcalendar .fc-row .fc-helper-skeleton td {
+    border-color: #ddd;
+}
+@media (max-width: 340px) {
+    .fullcalendar .fc button {
+        padding: 0 5px;
+    }
+}
+@media (max-width: 1024px) {
+    .fullcalendar .fc-center {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    .fullcalendar .fc-toolbar h2 {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+
+/* 9.23 Plugin - Sparkline Setting */
+
+.jqstooltip {
+    border: none !important;
+    border-radius: 4px !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+
+/* 9.24 Plugin - jQuery Vector Map Setting */
+
+.jvectormap-zoomin, .jvectormap-zoomout {
+    width: 16px !important;
+    height: 16px !important;
+    background: url(../img/transparent/black-0.8.png) !important;
+    background: rgba(0,0,0,0.75) !important;
+    left: 15px;
+}
+.jvectormap-zoomout {
+    top: 35px;
+}
+.jvectormap-zoomin {
+    top: 15px;
+}
+.jvectormap-label {
+    border: none !important;
+    background: url(../img/transparent/black-0.8.png) !important;
+    background: rgba(0,0,0,.75) !important;
+    padding: 3px 6px !important;
+}
+

@@ -1,0 +1,2127 @@
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
+    
+::  3.0  Sidebar
+-------------------------------------------
+    3.1  Sidebar Element
+    3.2  Sidebar - Minified Version Setting
+    3.3  Sidebar - Right Sidebar Setting
+    3.4  Sidebar - Page with Two Sidebar Setting
+    3.5  Sidebar - Page with Top Menu Setting
+    3.6  Sidebar - Badge & Label Setting
+    3.7  Sidebar Widget - User Profile
+    3.8  Sidebar Widget - Project
+    3.9  Sidebar Widget - Tabs
+    3.10 Sidebar Widget - Calendar
+    3.11 Sidebar Widget - Notification List
+    3.12 Sidebar Widget - Stock List
+    3.13 Sidebar Widget - Latest Post
+    3.14 Sidebar Theme - Light
+    3.15 Sidebar Theme - Success
+    3.16 Sidebar Theme - Lime
+    3.17 Sidebar Theme - Warning
+    3.18 Sidebar Theme - Danger
+    3.19 Sidebar Theme - Primary
+    3.20 Sidebar Theme - Grey
+    3.21 Sidebar Theme - Purple
+
+
+    below originally from 12.8 thru 12.16
+    -------------------------------------------
+    
+    3.22 Sidebar Highlight Theme - Purple
+    3.23 Sidebar Highlight Theme - Primary
+    3.24 Sidebar Highlight Theme - Info
+    3.25 Sidebar Highlight Theme - Lime
+    3.26 Sidebar Highlight Theme - Warning
+    3.27 Sidebar Highlight Theme - Danger
+    3.28 Sidebar Highlight Theme - Grey
+    3.29 Sidebar Highlight Theme - Light
+    3.30 Sidebar Highlight Theme - Inverse
+
+
+
+/* -------------------------------
+   3.0 Sidebar
+------------------------------- */
+
+/* 3.1 Sidebar Element */
+
+.sidebar,
+.sidebar-bg {
+    position: absolute;
+    left: 0;
+    top: 56px;
+    background: #3C454D;
+    width: 250px;
+    font-size: 13px;
+    font-weight: 300;
+    z-index: 1010;
+}
+.sidebar-bg {
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+.page-sidebar-fixed .sidebar {
+    position: fixed;
+    bottom: 0;
+}
+@media (max-width: 767px) {
+    .sidebar,
+    .sidebar-bg {
+        top: 0;
+        left: -250px;
+        z-index: 1040;
+    }
+    .sidebar-bg {
+        z-index: 1035;
+    }
+    @keyframes sidebarSlideInLeft {
+        from { left: -250px; }
+        to { left: 0; }
+    }
+    @-webkit-keyframes sidebarSlideInLeft {
+        from { left: -250px; }
+        to { left: 0; }
+    }
+    
+    .page-sidebar-toggled .sidebar {
+        left: 0;
+        animation: sidebarSlideInLeft .2s;
+        -webkit-animation: sidebarSlideInLeft .2s;
+    }
+    .page-sidebar-toggled .sidebar-bg {
+        position: fixed;
+        left: 0;
+        animation: sidebarSlideInLeft .2s;
+        -webkit-animation: sidebarSlideInLeft .2s;
+    }
+}
+.sidebar .nav > li.nav-header {
+    padding: 15px 20px 10px;
+    color: #b1b5b8;
+    font-size: 10px;
+    font-weight: bold;
+}
+.sidebar .nav > li.divider {
+    margin: 15px 0;
+    height: 2px;
+    background: #30373e;
+}
+.sidebar .nav > li.divider + li.nav-header {
+    margin-top: -15px;
+}
+.sidebar .nav > li:before,
+.sidebar .nav > li:after,
+.sidebar .nav > li > a:before,
+.sidebar .nav > li > a:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.sidebar .nav > li > a {
+    padding: 12px 20px;
+    color: #b1b5b8;
+}
+.sidebar .nav > li.expand > a,
+.sidebar .nav > li > a:hover,
+.sidebar .nav > li > a:focus {
+    background: #636a71;
+}
+.sidebar .nav > li > a > i {
+    float: left;
+    width: 36px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+    border-radius: 6px;
+    font-size: 18px;
+    margin: -7px 10px -7px 0;
+    font-size: 14px;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.21);
+    position: relative;
+    overflow: hidden;
+}
+.sidebar .nav > li > a > i:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+}
+.sidebar .nav > li.active > a,
+.sidebar .nav > li.active > a:hover,
+.sidebar .nav > li.active > a:focus {
+    background: #24292e;
+    color: #fff;
+}
+.sidebar .nav > li.active > a > i {
+    color: #0F6655;
+    background: #1abc9c;
+}
+.sidebar .nav > li.active > a > i:after {
+    background: none;
+}
+.sidebar .nav > li > a > .caret.pull-right {
+    margin-top: 10px;
+    margin-right: 2px;
+    color: #b1b5b8;
+}
+.sidebar .has-sub.active > .sub-menu {
+    display: block;
+}
+.sidebar .sub-menu:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 36px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #24292e;
+}
+.sidebar .sub-menu {
+    list-style-type: none;
+    padding: 10px 0 10px 45px;
+    margin: 0;
+    background: #30373e;
+    position: relative;
+    display: none;
+    font-size: 12.5px;
+}
+.sidebar .sub-menu .sub-menu {
+    padding: 0 0 0 30px;
+    background: none;
+}
+.sidebar .sub-menu .sub-menu:before {
+    left: 21px;
+}
+.sidebar .sub-menu > li > a {
+    padding: 5px 20px;
+    display:block;
+    color: #8a8f94;
+    text-decoration: none;
+    position: relative;
+}
+.sidebar .sub-menu > li > a:before {
+    content: '\f111';
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    font-size: 7px;
+    color: #4f555a;
+    top: 50%;
+    margin-top: -6px;
+    margin-left: -10px;
+}
+.sidebar .sub-menu > li > a:hover:before,
+.sidebar .sub-menu > li > a:focus:before {
+    color: #8a8f94;
+}
+.sidebar .sub-menu > li > a:hover,
+.sidebar .sub-menu > li > a:focus,
+.sidebar .sub-menu > li.active > a,
+.sidebar .sub-menu > li.active > a:hover,
+.sidebar .sub-menu > li.active > a:focus,
+.sidebar .nav > li li.has-sub.active > a {
+    color: #fff;
+}
+.sidebar .sub-menu > li.active > a:before {
+    color: #1abc9c;
+}
+.sidebar .nav .sub-menu > li > a .caret {
+    float: right; 
+    margin-top: 7px;
+}
+.sidebar .label.label-theme {
+    background: #1abc9c;
+}
+.sidebar .text-theme {
+    color: #1abc9c;
+}
+
+
+/* 3.2 Sidebar - Minified Version Setting */
+
+.sidebar-minify-btn,
+.sidebar-minify-btn:hover,
+.sidebar-minify-btn:focus {
+    text-align: center;
+    font-size: 14px;
+    z-index: 10;
+    padding: 0 !important;
+    background: #24292e;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: #1abc9c;
+    line-height: 30px;
+    margin: -15px auto;
+}
+.sidebar-minify-btn i {
+    background: none !important;
+    width: inherit !important;
+    height: inherit !important;
+    display: inline !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: inherit !important;
+    color: inherit !important;
+}
+.sidebar-minify-btn i:after {
+    background: none !important;
+}
+.page-sidebar-minified .sidebar {
+    width: 70px;
+    padding: 10px 0;
+    position: absolute;
+}
+.page-sidebar-minified .sidebar-bg {
+    width: 70px;
+}
+@media (max-width: 767px) {
+    .page-sidebar-minified .sidebar {
+        position: fixed;
+    }
+}
+.page-sidebar-minified .sidebar .nav-header,
+.page-sidebar-minified .sidebar .nav-user,
+.page-sidebar-minified .sidebar .nav-project,
+.page-sidebar-minified .sidebar .nav > li > a > span {
+    display: none;
+}
+.page-sidebar-minified .sidebar .slimScrollBar {
+    display: none !important;
+}
+.page-sidebar-minified .sidebar.sidebar-right .slimScrollBar {
+    display: block !important;
+}
+.page-sidebar-minified .sidebar .nav {
+    position: relative;
+    z-index: 10;
+}
+.page-sidebar-minified .sidebar .nav > li > a {
+    padding: 12px 19px 12px 15px;
+}
+.page-sidebar-minified .sidebar .nav > li.has-sub:hover > a,
+.page-sidebar-minified .sidebar .nav > li.has-sub:focus > a {
+    background: #636a71;
+}
+.page-sidebar-minified .sidebar .nav > li.has-sub.active:hover > a,
+.page-sidebar-minified .sidebar .nav > li.has-sub.active:focus > a {
+    background: #24292e;
+}
+.page-sidebar-minified .sidebar .nav li.has-sub {
+    position: relative;
+}
+.page-sidebar-minified .sidebar .nav li.has-sub > .sub-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
+    width: 250px;
+    background: #30373e;
+    padding: 10px 0 10px 30px;
+}
+.page-sidebar-minified .sidebar li.has-sub > .sub-menu {
+    display: none !important;
+}
+.page-sidebar-minified .sidebar .sub-menu:before {
+    left: 25px;
+}
+.page-sidebar-minified .sidebar .sub-menu > li > a:before {
+    margin-left: -6px;
+    margin-top: -5px;
+}
+.page-sidebar-minified .sidebar li.has-sub:hover > .sub-menu,
+.page-sidebar-minified .sidebar li.has-sub:focus > .sub-menu {
+    display: block !important;
+    overflow: visible !important;
+}
+.page-sidebar-minified .sidebar .nav > li > a .caret,
+.page-sidebar-minified .sidebar .nav > li > .sub-menu .caret {
+    position: absolute;
+    right: 0;
+    top: 21px;
+    margin-top: -4px;
+    margin-right: 4px;
+    border-left: 4px dashed;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+.page-sidebar-minified .sidebar .nav > li > .sub-menu .caret {
+    top: 14px;
+    right: 10px;
+}
+.page-sidebar-minified .sidebar .nav > li.has-sub li.has-sub .sub-menu {
+    margin-top: -10px;
+}
+.page-sidebar-minified .sidebar .slimScrollDiv,
+.page-sidebar-minified .sidebar .slimScrollDiv > div {
+    overflow: visible !important;
+}
+.page-sidebar-minified .sidebar.sidebar-right .slimScrollDiv,
+.page-sidebar-minified .sidebar.sidebar-right .slimScrollDiv > div {
+    overflow: hidden !important;
+}
+.page-sidebar-minified .sidebar-minify-btn i:before {
+    content: '\f105';
+}
+.page-sidebar-minified .divider.has-minify-btn {
+    margin: 20px 0 !important;
+}
+
+
+/* 3.3 Sidebar - Right Sidebar Setting */
+
+.page-with-right-sidebar .sidebar,
+.page-with-right-sidebar .sidebar-bg {
+    right: 0;
+    left: auto;
+}
+.page-with-right-sidebar.page-sidebar-minified .sidebar .nav > li > a {
+    padding: 12px 15px 12px 19px;
+}
+.page-with-right-sidebar .sidebar-minify-btn .fa:before {
+    content: '\f105';
+}
+.page-with-right-sidebar.page-sidebar-minified .sidebar-minify-btn .fa:before {
+    content: '\f104';
+}
+.page-with-right-sidebar.page-sidebar-minified .sidebar .nav > li > a .caret, 
+.page-with-right-sidebar.page-sidebar-minified .sidebar .nav > li > .sub-menu .caret {
+    left: 0;
+    right: auto;
+    margin-right: 0;
+    margin-left: 4px;
+    border-left: 4px solid transparent;
+    border-right: 4px dashed;
+}
+.page-with-right-sidebar.page-sidebar-minified .sidebar .nav li.has-sub > .sub-menu {
+    left: auto;
+    right: 100%;
+}
+.page-with-right-sidebar.page-sidebar-minified .sidebar .sub-menu:before {
+    left: auto;
+    right: 25px;
+}
+.page-with-right-sidebar.page-sidebar-minified .sidebar .nav li.has-sub > .sub-menu {
+    padding: 10px 30px 10px 0;
+}
+.page-with-right-sidebar.page-sidebar-minified .sidebar .sub-menu > li > a:before {
+    left: auto;
+    right: 0;
+    margin-left: 0;
+    margin-right: -6px;
+}
+@media (max-width: 767px) {
+    .page-with-right-sidebar .sidebar,
+    .page-with-right-sidebar .sidebar-bg {
+        left: auto;
+        right: -250px;
+    }
+    @keyframes sidebarSlideInRight {
+        from { right: -250px; }
+        to { right: 0; }
+    }
+    @-webkit-keyframes sidebarSlideInRight {
+        from { right: -250px; }
+        to { right: 0; }
+    }
+    .page-with-right-sidebar.page-sidebar-toggled .sidebar,
+    .page-with-right-sidebar.page-sidebar-toggled .sidebar-bg {
+        right: 0;
+        animation: sidebarSlideInRight .2s;
+        -webkit-animation: sidebarSlideInRight .2s;
+    }
+}
+
+
+/* 3.4 Sidebar - Page with Two Sidebar Setting */
+
+.page-with-two-sidebar.page-sidebar-fixed .sidebar.sidebar-right {
+    position: fixed;
+}
+.page-with-two-sidebar .sidebar.sidebar-right,
+.page-with-two-sidebar .sidebar-bg.sidebar-right {
+    right: -250px;
+    left: auto;
+}
+.page-with-two-sidebar.page-sidebar-minified .sidebar.sidebar-right .nav-header,
+.page-with-two-sidebar.page-sidebar-minified .sidebar.sidebar-right .nav-user,
+.page-with-two-sidebar.page-sidebar-minified .sidebar.sidebar-right .nav-project {
+    display: block;
+}
+@media (max-width: 767px) {
+    @keyframes mobileSidebarSlideInRight {
+        from { right: -250px; }
+        to { right: 0; }
+    }
+    @-webkit-keyframes mobileSidebarSlideInRight {
+        from { right: -250px; }
+        to { right: 0; }
+    }
+    .page-with-two-sidebar .sidebar.sidebar-right,
+    .page-with-two-sidebar .sidebar-bg.sidebar-right {
+        right: -250px;
+        -webkit-animation: none;
+        animation: none;
+    }
+    .page-with-two-sidebar.page-right-sidebar-toggled .sidebar.sidebar-right,
+    .page-with-two-sidebar.page-right-sidebar-toggled .sidebar-bg.sidebar-right {
+        right: 0;
+        left: auto;
+        -webkit-animation: mobileSidebarSlideInRight .2s;
+        animation: mobileSidebarSlideInRight .2s;
+    }
+}
+.page-with-two-sidebar.page-sidebar-minified .sidebar.sidebar-right,
+.page-with-two-sidebar.page-sidebar-minified .sidebar-bg.sidebar-right {
+    width: 250px;
+    padding: 0;
+}
+.page-with-two-sidebar.page-right-sidebar-toggled .sidebar.sidebar-right,
+.page-with-two-sidebar.page-right-sidebar-toggled .sidebar-bg.sidebar-right {
+    right: 0;
+}
+
+
+/* 3.5 Sidebar - Page with Top Menu Setting */
+
+.page-with-top-menu .sidebar,
+.page-with-top-menu .sidebar-bg {
+    top: 100px;
+}
+@media (max-width: 767px) {
+    .page-with-top-menu .sidebar,
+    .page-with-top-menu .sidebar-bg {
+        top: 0;
+    }
+}
+
+
+/* 3.6 Sidebar - Badge & Label Setting */
+
+.sidebar .badge {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size: 10px;
+}
+.sidebar a:hover .badge,
+.sidebar a:focus .badge {
+    background: #8a8f94;
+}
+.sidebar .badge.pull-right,
+.sidebar .badge.pull-left {
+    padding-top: 4px;
+    padding-bottom: 3px;
+}
+
+
+/* 3.7 Sidebar Widget - User Profile */
+
+.sidebar .nav-user {
+    padding: 15px;
+    background: #30373e;
+}
+.sidebar .nav-user .image {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+}
+.sidebar .nav-user .image img {
+    max-width: 100%;
+}
+.sidebar .nav-user .image + .info {
+    margin-left: 50px;
+}
+.sidebar .nav-user .info .name,
+.sidebar .nav-user .info .name > a,
+.sidebar .nav-user .info .name > a:hover,
+.sidebar .nav-user .info .name > a:focus {
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    display: block;
+    font-size: 14px;
+}
+.sidebar .nav-user .info .position {
+    color: #b1b5b8;
+    font-size: 12px;
+}
+
+
+/* 3.8 Sidebar Widget - Project */
+
+.sidebar .nav-project .project-list {
+    list-style-type: none;
+    margin: 0 0 15px;
+    padding: 0;
+}
+.sidebar .nav-project .project-list > li {
+    padding: 0 20px;
+}
+.sidebar .nav-project .project-list > li + li {
+    margin-top: 10px;
+}
+.sidebar .nav-project .project-list > li:before,
+.sidebar .nav-project .project-list > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.sidebar .nav-project .project-list > li a {
+    text-decoration: none;
+}
+.sidebar .nav-project .project-list > li .icon {
+    float: left;
+    width: 20px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+}
+.sidebar .nav-project .project-list > li .info {
+    margin-left: 30px;
+}
+.sidebar .nav-project .project-list > li .title {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.sidebar .nav-project .project-list > li .title,
+.sidebar .nav-project .project-list > li .title a,
+.sidebar .nav-project .project-list > li .title a:hover,
+.sidebar .nav-project .project-list > li .title a:focus {
+    color: #fff;
+}
+.sidebar .nav-project .project-list > li .desc {
+    font-size: 11px;
+    color: #8a8f94;
+}
+.sidebar .nav-project .project-list > li .progress {
+    height: 5px;
+    margin-bottom: 5px;
+    background: #30373e;
+}
+
+
+/* 3.9 Sidebar Widget - Tabs */
+
+.sidebar .nav.nav-tabs {
+    display: table;
+    width: 100%;
+    border: none;
+}
+.sidebar .tab-content {
+    background: none;
+    padding: 0;
+}
+.sidebar .nav.nav-tabs > li {
+    display: table-cell;
+    float: none;
+    margin: 0;
+    border: none;
+}
+.sidebar .nav.nav-tabs > li a {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    line-height: 36px;
+    font-size: 12px;
+    text-align: center;
+    background: #30373e;
+}
+.sidebar .nav.nav-tabs > li a:hover,
+.sidebar .nav.nav-tabs > li a:focus {
+    background: #636a71;
+}
+.sidebar .nav.nav-tabs > li:after,
+.sidebar .nav.nav-tabs > li:hover:after,
+.sidebar .nav.nav-tabs > li:focus:after,
+.sidebar .nav.nav-tabs > li.active:after, 
+.sidebar .nav.nav-tabs > li.active:hover:after, 
+.sidebar .nav.nav-tabs > li.active:focus:after {
+    background: none;
+}
+.sidebar .nav.nav-tabs > li.active a {
+    background: none !important;
+}
+
+
+/* 3.10 Sidebar Widget - Calendar */
+
+.sidebar .calendar {
+    background: none;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.sidebar .calendar .table {
+    background: none !important;
+}
+.sidebar .calendar .table > thead > tr > th, 
+.sidebar .calendar .table > tbody > tr > td {
+    border: none !important;
+}
+.sidebar .calendar .week_days td {
+    background: none;
+    color: #17B6A4 !important;
+}
+.sidebar .calendar .week_days td,
+.sidebar .calendar .visualmonthyear,
+.sidebar .calendar a {
+    color: #b1b5b8;
+    text-shadow: none;
+}
+.sidebar .calendar .table td {
+    border-color: transparent;
+    font-weight: 300;
+}
+.sidebar .calendar .table.header td.year {
+    width: 100%;
+}
+.sidebar .calendar .event {
+    background: #272C31;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.sidebar .calendar .event a {
+    color: #fff;
+}
+.sidebar .calendar .icon-arrow-right,
+.sidebar .calendar .icon-arrow-left {
+    display: block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    cursor: pointer;
+    width: 25px;
+}
+.sidebar .calendar .icon-arrow-right:hover,
+.sidebar .calendar .icon-arrow-right:focus,
+.sidebar .calendar .icon-arrow-left:hover,
+.sidebar .calendar .icon-arrow-left:focus {
+    color: #fff;
+}
+.sidebar .calendar .icon-arrow-right:before {
+    content: '\f061';
+}
+.sidebar .calendar .icon-arrow-left:before {
+    content: '\f060';
+}
+.sidebar .nav > li.nav-date {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+.sidebar .nav > li.nav-date + .divider {
+    margin-top: 0;
+}
+
+
+/* 3.11 Sidebar Widget - Notification List */
+
+.sidebar .notification-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 20px;
+}
+.sidebar .notification-list > li {
+    padding: 0;
+}
+.sidebar .notification-list > li + li {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #4f575e;
+}
+.sidebar .notification-list > li:before,
+.sidebar .notification-list > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.sidebar .notification-list > li .media {
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+    font-size: 14px;
+}
+.sidebar .notification-list > li .media img {
+    max-width: 100%;
+    display: block;
+}
+.sidebar .notification-list > li .info {
+    margin-left: 40px;
+}
+.sidebar .notification-list > li .info .title,
+.sidebar .notification-list > li .info .title a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+.sidebar .notification-list > li .info .title,
+.sidebar .notification-list > li .info .title a,
+.sidebar .notification-list > li .info .time,
+.sidebar .notification-list > li .info .desc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sidebar .notification-list > li .info .time,
+.sidebar .notification-list > li .info .desc {
+    font-size: 11px;
+    color: #b1b5b8;
+}
+
+
+/* 3.12 Sidebar Widget - Stock List */
+
+.sidebar .stock-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 11px;
+}
+.sidebar .stock-list > li:before,
+.sidebar .stock-list > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.sidebar .stock-list > li {
+    padding: 10px 0;
+}
+.sidebar .stock-list > li + li {
+    border-top: 1px solid #4f575e;
+}
+.sidebar .stock-list > li .name,
+.sidebar .stock-list > li .value,
+.sidebar .stock-list > li .percentage {
+    float: left;
+}
+.sidebar .stock-list > li div + div {
+    padding-left: 10px;
+}
+.sidebar .stock-list > li .name {
+    width: 35%;
+    color: #fff;
+}
+.sidebar .stock-list > li .value {
+    width: 35%;
+    text-align: right;
+    color: #b1b5b8;
+}
+.sidebar .stock-list > li .percentage {
+    width: 30%;
+    text-align: center;
+}
+.sidebar .stock-list > li .percentage .label {
+    font-weight: 300;
+    font-size: 11px;
+    display: block;
+    padding: 3px 0;
+    margin: -3px 0;
+    line-height: 15px;
+}
+
+
+/* 3.13 Sidebar Widget - Latest Post */
+
+.sidebar .nav-post {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 20px;
+}
+.sidebar .nav-post > li {
+    padding: 0;
+}
+.sidebar .nav-post > li + li {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #4f575e;
+}
+.sidebar .nav-post > li:before,
+.sidebar .nav-post > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.sidebar .nav-post > li .image {
+    float: left;
+    width: 46px;
+    height: 32px;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.sidebar .nav-post > li .image img {
+    max-height: 100%;
+    display: block;
+}
+.sidebar .nav-post > li .info {
+    margin-left: 56px;
+}
+.sidebar .nav-post > li .info .title {
+    font-size: 12px;
+    color: #fff;
+}
+.sidebar .nav-post > li .info .time,
+.sidebar .nav-post > li .info .desc {
+    color: #b1b5b8;
+    font-size: 11px;
+}
+.sidebar .nav-post > li .info .title,
+.sidebar .nav-post > li .info .time,
+.sidebar .nav-post > li .info .desc {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/* 3.14 Sidebar Theme - Light */
+
+.sidebar.sidebar-light,
+.sidebar-bg.sidebar-light {
+    background: #fff;
+}
+.sidebar.sidebar-light .nav-user,
+.sidebar.sidebar-light .sub-menu,
+.page-sidebar-minified .sidebar.sidebar-light li.has-sub:hover > .sub-menu, 
+.page-sidebar-minified .sidebar.sidebar-light li.has-sub:focus > .sub-menu,
+.sidebar.sidebar-light .nav > li.divider,
+.sidebar.sidebar-light .sidebar-minify-btn, 
+.sidebar.sidebar-light .sidebar-minify-btn:hover, 
+.sidebar.sidebar-light .sidebar-minify-btn:focus,
+.sidebar.sidebar-light .nav-project .project-list > li .progress {
+    background: #eff0f1;
+}
+.sidebar.sidebar-light .nav-user .info .name, 
+.sidebar.sidebar-light .nav-user .info .name > a, 
+.sidebar.sidebar-light .nav-user .info .name > a:hover, 
+.sidebar.sidebar-light .nav-user .info .name > a:focus {
+    color: #323539;
+}
+.sidebar.sidebar-light .nav-user .position {
+    color: #636a71;
+}
+.sidebar.sidebar-light .nav > li > a,
+.sidebar.sidebar-light .nav > li > a > i,
+.sidebar.sidebar-light .nav > li.nav-header,
+.sidebar.sidebar-light .sub-menu > li.active > a,
+.sidebar.sidebar-light .sub-menu > li.active > a:before,
+.sidebar.sidebar-light .sub-menu > li > a:hover,
+.sidebar.sidebar-light .sub-menu > li > a:focus,
+.sidebar.sidebar-light .sub-menu > li > a:hover:before,
+.sidebar.sidebar-light .sub-menu > li > a:focus:before,
+.sidebar.sidebar-light .nav-project .project-list > li .title, 
+.sidebar.sidebar-light .nav-project .project-list > li .title a, 
+.sidebar.sidebar-light .nav-project .project-list > li .title a:hover, 
+.sidebar.sidebar-light .nav-project .project-list > li .title a:focus {
+    color: #3C454D;
+}
+.sidebar.sidebar-light .nav > li > a > i {
+    background: url(../img/transparent/black-0.2.png);
+    background: rgba(70, 78, 86, 0.15);
+}
+.sidebar.sidebar-light .nav > li > a > i:after {
+    background: url(../img/transparent/black-0.2.png);
+    background: rgba(0, 0, 0, 0.15);
+}
+.sidebar.sidebar-light .nav > li.expand > a, 
+.sidebar.sidebar-light .nav > li > a:hover,
+.sidebar.sidebar-light .nav > li > a:focus,
+.page-sidebar-minified .sidebar.sidebar-light .nav > li.has-sub:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-light .nav > li.has-sub:focus > a {
+    background: #d8dadb;
+}
+.sidebar.sidebar-light .nav > li.active > a i {
+    color: #0F6655;
+    background: #1abc9c;
+}
+.sidebar.sidebar-light .nav > li.active > a, 
+.sidebar.sidebar-light .nav > li.active > a:hover, 
+.sidebar.sidebar-light .nav > li.active > a:focus,
+.page-sidebar-minified .sidebar.sidebar-light .nav > li.has-sub.active:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-light .nav > li.has-sub.active:focus > a {
+    background: #464e56;
+    color: #fff;
+}
+.sidebar.sidebar-light .slimScrollBar {
+    background: #464e56 !important;
+}
+.sidebar.sidebar-light .sub-menu:before {
+    background: #c4c7c9;
+}
+.sidebar.sidebar-light .sub-menu > li > a,
+.sidebar.sidebar-light .sub-menu > li > a:before {
+    color: #9da2a6;
+}
+.sidebar.sidebar-light .nav.nav-tabs > li a,
+.sidebar.sidebar-light .nav.nav-tabs > li.active a {
+    color: #3C454D;
+    font-weight: normal;
+}
+.sidebar.sidebar-light .nav.nav-tabs > li a,
+.sidebar.sidebar-light .nav.nav-tabs > li a:hover,
+.sidebar.sidebar-light .nav.nav-tabs > li a:focus {
+    background: url(../img/transparent/black-0.2.png);
+    background: rgba(0,0,0,0.15);
+}
+.sidebar.sidebar-light .nav.nav-tabs > li.active a,
+.sidebar.sidebar-light .nav.nav-tabs > li.active a:hover,
+.sidebar.sidebar-light .nav.nav-tabs > li.active a:focus {
+    background: none;
+}
+.sidebar.sidebar-light .stock-list > li .value,
+.sidebar.sidebar-light .calendar .week_days td, 
+.sidebar.sidebar-light .calendar .visualmonthyear, 
+.sidebar.sidebar-light .calendar a,
+.sidebar.sidebar-light .calendar .table {
+    color: #3C454D;
+}
+.sidebar.sidebar-light .calendar .week_days td {
+    color: #3C454D !important;
+    font-weight: normal;
+}
+.sidebar.sidebar-light .calendar .event {
+    background: url(../img/transparent/black-0.2.png) !important;
+    background: rgba(0,0,0,0.15) !important;
+}
+.sidebar.sidebar-light .stock-list > li + li,
+.sidebar.sidebar-light .nav-post > li + li,
+.sidebar.sidebar-light .notification-list > li + li {
+    border-top-color: #eff0f1;
+}
+.sidebar.sidebar-light .nav-post > li .info .time, 
+.sidebar.sidebar-light .nav-post > li .info .desc,
+.sidebar.sidebar-light .notification-list > li .info .time, 
+.sidebar.sidebar-light .notification-list > li .info .desc {
+    color: #000;
+    color: rgba(0,0,0,0.5);
+    font-weight: normal;
+}
+.sidebar.sidebar-light .nav > li.nav-date,
+.sidebar.sidebar-light .nav-post > li .info .title,
+.sidebar.sidebar-light .stock-list > li .name,
+.sidebar.sidebar-light .notification-list > li .info .title, 
+.sidebar.sidebar-light .notification-list > li .info .title a,
+.sidebar.sidebar-light .notification-list > li .media {
+    color: #3C454D;
+}
+
+
+/* 3.15 Sidebar Theme - Success */
+
+.sidebar.sidebar-success,
+.sidebar-bg.sidebar-success {
+    background: #17B6A4;
+}
+.sidebar.sidebar-success .nav-user,
+.sidebar.sidebar-success .sub-menu,
+.page-sidebar-minified .sidebar.sidebar-success li.has-sub:hover > .sub-menu, 
+.page-sidebar-minified .sidebar.sidebar-success li.has-sub:focus > .sub-menu,
+.sidebar.sidebar-success .nav > li.divider,
+.sidebar.sidebar-success .sidebar-minify-btn, 
+.sidebar.sidebar-success .sidebar-minify-btn:hover, 
+.sidebar.sidebar-success .sidebar-minify-btn:focus,
+.sidebar.sidebar-success .nav-project .project-list > li .progress {
+    background: #129283;
+}
+.sidebar.sidebar-success .nav-user .info .name, 
+.sidebar.sidebar-success .nav-user .info .name > a, 
+.sidebar.sidebar-success .nav-user .info .name > a:hover, 
+.sidebar.sidebar-success .nav-user .info .name > a:focus,
+.sidebar.sidebar-success .nav > li > a > .caret.pull-right {
+    color: #fff;
+}
+.sidebar.sidebar-success .nav > li.nav-header,
+.sidebar.sidebar-success .nav-user .position {
+    color: #b9e9e4;
+}
+.sidebar.sidebar-success .nav > li > a,
+.sidebar.sidebar-success .nav-project .project-list > li .title, 
+.sidebar.sidebar-success .nav-project .project-list > li .title a, 
+.sidebar.sidebar-success .nav-project .project-list > li .title a:hover, 
+.sidebar.sidebar-success .nav-project .project-list > li .title a:focus,
+.sidebar.sidebar-success .nav > li > a > i,
+.sidebar.sidebar-success .sub-menu > li.active > a,
+.sidebar.sidebar-success .sub-menu > li.active > a:before,
+.sidebar.sidebar-success .sub-menu > li > a:hover,
+.sidebar.sidebar-success .sub-menu > li > a:focus,
+.sidebar.sidebar-success .sub-menu > li > a:hover:before,
+.sidebar.sidebar-success .sub-menu > li > a:focus:before,
+.sidebar.sidebar-success .nav-project .project-list > li .desc {
+    color: #fff;
+}
+.sidebar.sidebar-success .nav-project .project-list > li .icon i {
+    color: #fff !important;
+}
+.sidebar.sidebar-success .nav > li.expand > a, 
+.sidebar.sidebar-success .nav > li > a:hover,
+.sidebar.sidebar-success .nav > li > a:focus,
+.page-sidebar-minified .sidebar.sidebar-success .nav > li.has-sub:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-success .nav > li.has-sub:focus > a {
+    background: #45c5b6;
+}
+.sidebar.sidebar-success .nav > li.active > a i,
+.sidebar.sidebar-success .badge,
+.sidebar.sidebar-success a:hover .badge, 
+.sidebar.sidebar-success a:focus .badge,
+.sidebar.sidebar-success .label,
+.sidebar.sidebar-success a:hover .label, 
+.sidebar.sidebar-success a:focus .label {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-success .text-theme {
+    color: #000;
+    color: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-success .nav > li.active > a, 
+.sidebar.sidebar-success .nav > li.active > a:hover, 
+.sidebar.sidebar-success .nav > li.active > a:focus,
+.page-sidebar-minified .sidebar.sidebar-success .nav > li.has-sub.active:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-success .nav > li.has-sub.active:focus > a {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+.sidebar.sidebar-success .sub-menu:before {
+    background: #108073;
+}
+.sidebar.sidebar-success .progress .progress-bar {
+    background: #fff;
+}
+.sidebar.sidebar-success .sub-menu > li > a,
+.sidebar.sidebar-success .sub-menu > li > a:before {
+    color: #8bdad1;
+}
+.sidebar.sidebar-success .stock-list > li .percentage .label {
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.25);
+}
+.sidebar.sidebar-success .nav.nav-tabs > li a {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+.sidebar.sidebar-success .nav.nav-tabs > li a:focus {
+    background: none;
+}
+.sidebar.sidebar-success .stock-list > li .value,
+.sidebar.sidebar-success .calendar .week_days td, 
+.sidebar.sidebar-success .calendar .visualmonthyear, 
+.sidebar.sidebar-success .calendar a,
+.sidebar.sidebar-success .calendar .table {
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+}
+.sidebar.sidebar-success .calendar .event {
+    background: rgba(0,0,0,0.25) !important;
+}
+.sidebar.sidebar-success .calendar .week_days td {
+    color: #000 !important;
+    color: rgba(0,0,0,0.4) !important;
+    font-weight: bold;
+}
+.sidebar.sidebar-success .stock-list > li + li,
+.sidebar.sidebar-success .nav-post > li + li,
+.sidebar.sidebar-success .notification-list > li + li {
+    border-top-color: rgba(255,255,255,0.3);
+}
+.sidebar.sidebar-success .nav-post > li .info .time, 
+.sidebar.sidebar-success .nav-post > li .info .desc,
+.sidebar.sidebar-success .notification-list > li .info .time, 
+.sidebar.sidebar-success .notification-list > li .info .desc {
+    color: #fff;
+    color: rgba(255,255,255,0.6);
+}
+.sidebar.sidebar-success .notification-list > li .media {
+    color: #fff;
+}
+
+
+/* 3.16 Sidebar Theme - Lime */
+
+.sidebar.sidebar-lime,
+.sidebar-bg.sidebar-lime {
+    background: #65C56F;
+}
+.sidebar.sidebar-lime .nav-user,
+.sidebar.sidebar-lime .sub-menu,
+.page-sidebar-minified .sidebar.sidebar-lime li.has-sub:hover > .sub-menu, 
+.page-sidebar-minified .sidebar.sidebar-lime li.has-sub:focus > .sub-menu,
+.sidebar.sidebar-lime .nav > li.divider,
+.sidebar.sidebar-lime .sidebar-minify-btn, 
+.sidebar.sidebar-lime .sidebar-minify-btn:hover, 
+.sidebar.sidebar-lime .sidebar-minify-btn:focus,
+.sidebar.sidebar-lime .nav-project .project-list > li .progress {
+    background: #519e59;
+}
+.sidebar.sidebar-lime .nav-user .info .name, 
+.sidebar.sidebar-lime .nav-user .info .name > a, 
+.sidebar.sidebar-lime .nav-user .info .name > a:hover, 
+.sidebar.sidebar-lime .nav-user .info .name > a:focus,
+.sidebar.sidebar-lime .nav > li > a > .caret.pull-right {
+    color: #fff;
+}
+.sidebar.sidebar-lime .nav > li.nav-header,
+.sidebar.sidebar-lime .nav-user .position {
+    color: #d0edd4;
+}
+.sidebar.sidebar-lime .nav > li > a,
+.sidebar.sidebar-lime .nav-project .project-list > li .title, 
+.sidebar.sidebar-lime .nav-project .project-list > li .title a, 
+.sidebar.sidebar-lime .nav-project .project-list > li .title a:hover, 
+.sidebar.sidebar-lime .nav-project .project-list > li .title a:focus,
+.sidebar.sidebar-lime .nav > li > a > i,
+.sidebar.sidebar-lime .sub-menu > li.active > a,
+.sidebar.sidebar-lime .sub-menu > li.active > a:before,
+.sidebar.sidebar-lime .sub-menu > li > a:hover,
+.sidebar.sidebar-lime .sub-menu > li > a:focus,
+.sidebar.sidebar-lime .sub-menu > li > a:hover:before,
+.sidebar.sidebar-lime .sub-menu > li > a:focus:before,
+.sidebar.sidebar-lime .nav-project .project-list > li .desc {
+    color: #fff;
+}
+.sidebar.sidebar-lime .nav-project .project-list > li .icon i {
+    color: #fff !important;
+}
+.sidebar.sidebar-lime .nav > li.expand > a, 
+.sidebar.sidebar-lime .nav > li > a:hover,
+.sidebar.sidebar-lime .nav > li > a:focus,
+.page-sidebar-minified .sidebar.sidebar-lime .nav > li.has-sub:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-lime .nav > li.has-sub:focus > a {
+    background: #84d18c;
+}
+.sidebar.sidebar-lime .nav > li.active > a i,
+.sidebar.sidebar-lime .badge,
+.sidebar.sidebar-lime a:hover .badge, 
+.sidebar.sidebar-lime a:focus .badge,
+.sidebar.sidebar-lime .label,
+.sidebar.sidebar-lime a:hover .label, 
+.sidebar.sidebar-lime a:focus .label {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-lime .text-theme {
+    color: #000;
+    color: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-lime .nav > li.active > a, 
+.sidebar.sidebar-lime .nav > li.active > a:hover, 
+.sidebar.sidebar-lime .nav > li.active > a:focus,
+.page-sidebar-minified .sidebar.sidebar-lime .nav > li.has-sub.active:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-lime .nav > li.has-sub.active:focus > a {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+.sidebar.sidebar-lime .sub-menu:before {
+    background: #478a4e;
+}
+.sidebar.sidebar-lime .progress .progress-bar {
+    background: #fff;
+}
+.sidebar.sidebar-lime .sub-menu > li > a,
+.sidebar.sidebar-lime .sub-menu > li > a:before {
+    color: #b2e2b7;
+}
+.sidebar.sidebar-lime .stock-list > li .percentage .label {
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.25);
+}
+.sidebar.sidebar-lime .nav.nav-tabs > li a {
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.5);
+}
+.sidebar.sidebar-lime .nav.nav-tabs > li a:focus {
+    background: none;
+}
+.sidebar.sidebar-lime .stock-list > li .value,
+.sidebar.sidebar-lime .calendar .week_days td, 
+.sidebar.sidebar-lime .calendar .visualmonthyear, 
+.sidebar.sidebar-lime .calendar a,
+.sidebar.sidebar-lime .calendar .table {
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+}
+.sidebar.sidebar-lime .calendar .week_days td {
+    color: #000;
+    color: rgba(0,0,0,0.4) !important;
+    font-weight: bold;
+}
+.sidebar.sidebar-lime .calendar .event {
+    background: url(../img/transparent/black-0.3.png) !important;
+    background: rgba(0,0,0,0.25) !important;
+}
+.sidebar.sidebar-lime .stock-list > li + li,
+.sidebar.sidebar-lime .nav-post > li + li,
+.sidebar.sidebar-lime .notification-list > li + li {
+    border-top-color: rgba(255,255,255,0.3);
+}
+.sidebar.sidebar-lime .nav-post > li .info .time, 
+.sidebar.sidebar-lime .nav-post > li .info .desc,
+.sidebar.sidebar-lime .notification-list > li .info .time, 
+.sidebar.sidebar-lime .notification-list > li .info .desc {
+    color: #fff;
+    color: rgba(255,255,255,0.6);
+}
+.sidebar.sidebar-lime .notification-list > li .media {
+    color: #fff;
+}
+
+
+/* 3.17 Sidebar Theme - Warning */
+
+.sidebar.sidebar-warning,
+.sidebar-bg.sidebar-warning {
+    background: #fcaf41;
+}
+.sidebar.sidebar-warning .nav-user,
+.sidebar.sidebar-warning .sub-menu,
+.page-sidebar-minified .sidebar.sidebar-warning li.has-sub:hover > .sub-menu, 
+.page-sidebar-minified .sidebar.sidebar-warning li.has-sub:focus > .sub-menu,
+.sidebar.sidebar-warning .nav > li.divider,
+.sidebar.sidebar-warning .sidebar-minify-btn, 
+.sidebar.sidebar-warning .sidebar-minify-btn:hover, 
+.sidebar.sidebar-warning .sidebar-minify-btn:focus,
+.sidebar.sidebar-warning .nav-project .project-list > li .progress {
+    background: #ca8c34;
+}
+.sidebar.sidebar-warning .nav-user .info .name, 
+.sidebar.sidebar-warning .nav-user .info .name > a, 
+.sidebar.sidebar-warning .nav-user .info .name > a:hover, 
+.sidebar.sidebar-warning .nav-user .info .name > a:focus,
+.sidebar.sidebar-warning .nav > li > a > .caret.pull-right {
+    color: #fff;
+}
+.sidebar.sidebar-warning .nav > li.nav-header,
+.sidebar.sidebar-warning .nav-user .position {
+    color: #fee7c6;
+}
+.sidebar.sidebar-warning .nav > li > a,
+.sidebar.sidebar-warning .nav-project .project-list > li .title, 
+.sidebar.sidebar-warning .nav-project .project-list > li .title a, 
+.sidebar.sidebar-warning .nav-project .project-list > li .title a:hover, 
+.sidebar.sidebar-warning .nav-project .project-list > li .title a:focus,
+.sidebar.sidebar-warning .nav > li > a > i,
+.sidebar.sidebar-warning .sub-menu > li.active > a,
+.sidebar.sidebar-warning .sub-menu > li.active > a:before,
+.sidebar.sidebar-warning .sub-menu > li > a:hover,
+.sidebar.sidebar-warning .sub-menu > li > a:focus,
+.sidebar.sidebar-warning .sub-menu > li > a:hover:before,
+.sidebar.sidebar-warning .sub-menu > li > a:focus:before,
+.sidebar.sidebar-warning .nav-project .project-list > li .desc {
+    color: #fff;
+}
+.sidebar.sidebar-warning .nav-project .project-list > li .icon i {
+    color: #fff !important;
+}
+.sidebar.sidebar-warning .nav > li.expand > a, 
+.sidebar.sidebar-warning .nav > li > a:hover,
+.sidebar.sidebar-warning .nav > li > a:focus,
+.page-sidebar-minified .sidebar.sidebar-warning .nav > li.has-sub:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-warning .nav > li.has-sub:focus > a {
+    background: #fdbf67;
+}
+.sidebar.sidebar-warning .nav > li.active > a i,
+.sidebar.sidebar-warning .badge,
+.sidebar.sidebar-warning a:hover .badge, 
+.sidebar.sidebar-warning a:focus .badge,
+.sidebar.sidebar-warning .label,
+.sidebar.sidebar-warning a:hover .label, 
+.sidebar.sidebar-warning a:focus .label {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-warning .text-theme {
+    color: #000;
+    color: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-warning .nav > li.active > a, 
+.sidebar.sidebar-warning .nav > li.active > a:hover, 
+.sidebar.sidebar-warning .nav > li.active > a:focus,
+.page-sidebar-minified .sidebar.sidebar-warning .nav > li.has-sub.active:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-warning .nav > li.has-sub.active:focus > a {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+.sidebar.sidebar-warning .sub-menu:before {
+    background: #b17b2e;
+}
+.sidebar.sidebar-warning .progress .progress-bar {
+    background: #fff;
+}
+.sidebar.sidebar-warning .sub-menu > li > a,
+.sidebar.sidebar-warning .sub-menu > li > a:before {
+    color: #fdd7a0;
+}
+.sidebar.sidebar-warning .stock-list > li .percentage .label {
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.25);
+}
+.sidebar.sidebar-warning .nav.nav-tabs > li a {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+.sidebar.sidebar-warning .nav.nav-tabs > li a:focus {
+    background: none;
+}
+.sidebar.sidebar-warning .stock-list > li .value,
+.sidebar.sidebar-warning .calendar .week_days td, 
+.sidebar.sidebar-warning .calendar .visualmonthyear, 
+.sidebar.sidebar-warning .calendar a,
+.sidebar.sidebar-warning .calendar .table {
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+}
+.sidebar.sidebar-warning .calendar .week_days td {
+    color: #000;
+    color: rgba(0,0,0,0.4) !important;
+    font-weight: bold;
+}
+.sidebar.sidebar-warning .calendar .event {
+    background: url(../img/transparent/black-0.3.png) !important;
+    background: rgba(0,0,0,0.25) !important;
+}
+.sidebar.sidebar-warning .stock-list > li + li,
+.sidebar.sidebar-warning .nav-post > li + li,
+.sidebar.sidebar-warning .notification-list > li + li {
+    border-top-color: rgba(255,255,255,0.3);
+}
+.sidebar.sidebar-warning .nav-post > li .info .time, 
+.sidebar.sidebar-warning .nav-post > li .info .desc,
+.sidebar.sidebar-warning .notification-list > li .info .time, 
+.sidebar.sidebar-warning .notification-list > li .info .desc {
+    color: #fff;
+    color: rgba(255,255,255,0.6);
+}
+.sidebar.sidebar-warning .notification-list > li .media {
+    color: #fff;
+}
+
+
+/* 3.18 Sidebar Theme - Danger */
+
+.sidebar.sidebar-danger,
+.sidebar-bg.sidebar-danger {
+    background: #F04B46;
+}
+.sidebar.sidebar-danger .nav-user,
+.sidebar.sidebar-danger .sub-menu,
+.page-sidebar-minified .sidebar.sidebar-danger li.has-sub:hover > .sub-menu, 
+.page-sidebar-minified .sidebar.sidebar-danger li.has-sub:focus > .sub-menu,
+.sidebar.sidebar-danger .nav > li.divider,
+.sidebar.sidebar-danger .sidebar-minify-btn, 
+.sidebar.sidebar-danger .sidebar-minify-btn:hover, 
+.sidebar.sidebar-danger .sidebar-minify-btn:focus,
+.sidebar.sidebar-danger .nav-project .project-list > li .progress {
+    background: #c03c38;
+}
+.sidebar.sidebar-danger .nav-user .info .name, 
+.sidebar.sidebar-danger .nav-user .info .name > a, 
+.sidebar.sidebar-danger .nav-user .info .name > a:hover, 
+.sidebar.sidebar-danger .nav-user .info .name > a:focus,
+.sidebar.sidebar-danger .nav > li > a > .caret.pull-right {
+    color: #fff;
+}
+.sidebar.sidebar-danger .nav > li.nav-header,
+.sidebar.sidebar-danger .nav-user .position {
+    color: #fac9c7;
+}
+.sidebar.sidebar-danger .nav > li > a,
+.sidebar.sidebar-danger .nav-project .project-list > li .title, 
+.sidebar.sidebar-danger .nav-project .project-list > li .title a, 
+.sidebar.sidebar-danger .nav-project .project-list > li .title a:hover, 
+.sidebar.sidebar-danger .nav-project .project-list > li .title a:focus,
+.sidebar.sidebar-danger .nav > li > a > i,
+.sidebar.sidebar-danger .sub-menu > li.active > a,
+.sidebar.sidebar-danger .sub-menu > li.active > a:before,
+.sidebar.sidebar-danger .sub-menu > li > a:hover,
+.sidebar.sidebar-danger .sub-menu > li > a:focus,
+.sidebar.sidebar-danger .sub-menu > li > a:hover:before,
+.sidebar.sidebar-danger .sub-menu > li > a:focus:before,
+.sidebar.sidebar-danger .nav-project .project-list > li .desc {
+    color: #fff;
+}
+.sidebar.sidebar-danger .nav-project .project-list > li .icon i {
+    color: #fff !important;
+}
+.sidebar.sidebar-danger .nav > li.expand > a, 
+.sidebar.sidebar-danger .nav > li > a:hover,
+.sidebar.sidebar-danger .nav > li > a:focus,
+.page-sidebar-minified .sidebar.sidebar-danger .nav > li.has-sub:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-danger .nav > li.has-sub:focus > a {
+    background: #f36f6b;
+}
+.sidebar.sidebar-danger .nav > li.active > a i,
+.sidebar.sidebar-danger .badge,
+.sidebar.sidebar-danger a:hover .badge, 
+.sidebar.sidebar-danger a:focus .badge,
+.sidebar.sidebar-danger .label,
+.sidebar.sidebar-danger a:hover .label, 
+.sidebar.sidebar-danger a:focus .label {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-danger .text-theme {
+    color: #000;
+    color: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-danger .nav > li.active > a, 
+.sidebar.sidebar-danger .nav > li.active > a:hover, 
+.sidebar.sidebar-danger .nav > li.active > a:focus,
+.page-sidebar-minified .sidebar.sidebar-danger .nav > li.has-sub.active:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-danger .nav > li.has-sub.active:focus > a {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+.sidebar.sidebar-danger .sub-menu:before {
+    background: #a83531;
+}
+.sidebar.sidebar-danger .progress .progress-bar {
+    background: #fff;
+}
+.sidebar.sidebar-danger .sub-menu > li > a,
+.sidebar.sidebar-danger .sub-menu > li > a:before {
+    color: #f7a5a2;
+}
+.sidebar.sidebar-danger .stock-list > li .percentage .label {
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.25);
+}
+.sidebar.sidebar-danger .nav.nav-tabs > li a {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+.sidebar.sidebar-danger .nav.nav-tabs > li a:focus {
+    background: none;
+}
+.sidebar.sidebar-danger .stock-list > li .value,
+.sidebar.sidebar-danger .calendar .week_days td, 
+.sidebar.sidebar-danger .calendar .visualmonthyear, 
+.sidebar.sidebar-danger .calendar a,
+.sidebar.sidebar-danger .calendar .table {
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+}
+.sidebar.sidebar-danger .calendar .week_days td {
+    color: #000;
+    color: rgba(0,0,0,0.4) !important;
+    font-weight: bold;
+}
+.sidebar.sidebar-danger .calendar .event {
+    background: url(../img/transparent/black-0.3.png) !important;
+    background: rgba(0,0,0,0.25) !important;
+}
+.sidebar.sidebar-danger .stock-list > li + li,
+.sidebar.sidebar-danger .nav-post > li + li,
+.sidebar.sidebar-danger .notification-list > li + li {
+    border-top-color: rgba(255,255,255,0.3);
+}
+.sidebar.sidebar-danger .nav-post > li .info .time, 
+.sidebar.sidebar-danger .nav-post > li .info .desc,
+.sidebar.sidebar-danger .notification-list > li .info .time, 
+.sidebar.sidebar-danger .notification-list > li .info .desc {
+    color: #fff;
+    color: rgba(255,255,255,0.6);
+}
+.sidebar.sidebar-danger .notification-list > li .media {
+    color: #fff;
+}
+
+
+/* 3.19 Sidebar Theme - Primary */
+
+.sidebar.sidebar-primary,
+.sidebar-bg.sidebar-primary {
+    background: #2184DA;
+}
+.sidebar.sidebar-primary .nav-user,
+.sidebar.sidebar-primary .sub-menu,
+.page-sidebar-minified .sidebar.sidebar-primary li.has-sub:hover > .sub-menu, 
+.page-sidebar-minified .sidebar.sidebar-primary li.has-sub:focus > .sub-menu,
+.sidebar.sidebar-primary .nav > li.divider,
+.sidebar.sidebar-primary .sidebar-minify-btn, 
+.sidebar.sidebar-primary .sidebar-minify-btn:hover, 
+.sidebar.sidebar-primary .sidebar-minify-btn:focus,
+.sidebar.sidebar-primary .nav-project .project-list > li .progress {
+    background: #1a6aae;
+}
+.sidebar.sidebar-primary .nav-user .info .name, 
+.sidebar.sidebar-primary .nav-user .info .name > a, 
+.sidebar.sidebar-primary .nav-user .info .name > a:hover, 
+.sidebar.sidebar-primary .nav-user .info .name > a:focus,
+.sidebar.sidebar-primary .nav > li > a > .caret.pull-right {
+    color: #fff;
+}
+.sidebar.sidebar-primary .nav > li.nav-header,
+.sidebar.sidebar-primary .nav-user .position {
+    color: #d3e6f8;
+}
+.sidebar.sidebar-primary .nav > li > a,
+.sidebar.sidebar-primary .nav-project .project-list > li .title, 
+.sidebar.sidebar-primary .nav-project .project-list > li .title a, 
+.sidebar.sidebar-primary .nav-project .project-list > li .title a:hover, 
+.sidebar.sidebar-primary .nav-project .project-list > li .title a:focus,
+.sidebar.sidebar-primary .nav > li > a > i,
+.sidebar.sidebar-primary .sub-menu > li.active > a,
+.sidebar.sidebar-primary .sub-menu > li.active > a:before,
+.sidebar.sidebar-primary .sub-menu > li > a:hover,
+.sidebar.sidebar-primary .sub-menu > li > a:focus,
+.sidebar.sidebar-primary .sub-menu > li > a:hover:before,
+.sidebar.sidebar-primary .sub-menu > li > a:focus:before,
+.sidebar.sidebar-primary .nav-project .project-list > li .desc {
+    color: #fff;
+}
+.sidebar.sidebar-primary .nav-project .project-list > li .icon i {
+    color: #fff !important;
+}
+.sidebar.sidebar-primary .nav > li.expand > a, 
+.sidebar.sidebar-primary .nav > li > a:hover,
+.sidebar.sidebar-primary .nav > li > a:focus,
+.page-sidebar-minified .sidebar.sidebar-primary .nav > li.has-sub:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-primary .nav > li.has-sub:focus > a {
+    background: #4d9de1;
+}
+.sidebar.sidebar-primary .nav > li.active > a i,
+.sidebar.sidebar-primary .badge,
+.sidebar.sidebar-primary a:hover .badge, 
+.sidebar.sidebar-primary a:focus .badge,
+.sidebar.sidebar-primary .label,
+.sidebar.sidebar-primary a:hover .label, 
+.sidebar.sidebar-primary a:focus .label {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-primary .text-theme {
+    color: #000;
+    color: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-primary .nav > li.active > a, 
+.sidebar.sidebar-primary .nav > li.active > a:hover, 
+.sidebar.sidebar-primary .nav > li.active > a:focus,
+.page-sidebar-minified .sidebar.sidebar-primary .nav > li.has-sub.active:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-primary .nav > li.has-sub.active:focus > a {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+.sidebar.sidebar-primary .sub-menu:before {
+    background: #175d99;
+}
+.sidebar.sidebar-primary .progress .progress-bar {
+    background: #fff;
+}
+.sidebar.sidebar-primary .sub-menu > li > a,
+.sidebar.sidebar-primary .sub-menu > li > a:before {
+    color: #90c1ec;
+}
+.sidebar.sidebar-primary .stock-list > li .percentage .label {
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.25);
+}
+.sidebar.sidebar-primary .nav.nav-tabs > li a {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+.sidebar.sidebar-primary .nav.nav-tabs > li a:focus {
+    background: none;
+}
+.sidebar.sidebar-primary .stock-list > li .value,
+.sidebar.sidebar-primary .calendar .week_days td, 
+.sidebar.sidebar-primary .calendar .visualmonthyear, 
+.sidebar.sidebar-primary .calendar a,
+.sidebar.sidebar-primary .calendar .table {
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+}
+.sidebar.sidebar-primary .calendar .week_days td {
+    color: #000;
+    color: rgba(0,0,0,0.4) !important;
+    font-weight: bold;
+}
+.sidebar.sidebar-primary .calendar .event {
+    background: url(../img/transparent/black-0.3.png) !important;
+    background: rgba(0,0,0,0.25) !important;
+}
+.sidebar.sidebar-primary .stock-list > li + li,
+.sidebar.sidebar-primary .nav-post > li + li,
+.sidebar.sidebar-primary .notification-list > li + li {
+    border-top-color: rgba(255,255,255,0.3);
+}
+.sidebar.sidebar-primary .nav-post > li .info .time, 
+.sidebar.sidebar-primary .nav-post > li .info .desc,
+.sidebar.sidebar-primary .notification-list > li .info .time, 
+.sidebar.sidebar-primary .notification-list > li .info .desc {
+    color: #fff;
+    color: rgba(255,255,255,0.6);
+}
+.sidebar.sidebar-primary .notification-list > li .media {
+    color: #fff;
+}
+
+
+/* 3.20 Sidebar Theme - Grey */
+
+.sidebar.sidebar-grey,
+.sidebar-bg.sidebar-grey {
+    background: #aab3ba;
+}
+.sidebar.sidebar-grey .nav-user,
+.sidebar.sidebar-grey .sub-menu,
+.page-sidebar-minified .sidebar.sidebar-grey li.has-sub:hover > .sub-menu, 
+.page-sidebar-minified .sidebar.sidebar-grey li.has-sub:focus > .sub-menu,
+.sidebar.sidebar-grey .nav > li.divider,
+.sidebar.sidebar-grey .sidebar-minify-btn, 
+.sidebar.sidebar-grey .sidebar-minify-btn:hover, 
+.sidebar.sidebar-grey .sidebar-minify-btn:focus,
+.sidebar.sidebar-grey .nav-project .project-list > li .progress {
+    background: #888f95;
+}
+.sidebar.sidebar-grey .nav-user .info .name, 
+.sidebar.sidebar-grey .nav-user .info .name > a, 
+.sidebar.sidebar-grey .nav-user .info .name > a:hover, 
+.sidebar.sidebar-grey .nav-user .info .name > a:focus,
+.sidebar.sidebar-grey .nav > li > a > .caret.pull-right {
+    color: #fff;
+}
+.sidebar.sidebar-grey .nav > li.nav-header,
+.sidebar.sidebar-grey .nav-user .position {
+    color: #e5e8ea;
+}
+.sidebar.sidebar-grey .nav > li > a,
+.sidebar.sidebar-grey .nav-project .project-list > li .title, 
+.sidebar.sidebar-grey .nav-project .project-list > li .title a, 
+.sidebar.sidebar-grey .nav-project .project-list > li .title a:hover, 
+.sidebar.sidebar-grey .nav-project .project-list > li .title a:focus,
+.sidebar.sidebar-grey .nav > li > a > i,
+.sidebar.sidebar-grey .sub-menu > li.active > a,
+.sidebar.sidebar-grey .sub-menu > li.active > a:before,
+.sidebar.sidebar-grey .sub-menu > li > a:hover,
+.sidebar.sidebar-grey .sub-menu > li > a:focus,
+.sidebar.sidebar-grey .sub-menu > li > a:hover:before,
+.sidebar.sidebar-grey .sub-menu > li > a:focus:before,
+.sidebar.sidebar-grey .nav-project .project-list > li .desc {
+    color: #fff;
+}
+.sidebar.sidebar-grey .nav-project .project-list > li .icon i {
+    color: #fff !important;
+}
+.sidebar.sidebar-grey .nav > li.expand > a, 
+.sidebar.sidebar-grey .nav > li > a:hover,
+.sidebar.sidebar-grey .nav > li > a:focus,
+.page-sidebar-minified .sidebar.sidebar-grey .nav > li.has-sub:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-grey .nav > li.has-sub:focus > a {
+    background: #bbc2c8;
+}
+.sidebar.sidebar-grey .nav > li.active > a i,
+.sidebar.sidebar-grey .badge,
+.sidebar.sidebar-grey a:hover .badge, 
+.sidebar.sidebar-grey a:focus .badge,
+.sidebar.sidebar-grey .label,
+.sidebar.sidebar-grey a:hover .label, 
+.sidebar.sidebar-grey a:focus .label {
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-grey .text-theme {
+    color: #000;
+    color: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-grey .nav > li.active > a, 
+.sidebar.sidebar-grey .nav > li.active > a:hover, 
+.sidebar.sidebar-grey .nav > li.active > a:focus,
+.page-sidebar-minified .sidebar.sidebar-grey .nav > li.has-sub.active:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-grey .nav > li.has-sub.active:focus > a {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+.sidebar.sidebar-grey .sub-menu:before {
+    background: #777e83;
+}
+.sidebar.sidebar-grey .progress .progress-bar {
+    background: #fff;
+}
+.sidebar.sidebar-grey .sub-menu > li > a,
+.sidebar.sidebar-grey .sub-menu > li > a:before {
+    color: #d4d9dc;
+}
+.sidebar.sidebar-grey .stock-list > li .percentage .label {
+    background: rgba(0,0,0,0.25);
+}
+.sidebar.sidebar-grey .nav.nav-tabs > li a {
+    background: rgba(0,0,0,0.5);
+}
+.sidebar.sidebar-grey .nav.nav-tabs > li a:focus {
+    background: none;
+}
+.sidebar.sidebar-grey .stock-list > li .value,
+.sidebar.sidebar-grey .calendar .week_days td, 
+.sidebar.sidebar-grey .calendar .visualmonthyear, 
+.sidebar.sidebar-grey .calendar a,
+.sidebar.sidebar-grey .calendar .table {
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+}
+.sidebar.sidebar-grey .calendar .week_days td {
+    color: #000;
+    color: rgba(0,0,0,0.4) !important;
+    font-weight: bold;
+}
+.sidebar.sidebar-grey .calendar .event {
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.25) !important;
+}
+.sidebar.sidebar-grey .stock-list > li + li,
+.sidebar.sidebar-grey .nav-post > li + li,
+.sidebar.sidebar-grey .notification-list > li + li {
+    border-top-color: rgba(255,255,255,0.3);
+}
+.sidebar.sidebar-grey .nav-post > li .info .time, 
+.sidebar.sidebar-grey .nav-post > li .info .desc,
+.sidebar.sidebar-grey .notification-list > li .info .time, 
+.sidebar.sidebar-grey .notification-list > li .info .desc {
+    color: #fff;
+    color: rgba(255,255,255,0.6);
+}
+.sidebar.sidebar-grey .notification-list > li .media {
+    color: #fff;
+}
+
+
+/* 3.21 Sidebar Theme - Purple */
+
+.sidebar.sidebar-purple,
+.sidebar-bg.sidebar-purple {
+    background: #9b59b6;
+}
+.sidebar.sidebar-purple .nav-user,
+.sidebar.sidebar-purple .sub-menu,
+.page-sidebar-minified .sidebar.sidebar-purple li.has-sub:hover > .sub-menu, 
+.page-sidebar-minified .sidebar.sidebar-purple li.has-sub:focus > .sub-menu,
+.sidebar.sidebar-purple .nav > li.divider,
+.sidebar.sidebar-purple .sidebar-minify-btn, 
+.sidebar.sidebar-purple .sidebar-minify-btn:hover, 
+.sidebar.sidebar-purple .sidebar-minify-btn:focus,
+.sidebar.sidebar-purple .nav-project .project-list > li .progress {
+    background: #7c4792;
+}
+.sidebar.sidebar-purple .nav-user .info .name, 
+.sidebar.sidebar-purple .nav-user .info .name > a, 
+.sidebar.sidebar-purple .nav-user .info .name > a:hover, 
+.sidebar.sidebar-purple .nav-user .info .name > a:focus,
+.sidebar.sidebar-purple .nav > li > a > .caret.pull-right {
+    color: #fff;
+}
+.sidebar.sidebar-purple .nav > li.nav-header,
+.sidebar.sidebar-purple .nav-user .position {
+    color: #e1cde9;
+}
+.sidebar.sidebar-purple .nav > li > a,
+.sidebar.sidebar-purple .nav-project .project-list > li .title, 
+.sidebar.sidebar-purple .nav-project .project-list > li .title a, 
+.sidebar.sidebar-purple .nav-project .project-list > li .title a:hover, 
+.sidebar.sidebar-purple .nav-project .project-list > li .title a:focus,
+.sidebar.sidebar-purple .nav > li > a > i,
+.sidebar.sidebar-purple .sub-menu > li.active > a,
+.sidebar.sidebar-purple .sub-menu > li.active > a:before,
+.sidebar.sidebar-purple .sub-menu > li > a:hover,
+.sidebar.sidebar-purple .sub-menu > li > a:focus,
+.sidebar.sidebar-purple .sub-menu > li > a:hover:before,
+.sidebar.sidebar-purple .sub-menu > li > a:focus:before,
+.sidebar.sidebar-purple .nav-project .project-list > li .desc {
+    color: #fff;
+}
+.sidebar.sidebar-purple .nav-project .project-list > li .icon i {
+    color: #fff !important;
+}
+.sidebar.sidebar-purple .nav > li.expand > a, 
+.sidebar.sidebar-purple .nav > li > a:hover,
+.sidebar.sidebar-purple .nav > li > a:focus,
+.page-sidebar-minified .sidebar.sidebar-purple .nav > li.has-sub:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-purple .nav > li.has-sub:focus > a {
+    background: #af7ac5;
+}
+.sidebar.sidebar-purple .nav > li.active > a i,
+.sidebar.sidebar-purple .badge,
+.sidebar.sidebar-purple a:hover .badge, 
+.sidebar.sidebar-purple a:focus .badge,
+.sidebar.sidebar-purple .label,
+.sidebar.sidebar-purple a:hover .label, 
+.sidebar.sidebar-purple a:focus .label {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-purple .text-theme {
+    color: #000;
+    color: rgba(0,0,0,0.4);
+}
+.sidebar.sidebar-purple .nav > li.active > a, 
+.sidebar.sidebar-purple .nav > li.active > a:hover, 
+.sidebar.sidebar-purple .nav > li.active > a:focus,
+.page-sidebar-minified .sidebar.sidebar-purple .nav > li.has-sub.active:hover > a, 
+.page-sidebar-minified .sidebar.sidebar-purple .nav > li.has-sub.active:focus > a {
+    background: url(../img/transparent/black-0.4.png);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+.sidebar.sidebar-purple .sub-menu:before {
+    background: #6d3e80;
+}
+.sidebar.sidebar-purple .progress .progress-bar {
+    background: #fff;
+}
+.sidebar.sidebar-purple .sub-menu > li > a,
+.sidebar.sidebar-purple .sub-menu > li > a:before {
+    color: #cdacda;
+}
+.sidebar.sidebar-purple .stock-list > li .percentage .label {
+    background: rgba(0,0,0,0.25);
+}
+.sidebar.sidebar-purple .nav.nav-tabs > li a {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+.sidebar.sidebar-purple .nav.nav-tabs > li a:focus {
+    background: none;
+}
+.sidebar.sidebar-purple .stock-list > li .value,
+.sidebar.sidebar-purple .calendar .week_days td, 
+.sidebar.sidebar-purple .calendar .visualmonthyear, 
+.sidebar.sidebar-purple .calendar a,
+.sidebar.sidebar-purple .calendar .table {
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+}
+.sidebar.sidebar-purple .calendar .week_days td {
+    color: #000;
+    color: rgba(0,0,0,0.4) !important;
+    font-weight: bold;
+}
+.sidebar.sidebar-purple .calendar .event {
+    background: url(../img/transparent/black-0.3.png) !important;
+    background: rgba(0,0,0,0.25) !important;
+}
+.sidebar.sidebar-purple .stock-list > li + li,
+.sidebar.sidebar-purple .nav-post > li + li,
+.sidebar.sidebar-purple .notification-list > li + li {
+    border-top-color: rgba(255,255,255,0.3);
+}
+.sidebar.sidebar-purple .nav-post > li .info .time, 
+.sidebar.sidebar-purple .nav-post > li .info .desc,
+.sidebar.sidebar-purple .notification-list > li .info .time, 
+.sidebar.sidebar-purple .notification-list > li .info .desc {
+    color: #fff;
+    color: rgba(255,255,255,0.6);
+}
+.sidebar.sidebar-purple .notification-list > li .media {
+    color: #fff;
+}
+
+
+
+/* 3.22 Sidebar Highlight Theme - Purple */
+
+.sidebar.sidebar-highlight-purple .label.label-theme,
+.sidebar.sidebar-highlight-purple .nav > li.active > a > i,
+.sidebar.sidebar-highlight-purple .stock-list > li .percentage .label,
+.sidebar.sidebar-highlight-purple .calendar .event {
+    background: #9b59b6 !important;
+}
+.sidebar.sidebar-highlight-purple .sub-menu > li.active > a:before,
+.sidebar.sidebar-highlight-purple .text-theme,
+.sidebar.sidebar-highlight-purple .calendar .week_days td {
+    color: #9b59b6 !important;
+}
+.sidebar.sidebar-highlight-purple .nav > li.active > a > i {
+    color: #3e2449;
+}
+
+
+/* 3.23 Sidebar Highlight Theme - Primary */
+
+.sidebar.sidebar-highlight-primary .label.label-theme,
+.sidebar.sidebar-highlight-primary .nav > li.active > a > i,
+.sidebar.sidebar-highlight-primary .stock-list > li .percentage .label,
+.sidebar.sidebar-highlight-primary .calendar .event {
+    background: #2184DA !important;
+}
+.sidebar.sidebar-highlight-primary .sub-menu > li.active > a:before,
+.sidebar.sidebar-highlight-primary .text-theme,
+.sidebar.sidebar-highlight-primary .calendar .week_days td {
+    color: #2184DA !important;
+}
+.sidebar.sidebar-highlight-primary .nav > li.active > a > i {
+    color: #0d3557;
+}
+
+
+/* 3.24 Sidebar Highlight Theme - Info */
+
+.sidebar.sidebar-highlight-info .label.label-theme,
+.sidebar.sidebar-highlight-info .nav > li.active > a > i,
+.sidebar.sidebar-highlight-info .stock-list > li .percentage .label,
+.sidebar.sidebar-highlight-info .calendar .event {
+    background: #38AFD3 !important;
+}
+.sidebar.sidebar-highlight-info .sub-menu > li.active > a:before,
+.sidebar.sidebar-highlight-info .text-theme,
+.sidebar.sidebar-highlight-info .calendar .week_days td {
+    color: #38AFD3 !important;
+}
+.sidebar.sidebar-highlight-info .nav > li.active > a > i {
+    color: #164654;
+}
+
+
+/* 3.25 Sidebar Highlight Theme - Lime */
+
+.sidebar.sidebar-highlight-lime .label.label-theme,
+.sidebar.sidebar-highlight-lime .nav > li.active > a > i,
+.sidebar.sidebar-highlight-lime .stock-list > li .percentage .label,
+.sidebar.sidebar-highlight-lime .calendar .event {
+    background: #65C56F !important;
+}
+.sidebar.sidebar-highlight-lime .sub-menu > li.active > a:before,
+.sidebar.sidebar-highlight-lime .text-theme,
+.sidebar.sidebar-highlight-lime .calendar .week_days td {
+    color: #65C56F !important;
+}
+.sidebar.sidebar-highlight-lime .nav > li.active > a > i {
+    color: #284f2c;
+}
+
+
+/* 3.26 Sidebar Highlight Theme - Warning */
+
+.sidebar.sidebar-highlight-warning .label.label-theme,
+.sidebar.sidebar-highlight-warning .nav > li.active > a > i,
+.sidebar.sidebar-highlight-warning .stock-list > li .percentage .label,
+.sidebar.sidebar-highlight-warning .calendar .event {
+    background: #fcaf41 !important;
+}
+.sidebar.sidebar-highlight-warning .sub-menu > li.active > a:before,
+.sidebar.sidebar-highlight-warning .text-theme,
+.sidebar.sidebar-highlight-warning .calendar .week_days td {
+    color: #fcaf41 !important;
+}
+.sidebar.sidebar-highlight-warning .nav > li.active > a > i {
+    color: #65461a;
+}
+
+
+/* 3.27 Sidebar Highlight Theme - Danger */
+
+.sidebar.sidebar-highlight-danger .label.label-theme,
+.sidebar.sidebar-highlight-danger .nav > li.active > a > i,
+.sidebar.sidebar-highlight-danger .stock-list > li .percentage .label,
+.sidebar.sidebar-highlight-danger .calendar .event {
+    background: #F04B46 !important;
+}
+.sidebar.sidebar-highlight-danger .sub-menu > li.active > a:before,
+.sidebar.sidebar-highlight-danger .text-theme,
+.sidebar.sidebar-highlight-danger .calendar .week_days td {
+    color: #F04B46 !important;
+}
+.sidebar.sidebar-highlight-danger .nav > li.active > a > i {
+    color: #601e1c;
+}
+
+
+/* 3.28 Sidebar Highlight Theme - Grey */
+
+.sidebar.sidebar-highlight-grey .label.label-theme,
+.sidebar.sidebar-highlight-grey .nav > li.active > a > i,
+.sidebar.sidebar-highlight-grey .stock-list > li .percentage .label,
+.sidebar.sidebar-highlight-grey .calendar .event {
+    background: #aab3ba !important;
+}
+.sidebar.sidebar-highlight-grey .sub-menu > li.active > a:before,
+.sidebar.sidebar-highlight-grey .text-theme,
+.sidebar.sidebar-highlight-grey .calendar .week_days td {
+    color: #aab3ba !important;
+}
+.sidebar.sidebar-highlight-grey .nav > li.active > a > i {
+    color: #44484a;
+}
+
+
+/* 3.29 Sidebar Highlight Theme - Light */
+
+.sidebar.sidebar-highlight-light .label.label-theme,
+.sidebar.sidebar-highlight-light .nav > li.active > a > i,
+.sidebar.sidebar-highlight-light .stock-list > li .percentage .label,
+.sidebar.sidebar-highlight-light .calendar .event,
+.sidebar.sidebar-highlight-light .calendar .event a {
+    background: #fff !important;
+    color: #30373e !important;
+}
+.sidebar.sidebar-highlight-light .sub-menu > li.active > a:before,
+.sidebar.sidebar-highlight-light .text-theme,
+.sidebar.sidebar-highlight-light .calendar .week_days td {
+    color: #fff !important;
+}
+.sidebar.sidebar-highlight-light .nav > li.active > a > i {
+    color: #fff;
+}
+
+
+/* 3.30 Sidebar Highlight Theme - Inverse */
+
+.sidebar.sidebar-highlight-inverse .label.label-theme,
+.sidebar.sidebar-highlight-inverse .nav > li.active > a > i,
+.sidebar.sidebar-highlight-inverse .stock-list > li .percentage .label,
+.sidebar.sidebar-highlight-inverse .calendar .event,
+.sidebar.sidebar-highlight-inverse .calendar .event a {
+    background: #595F64 !important;
+    color: #fff !important;
+}
+.sidebar.sidebar-highlight-inverse .sub-menu > li.active > a:before,
+.sidebar.sidebar-highlight-inverse .text-theme,
+.sidebar.sidebar-highlight-inverse .calendar .week_days td {
+    color: #fff !important;
+}
+.sidebar.sidebar-highlight-inverse .nav > li.active > a > i {
+    color: #fff;
+}
+
+

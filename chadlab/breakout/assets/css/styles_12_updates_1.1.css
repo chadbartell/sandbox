@@ -1,0 +1,331 @@
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
+
+::  12.0 Update - v1.1
+-------------------------------------------
+    12.1 Widget - Stat Progress -  ** moved to 11.12 **
+
+
+    12.2 Panel - Option
+    12.3 Plugins - Chart JS Custom Tooltip
+    12.4 Chart Summary Setting
+    12.5 Feeds Setting
+    12.6 Chats Setting
+    12.7 Project Summary Setting
+
+    
+
+/* -------------------------------
+   12.0 Update - v1.1
+------------------------------- */
+
+
+
+/* 12.2 Panel - Option */
+
+.panel-option {
+    padding: 15px; 
+    background: #edeff0; 
+    font-size: 12px; 
+    font-weight: bold; 
+}
+.panel-option .btn {
+    margin-top: -6px;
+}
+.panel-body .panel-option {
+    margin: -20px -20px 20px;
+}
+
+
+/* 12.3 Plugins - Chart JS Custom Tooltip */
+
+.chartjs-tooltip {
+    display: none;
+    position: absolute;
+    background: url(../img/transparent/black-0.7.png);
+    background: rgba(0, 0, 0, .7);
+    color: white;
+    padding: 8px;
+    border-radius: 3px;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+}
+.chartjs-tooltip.above:before,
+.chartjs-tooltip.below:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -14px;
+    border: 7px solid transparent;
+    border-top-color: rgba(0,0,0,0.7);
+    left: 50%;
+    margin-left: -7px;
+}
+.chartjs-tooltip.above:before {
+    bottom: auto;
+    top: -14px;
+    border-top-color: transparent;
+    border-bottom-color: rgba(0,0,0,0.7);
+}
+.chartjs-tooltip-key {
+    display:inline-block;
+    width:10px;
+    height:10px;
+}
+.chartjs-tooltip.above {
+    margin-top: 15px;
+}
+.chartjs-tooltip.below {
+    margin-top: -50px;
+}
+
+
+/* 12.4 Chart Summary Setting */
+
+.chart-summary-container:before,
+.chart-summary-container:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.chart-summary-container .chart-title {
+    font-size: 14px; 
+    font-weight: normal; 
+    margin-bottom: 15px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #ebeced;
+}
+.chart-summary-container .chart-doughnut {
+    float: left;
+    width: 85px;
+    height: 85px;
+}
+.chart-summary-container .chart-doughnut canvas {
+    width: 85px;
+    height: 85px;
+}
+.chart-summary-container .chart-info {
+    margin-left: 100px;
+}
+.chart-summary-container .chart-summary {
+    font-size: 11px;
+    font-weight: normal;
+}
+.chart-summary-container .chart-summary .number {
+    font-size: 18px;
+    color: #333;
+}
+.chart-summary-container .chart-summary .number small {
+    font-size: 13px;
+    opacity: 0.6;
+}
+.chart-summary-container .chart-summary .number,
+.chart-summary-container .chart-summary .text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chart-summary-container .chart-summary + .chart-summary {
+    margin-top: 10px;
+}
+
+
+/* 12.5 Feeds Setting */
+
+.feeds {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.feeds > li {
+    position: relative;
+    line-height: 30px;
+    padding: 5px;
+    background: #ebeced;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.feeds > li + li {
+    margin-top: 5px;
+}
+.feeds > li > a {
+    display: block;
+    text-decoration: none;
+}
+.feeds > li .icon {
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #000;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 40px;
+    font-size: 18px;
+    margin: -5px 0 -5px -5px;
+}
+.feeds > li .desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+    white-space: nowrap;
+    color: #272C31;
+}
+.feeds > li .time {
+    float: right;
+    padding: 0 10px;
+    font-style: italic;
+    color: #aab3ba;
+    font-size: 12px;
+}
+
+
+/* 12.6 Chats Setting */
+
+.chats {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.chats:before,
+.chats:after,
+.chats > li:before,
+.chats > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.chats > li + li {
+    margin-top: 15px;
+}
+.chats > li .image {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.chats > li.right .image {
+    float: right;
+}
+.chats > li.right .message {
+    margin-left: 0;
+    margin-right: 70px;
+}
+.chats > li.right .message:before {
+    border-left-color: #ebeced;
+    border-right-color: transparent;
+    left: auto;
+    right: -20px;
+}
+.chats > li .image img {
+    max-width: 100%;
+    display: block;
+}
+.chats > li .message {
+    margin-left: 70px;
+    background: #ebeced;
+    border-radius: 6px;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+    padding-bottom: 30px;
+}
+.chats > li .message:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -20px;
+    border: 10px solid transparent;
+    border-right-color: #ebeced;
+    top: 15px;
+}
+.chats > li .message .name {
+    color: #08c;
+    display: block;
+}
+.chats > li .message .date-time {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 11px;
+    line-height: 10px;
+    opacity: 0.7;
+}
+
+
+/* 12.7 Project Summary Setting */
+
+.project-summary {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.project-summary .project-title {
+    margin-bottom: 8px;
+}
+.project-summary .progress {
+    height: 6px;
+    border-radius: 3px;
+    background: url(../img/transparent/black-0.2.png);
+    background: rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+}
+.project-summary .progress .progress-bar {
+    background: url(../img/transparent/white-0.9.png);
+    background: rgba(255,255,255,0.9);
+    background: linear-gradient(90deg, #00c6ff 10%, #0072ff 90%); /* W3C */
+    background: #3e474f;
+    background: linear-gradient(90deg, #4776E6 10%, #8E54E9 90%);
+}
+.project-summary .users .title {
+    font-weight: normal;
+    padding: 5px 0 10px;
+}
+.project-summary .users .image-list .add-btn {
+    background: #272C31;
+    border-radius: 30px;
+    line-height: 24px;
+    width: 24px;
+    text-align: center;
+    height: 24px;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+.project-summary .users .image-list .add-btn i {
+    display: block;
+    line-height: 24px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+}
+.project-summary .image-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 36px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.project-summary .image-list:before,
+.project-summary .image-list:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.project-summary .image-list > li {
+    float: left;
+    margin-right: 5px;
+}
+.project-summary .image-list > li img {
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+}
+
+

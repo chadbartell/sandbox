@@ -1,0 +1,139 @@
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
+
+    
+::  4.0  Content Setting
+-------------------------------------------
+    4.1  Content Element
+         4.1.1 Content Element - Breadcrumb
+         4.1.2 Content Element - Page Header
+    4.2  Content Setting - Page Sidebar Minified
+    4.3  Content Setting - Page with Right Sidebar
+    4.4  Content Setting - Page with Footer
+    4.5  Content Setting - Page without Sidebar
+ 
+
+
+
+/* -------------------------------
+   4.0 Content Setting
+------------------------------- */
+
+/* 4.1 Content Element */
+
+.content {
+    margin-left: 250px;
+    padding: 25px;
+    min-height: 100%;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .content {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+    }
+}
+
+
+/* 4.1.1 Content Element - Breadcrumb */
+
+.breadcrumb {
+    padding: 0;
+    margin: 3px 0 20px;
+    background: none;
+    font-weight: normal;
+    font-size: 13px;
+    position: relative;
+    z-index: 1000;
+}
+.breadcrumb a {
+    color: #30373e;
+}
+.breadcrumb > li.active {
+    color: #657380;
+    font-weight: 300;
+}
+.breadcrumb > li + li:before {
+    color: #b1b5b8;
+}
+@media (max-width: 767px) {
+    .breadcrumb {
+        margin: 0 0 8px;
+        font-size: 12px;
+    }
+    .breadcrumb.pull-right,
+    .breadcrumb.pull-left {
+        float: none !important;
+    }
+}
+
+
+/* 4.1.2 Content Element - Page Header */
+
+.page-header {
+    font-size: 20px;
+    margin: 0 0 20px;
+    padding: 0;
+    color: #30373e;
+    border: none;
+    font-weight: normal;
+    position: relative;
+    z-index: 1000;
+}
+.page-header small {
+    font-size: 14px;
+    color: #657380;
+    font-weight: 300;
+}
+
+
+/* 4.2 Content Setting - Page Sidebar Minified */
+
+.page-sidebar-minified .content {
+    margin-left: 70px;
+}
+@media (max-width: 767px) {
+    .page-sidebar-minified .content {
+        margin-left: 0;
+    }
+}
+
+
+/* 4.3 Content Setting - Page with Right Sidebar */
+
+.page-with-right-sidebar .content {
+    margin-left: 0;
+    margin-right: 250px;
+}
+.page-with-two-sidebar.page-right-sidebar-toggled .content {
+    margin-right: 250px;
+}
+.page-with-right-sidebar.page-sidebar-minified .content {
+    margin-right: 70px;
+}
+@media (max-width: 767px) {
+    .page-with-right-sidebar .content,
+    .page-with-two-sidebar.page-right-sidebar-toggled .content {
+        margin-right: 0;
+    }
+}
+
+
+/* 4.4 Content Setting - Page with Footer */
+
+.page-with-footer .content,
+.page-footer-fixed .content {
+    padding-bottom: 50px;
+}
+
+
+/* 4.5 Content Setting - Page without Sidebar */
+
+.page-without-sidebar .content {
+    margin-left: 0;
+}
+

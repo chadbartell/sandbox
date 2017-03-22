@@ -1,0 +1,667 @@
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
+
+    
+::  2.0  Header
+-------------------------------------------
+    2.1  Navbar Element
+    2.2  Navbar Header
+    2.3  Navbar Brand
+    2.4  Navbar Form
+    2.5  Navbar User
+    2.6  Navbar Theme - Default
+    2.7  Navbar Theme - Inverse
+    2.8  Navbar Theme - Purple
+    2.9  Navbar Theme - Primary
+    2.10 Navbar Theme - Success
+    2.11 Navbar Theme - Lime
+    2.12 Navbar Theme - Warning
+    2.13 Navbar Theme - Danger
+    2.14 Navbar Theme - Grey
+
+
+
+/* -------------------------------
+   2.0 Header
+------------------------------- */
+
+/* 2.1 Navbar Element */
+
+.navbar {
+    border: none;
+    font-size: 14px;
+    -webkit-box-shadow: 0 1px rgba(0,0,0,0.025);
+    box-shadow: 0 1px rgba(0,0,0,0.025);
+    z-index: 1040;
+    margin-bottom: 0;
+}
+.navbar-nav > li > a {
+    line-height: 26px;
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus,
+.navbar .navbar-nav > .open > a, 
+.navbar .navbar-nav > .open > a:focus, 
+.navbar .navbar-nav > .open > a:hover {
+    background: none;
+    color: #333;
+}
+.navbar-nav > li > a.has-notify {
+    position: relative;
+}
+.navbar-nav > li > a.has-notify:before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: 11px;
+    width: 11px;
+    height: 11px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #1abc9c;
+    z-index: 10;
+    opacity: 1;
+    transition: all .2s linear;
+}
+.navbar-nav > li > a.has-notify.read:before {
+    opacity: 0;
+    background: none;
+    width: 0;
+    height: 0;
+}
+@media (max-width: 767px) {
+    .navbar-nav {
+        margin: 0;
+    }
+    .navbar-right {
+        float: right;
+    }
+    .navbar-nav > li {
+        float: left;
+    }
+    .navbar-nav > li + li {
+        margin-left: 15px;
+    }
+    .navbar-nav > li > a {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .navbar-toggle {
+        border: none;
+        padding: 16px 15px;
+        margin: 0;
+        background: none;
+        border-radius: 0;
+    }
+    .navbar-nav > li > a.has-notify:before {
+        top: 11px;
+        right: 4px;
+    }
+}
+@media (max-width: 480px) {
+    .navbar-nav > li + li {
+        margin-left: 5px;
+    }
+}
+
+
+/* 2.2 Navbar Header */
+
+.navbar-header {
+    width: 230px;
+}
+@media (max-width: 767px) {
+    .navbar-header {
+        width: auto;
+        border-bottom: 2px solid #EAEDEF;
+    }
+}
+
+
+/* 2.3 Navbar Brand */
+        
+.navbar-brand {
+    font-weight: bold;
+    height: 56px;
+    line-height: 26px;
+}
+.navbar-brand .logo {
+    width: 30px;
+    margin-top: -1px;
+    float: left;
+    margin-right: 10px;
+}
+@media (max-width: 767px) {
+    .navbar-brand {
+        font-size: 16px;
+        height: 46px;
+        line-height: 28px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-brand .logo {
+        width: 22px;
+        margin: 2px 8px 0 0;
+    }
+}
+
+
+/* 2.4 Navbar Form */
+
+.navbar-form {
+    margin: 11px 0;
+    position: relative;
+}
+.navbar-form .form-control {
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    border-radius: 34px;
+    padding-right: 33px;
+}
+.navbar-form .btn {
+    background: none;
+    border: none;
+    color: #606D79;
+    position: absolute !important;
+    right: 15px;
+    top: 0 !important;
+    line-height: 22px;
+    -webkit-border-radius: 0 30px 30px 0;
+    -moz-border-radius: 0 30px 30px 0;
+    border-radius: 0 30px 30px 0;
+}
+@media (max-width: 767px) {
+    .navbar-form {
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 8px 0;
+    }
+    .navbar-form .form-control {
+        font-size: 12px;
+        height: 30px;
+    }
+    .navbar-form .btn {
+        top: 8px !important;
+        line-height: 18px;
+        right: 0;
+    }
+}
+@media (max-width: 480px) {
+    .navbar-form {
+        width: 145px;
+    }
+}
+
+
+/* 2.5 Navbar User */
+        
+.navbar-user > a .image {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: #eaedef;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -7px;
+    margin-right: 10px;
+}
+.navbar-user > a .image img {
+    display: block;
+    max-width: 100%;
+}
+@media (max-width: 767px) {
+    .navbar-user > a .image {
+        width: 28px;
+        height: 28px;
+        margin-top: 0;
+        margin-right: 5px;
+    }
+}
+
+
+/* 2.6 Navbar Theme - Default */
+
+.navbar-default {
+    background: #fff;
+}
+.navbar-default .navbar-brand {
+    color: #333;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #333;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+        background: #fff;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background: #333;
+    }
+}
+
+
+/* 2.7 Navbar Theme - Inverse */
+
+.navbar-inverse {
+    background: #272C31;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background: #fff;
+}
+.navbar-inverse .navbar-toggle .icon-bar:hover,
+.navbar-inverse .navbar-toggle .icon-bar:focus {
+    background: none;
+}
+.navbar-inverse .navbar-form .form-control,
+.navbar-inverse .navbar-form .btn,
+.navbar.navbar-inverse .navbar-nav > li > a {
+    color: #d4d5d6;
+}
+.navbar-inverse .navbar-brand,
+.navbar.navbar-inverse .navbar-nav > li > a:hover,
+.navbar.navbar-inverse .navbar-nav > li > a:focus,
+.navbar.navbar-inverse .navbar-nav > .open > a, 
+.navbar.navbar-inverse .navbar-nav > .open > a:focus, 
+.navbar.navbar-inverse .navbar-nav > .open > a:hover {
+    color: #fff;
+}
+.navbar-inverse .navbar-form .form-control {
+    background: none;
+    border-color: #52565a;
+    color: #fff;
+}
+.navbar-inverse .navbar-form .form-control:focus {
+    border-color: #939598;
+}
+.navbar-inverse .navbar-form .form-control::-webkit-input-placeholder {
+    color: #d4d5d6;
+}
+.navbar-inverse .navbar-form .form-control:-moz-placeholder {
+    color: #d4d5d6;
+}
+.navbar-inverse .navbar-form .form-control::-moz-placeholder {
+    color: #d4d5d6;
+}
+.navbar-inverse .navbar-form .form-control:-ms-input-placeholder {  
+    color: #d4d5d6;
+}
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-header {
+        border-bottom-color: #52565a;
+    }
+}
+
+
+/* 2.8 Navbar Theme - Purple */
+
+.navbar-purple {
+    background: #9b59b6;
+}
+.navbar-purple .navbar-toggle .icon-bar {
+    background: #fff;
+}
+.navbar-purple .navbar-form .form-control,
+.navbar-purple .navbar-form .btn,
+.navbar.navbar-purple .navbar-nav > li > a {
+    color: #ebdef0;
+}
+.navbar-purple .navbar-brand,
+.navbar.navbar-purple .navbar-nav > li > a:hover,
+.navbar.navbar-purple .navbar-nav > li > a:focus,
+.navbar.navbar-purple .navbar-nav > .open > a, 
+.navbar.navbar-purple .navbar-nav > .open > a:focus, 
+.navbar.navbar-purple .navbar-nav > .open > a:hover {
+    color: #fff;
+}
+.navbar-purple .navbar-form .form-control {
+    background: none;
+    border-color: #cdacda;
+    color: #fff;
+}
+.navbar-purple .navbar-form .form-control:focus {
+    border-color: #ebdef0;
+}
+.navbar-purple .navbar-form .form-control::-webkit-input-placeholder {
+    color: #ebdef0;
+}
+.navbar-purple .navbar-form .form-control:-moz-placeholder {
+    color: #ebdef0;
+}
+.navbar-purple .navbar-form .form-control::-moz-placeholder {
+    color: #ebdef0;
+}
+.navbar-purple .navbar-form .form-control:-ms-input-placeholder {  
+    color: #ebdef0;
+}
+.navbar-purple .navbar-nav > li > a.has-notify:before {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+@media (max-width: 767px) {
+    .navbar-purple .navbar-header {
+        border-bottom-color: #7c4792;
+    }
+}
+
+
+/* 2.9 Navbar Theme - Primary */
+
+.navbar-primary {
+    background: #2184DA;
+}
+.navbar-primary .navbar-toggle .icon-bar {
+    background: #fff;
+}
+.navbar-primary .navbar-form .form-control,
+.navbar-primary .navbar-form .btn,
+.navbar.navbar-primary .navbar-nav > li > a {
+    color: #d3e6f8;
+}
+.navbar-primary .navbar-brand,
+.navbar.navbar-primary .navbar-nav > li > a:hover,
+.navbar.navbar-primary .navbar-nav > li > a:focus,
+.navbar.navbar-primary .navbar-nav > .open > a, 
+.navbar.navbar-primary .navbar-nav > .open > a:focus, 
+.navbar.navbar-primary .navbar-nav > .open > a:hover {
+    color: #fff;
+}
+.navbar-primary .navbar-form .form-control {
+    background: none;
+    border-color: #90c1ec;
+    color: #fff;
+}
+.navbar-primary .navbar-form .form-control:focus {
+    border-color: #d3e6f8;
+}
+.navbar-primary .navbar-form .form-control::-webkit-input-placeholder {
+    color: #d3e6f8;
+}
+.navbar-primary .navbar-form .form-control:-moz-placeholder {
+    color: #d3e6f8;
+}
+.navbar-primary .navbar-form .form-control::-moz-placeholder {
+    color: #d3e6f8;
+}
+.navbar-primary .navbar-form .form-control:-ms-input-placeholder {  
+    color: #d3e6f8;
+}
+.navbar-primary .navbar-nav > li > a.has-notify:before {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+@media (max-width: 767px) {
+    .navbar-primary .navbar-header {
+        border-bottom-color: #1a6aae;
+    }
+}
+
+
+/* 2.10 Navbar Theme - Success */
+
+.navbar-success {
+    background: #17B6A4;
+}
+.navbar-success .navbar-toggle .icon-bar {
+    background: #fff;
+}
+.navbar-success .navbar-form .form-control,
+.navbar-success .navbar-form .btn,
+.navbar.navbar-success .navbar-nav > li > a {
+    color: #d1f0ed;
+}
+.navbar-success .navbar-brand,
+.navbar.navbar-success .navbar-nav > li > a:hover,
+.navbar.navbar-success .navbar-nav > li > a:focus,
+.navbar.navbar-success .navbar-nav > .open > a, 
+.navbar.navbar-success .navbar-nav > .open > a:focus, 
+.navbar.navbar-success .navbar-nav > .open > a:hover {
+    color: #fff;
+}
+.navbar-success .navbar-form .form-control {
+    background: none;
+    border-color: #8bdad1;
+    color: #fff;
+}
+.navbar-success .navbar-form .form-control:focus {
+    border-color: #d1f0ed;
+}
+.navbar-success .navbar-form .form-control::-webkit-input-placeholder {
+    color: #d1f0ed;
+}
+.navbar-success .navbar-form .form-control:-moz-placeholder {
+    color: #d1f0ed;
+}
+.navbar-success .navbar-form .form-control::-moz-placeholder {
+    color: #d1f0ed;
+}
+.navbar-success .navbar-form .form-control:-ms-input-placeholder {  
+    color: #d1f0ed;
+}
+.navbar-success .navbar-nav > li > a.has-notify:before {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+@media (max-width: 767px) {
+    .navbar-success .navbar-header {
+        border-bottom-color: #129283;
+    }
+}
+
+
+/* 2.11 Navbar Theme - Lime */
+
+.navbar-lime {
+    background: #65C56F;
+}
+.navbar-lime .navbar-toggle .icon-bar {
+    background: #fff;
+}
+.navbar-lime .navbar-form .form-control,
+.navbar-lime .navbar-form .btn,
+.navbar.navbar-lime .navbar-nav > li > a {
+    color: #e0f3e2;
+}
+.navbar-lime .navbar-brand,
+.navbar.navbar-lime .navbar-nav > li > a:hover,
+.navbar.navbar-lime .navbar-nav > li > a:focus,
+.navbar.navbar-lime .navbar-nav > .open > a, 
+.navbar.navbar-lime .navbar-nav > .open > a:focus, 
+.navbar.navbar-lime .navbar-nav > .open > a:hover {
+    color: #fff;
+}
+.navbar-lime .navbar-form .form-control {
+    background: none;
+    border-color: #b2e2b7;
+    color: #fff;
+}
+.navbar-lime .navbar-form .form-control:focus {
+    border-color: #e0f3e2;
+}
+.navbar-lime .navbar-form .form-control::-webkit-input-placeholder {
+    color: #e0f3e2;
+}
+.navbar-lime .navbar-form .form-control:-moz-placeholder {
+    color: #e0f3e2;
+}
+.navbar-lime .navbar-form .form-control::-moz-placeholder {
+    color: #e0f3e2;
+}
+.navbar-lime .navbar-form .form-control:-ms-input-placeholder {  
+    color: #e0f3e2;
+}
+.navbar-lime .navbar-nav > li > a.has-notify:before {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+@media (max-width: 767px) {
+    .navbar-lime .navbar-header {
+        border-bottom-color: #519e59;
+    }
+}
+
+
+/* 2.12 Navbar Theme - Warning */
+        
+.navbar-warning {
+    background: #fcaf41;
+}
+.navbar-warning .navbar-toggle .icon-bar {
+    background: #fff;
+}
+.navbar-warning .navbar-form .form-control,
+.navbar-warning .navbar-form .btn,
+.navbar.navbar-warning .navbar-nav > li > a {
+    color: #feefd9;
+}
+.navbar-warning .navbar-brand,
+.navbar.navbar-warning .navbar-nav > li > a:hover,
+.navbar.navbar-warning .navbar-nav > li > a:focus,
+.navbar.navbar-warning .navbar-nav > .open > a, 
+.navbar.navbar-warning .navbar-nav > .open > a:focus, 
+.navbar.navbar-warning .navbar-nav > .open > a:hover {
+    color: #fff;
+}
+.navbar-warning .navbar-form .form-control {
+    background: none;
+    border-color: #fdd7a0;
+    color: #fff;
+}
+.navbar-warning .navbar-form .form-control:focus {
+    border-color: #feefd9;
+}
+.navbar-warning .navbar-form .form-control::-webkit-input-placeholder {
+    color: #feefd9;
+}
+.navbar-warning .navbar-form .form-control:-moz-placeholder {
+    color: #feefd9;
+}
+.navbar-warning .navbar-form .form-control::-moz-placeholder {
+    color: #feefd9;
+}
+.navbar-warning .navbar-form .form-control:-ms-input-placeholder {  
+    color: #feefd9;
+}
+.navbar-warning .navbar-nav > li > a.has-notify:before {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+@media (max-width: 767px) {
+    .navbar-warning .navbar-header {
+        border-bottom-color: #ca8c34;
+    }
+}
+
+
+/* 2.13 Navbar Theme - Danger */
+
+.navbar-danger {
+    background: #F04B46;
+}
+.navbar-danger .navbar-toggle .icon-bar {
+    background: #fff;
+}
+.navbar-danger .navbar-form .form-control,
+.navbar-danger .navbar-form .btn,
+.navbar.navbar-danger .navbar-nav > li > a {
+    color: #fcdbda;
+}
+.navbar-danger .navbar-brand,
+.navbar.navbar-danger .navbar-nav > li > a:hover,
+.navbar.navbar-danger .navbar-nav > li > a:focus,
+.navbar.navbar-danger .navbar-nav > .open > a, 
+.navbar.navbar-danger .navbar-nav > .open > a:focus, 
+.navbar.navbar-danger .navbar-nav > .open > a:hover {
+    color: #fff;
+}
+.navbar-danger .navbar-form .form-control {
+    background: none;
+    border-color: #f7a5a2;
+    color: #fff;
+}
+.navbar-danger .navbar-form .form-control:focus {
+    border-color: #fcdbda;
+}
+.navbar-danger .navbar-form .form-control::-webkit-input-placeholder {
+    color: #fcdbda;
+}
+.navbar-danger .navbar-form .form-control:-moz-placeholder {
+    color: #fcdbda;
+}
+.navbar-danger .navbar-form .form-control::-moz-placeholder {
+    color: #fcdbda;
+}
+.navbar-danger .navbar-form .form-control:-ms-input-placeholder {  
+    color: #fcdbda;
+}
+.navbar-danger .navbar-nav > li > a.has-notify:before {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+@media (max-width: 767px) {
+    .navbar-danger .navbar-header {
+        border-bottom-color: #c03c38;
+    }
+}
+
+
+/* 2.14 Navbar Theme - Grey */
+
+.navbar-grey {
+    background: #aab3ba;
+}
+.navbar-grey .navbar-toggle .icon-bar {
+    background: #fff;
+}
+.navbar-grey .navbar-form .form-control,
+.navbar-grey .navbar-form .btn,
+.navbar.navbar-grey .navbar-nav > li > a {
+    color: #eef0f1;
+}
+.navbar-grey .navbar-brand,
+.navbar.navbar-grey .navbar-nav > li > a:hover,
+.navbar.navbar-grey .navbar-nav > li > a:focus,
+.navbar.navbar-grey .navbar-nav > .open > a, 
+.navbar.navbar-grey .navbar-nav > .open > a:focus, 
+.navbar.navbar-grey .navbar-nav > .open > a:hover {
+    color: #fff;
+}
+.navbar-grey .navbar-form .form-control {
+    background: none;
+    border-color: #d4d9dc;
+    color: #fff;
+}
+.navbar-grey .navbar-form .form-control:focus {
+    border-color: #eef0f1;
+}
+.navbar-grey .navbar-form .form-control::-webkit-input-placeholder {
+    color: #eef0f1;
+}
+.navbar-grey .navbar-form .form-control:-moz-placeholder {
+    color: #eef0f1;
+}
+.navbar-grey .navbar-form .form-control::-moz-placeholder {
+    color: #eef0f1;
+}
+.navbar-grey .navbar-form .form-control:-ms-input-placeholder {  
+    color: #eef0f1;
+}
+.navbar-grey .navbar-nav > li > a.has-notify:before {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+@media (max-width: 767px) {
+    .navbar-grey .navbar-header {
+        border-bottom-color: #888f95;
+    }
+}
+
+

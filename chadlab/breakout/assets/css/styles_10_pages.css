@@ -1,0 +1,1228 @@
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
+
+    
+::  10.0  Pages
+-------------------------------------------
+    10.1  Page - 404 Error Setting
+    10.2  Page - Coming Soon Setting
+    10.3  Page - Gallery Setting
+    10.4  Page - Invoice Setting
+    10.5  Page - Login & Register Setting
+    10.6  Page - Search Result Setting
+    10.7  Page - Timeline Setting
+    10.8  Page - Email Inbox Setting
+    10.9  Page - Email Detail Setting
+    10.10 Page - Email Compose Setting
+   
+
+/* -------------------------------
+   10.0 Pages
+------------------------------- */
+
+/* 10.1 Page - 404 Error Setting */
+
+.error {
+    text-align: center;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    width: 600px;
+    margin-left: -300px;
+}
+.error-code {
+    font-size: 128px;
+    line-height: 1.1;
+}
+.error-message {
+    font-size: 24px;
+}
+.error-search {
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+.error-search .form-control {
+    border-radius: 46px;
+    padding-right: 46px;
+}
+.error-search .btn-search {
+    border: none;
+    background: none;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 46px;
+    width: 46px;
+    padding: 0;
+    font-size: 16px;
+    color: #30373e;
+}
+.error-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    line-height: 30px;
+    border-top: 2px solid rgba(0, 0, 0, 0.06);
+}
+.error-footer-brand {
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.error-footer-brand img {
+    margin-right: 10px;
+    float: left;
+}
+
+
+/* 10.2 Page - Coming Soon Setting */
+
+.coming-soon {
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+    z-index: 1020;
+}
+.coming-soon-header .brand {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 45px;
+}
+.coming-soon-header .desc {
+    font-size: 16px;
+}
+.countdown {
+    padding: 45px 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.countdown:before,
+.countdown:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.countdown .countdown-col {
+    float: left;
+}
+.countdown.col-5 .countdown-col {
+    width: 20%;
+}
+.countdown.col-4 .countdown-col {
+    width: 25%;
+}
+.countdown.col-3 .countdown-col {
+    width: 33.33%;
+}
+.countdown.col-2 .countdown-col {
+    width: 50%;
+}
+.countdown-number {
+    position: relative;
+    margin: 0 auto 15px;
+    width: 60px;
+    height: 90px;
+    border-radius: 10px;
+    background: #30373e;
+    cursor: pointer;
+    line-height: 1;
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+.countdown-number .number {
+    line-height: 92px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    z-index: 1020;
+    color: #fff;
+    font-size: 28px;
+}
+.countdown-number:before, .countdown-number:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: '';
+    left: 0;
+}
+.countdown-number:before {
+    transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+}
+.countdown-number:after {
+    transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+}
+.coming-soon-content {
+    width: 600px;
+    margin: 0 auto;
+}
+.coming-soon-content .desc {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.coming-soon-content .coming-soon-form {
+    width: 350px;
+    margin: 0 auto 25px;
+}
+.coming-soon-form .input-group {
+    border-radius: 40px;
+    padding: 2px;
+    background: #30373e;
+}
+.coming-soon-form .btn,
+.coming-soon-form .form-control {
+    border-radius: 40px;
+}
+.coming-soon-form .form-control {
+    transition: all .2s linear;
+}
+.coming-soon-form .form-control:focus {
+    border-color: #fff;
+    background: #fff;
+}
+@media (max-width: 600px) {
+    .coming-soon-content {
+        width: auto;
+        margin: 0;
+    }
+}
+@media (max-width: 400px) {
+    .coming-soon-content .coming-soon-form {
+        width: auto;
+        margin: 0 0 25px;
+    }
+}
+
+
+/* 10.3 Page - Gallery Setting */
+
+.gallery-list {
+    list-style-type: none;
+    margin: -5px -5px 15px;
+    padding: 0;
+}
+.gallery-list:before,
+.gallery-list:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.gallery-list > li {
+    float: left;
+    width: 20%;
+    padding: 5px;
+}
+.gallery-list > li .image-container {
+    border-radius: 5px;
+    background: #fff;
+    position: relative;
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+}
+.gallery-list > li .image {
+    padding-top: 60%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+.gallery-list > li .image img {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.gallery-list > li .btn-list {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    z-index: 1020;
+}
+.gallery-list > li .info {
+    padding: 8px 10px;
+}
+.gallery-list > li .info * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gallery-list > li .info h5 {
+    margin: 0;
+    font-size: 12px;
+}
+@media (max-width: 991px) {
+    .gallery-list > li {
+        width: 33.33%;
+    }
+}
+@media (max-width: 480px) {
+    .gallery-list > li {
+        width: 50%;
+    }
+}
+
+.tag-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.tag-list:before,
+.tag-list:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.tag-list > li {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.tag-list > li a,
+.tag-list > li span {
+    border: 2px solid #ebeced;
+    border-radius: 40px;
+    color: #30373e;
+    font-size: 11px;
+    padding: 2px 8px;
+    display: block;
+}
+.tag-list > li.active a,
+.tag-list > li.active span {
+    color: #30373e;
+    border-color: #30373e;
+}
+
+
+/* 10.4 Page - Invoice Setting */
+
+.invoice {
+    padding: 40px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    margin: 0 auto 20px;
+    max-width: 980px;
+}
+.invoice-logo {
+    font-size: 20px;
+    line-height: 36px;
+    text-align: right;
+}
+.invoice-logo img {
+    height: 36px;
+    margin-right: 5px;
+}
+.invoice-company {
+    text-align: right;
+}
+.invoice-title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.invoice-detail {
+    float: right;
+}
+.invoice-header {
+    padding: 20px 0 40px;
+}
+.invoice .table {
+    margin-bottom: 80px;
+}
+.invoice .table thead th {
+    font-size: 12px;
+}
+.invoice .table thead th {
+    padding-top: 12px;
+}
+.invoice .table tbody td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.invoice .table tbody .tax td {
+    border: none;
+}
+.invoice .table tbody .total td {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-color: transparent !important;
+}
+.invoice .table tbody .total td.text,
+.invoice .table tbody .total td.value {
+    border-top-color: #ebeced !important;
+    border-bottom: 2px solid #ebeced !important;
+}
+.invoice .table tbody .subtotal td {
+    padding-bottom: 0;
+}
+.invoice-note {
+    font-size: 11px;
+    margin-bottom: 40px;
+}
+.invoice-footer {
+    padding-top: 15px;
+    border-top: 2px solid #ebeced;
+    font-size: 11px;
+}
+@media (max-width: 767px) {
+    .invoice {
+        padding: 20px;
+    }
+    .invoice-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .invoice-header {
+        padding: 0;
+    }
+    .invoice-detail {
+        float: none;
+    }
+    .invoice-note {
+        margin-bottom: 20px;
+    }
+    .invoice-footer p {
+        margin: 0;
+    }
+}
+
+
+/* 10.5 Page - Login & Register Setting */
+
+.register, 
+.login {
+    width: 420px;
+    display: block;
+    top: 80px;
+    position: absolute;
+    left: 50%;
+    margin-left: -210px;
+    z-index: 1020;
+}
+.login {
+    top: 100px;
+}
+.register-content,
+.login-content {
+    padding: 25px 30px;
+    border-radius: 0 0 8px 8px;
+    background: #fff;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+}
+.register-brand,
+.login-brand {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    line-height: 36px;
+    border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 420px) {
+    .register,
+    .login {
+        width: 100%;
+        left: 0;
+        top: 0;
+        margin: 0;
+        bottom: 0;
+        background: #fff;
+    }
+    .register-content,
+    .login-content {
+        box-shadow: none;
+    }
+    .register-brand,
+    .login-brand,
+    .register-content,
+    .login-content {
+        border-radius: 0;
+    }
+}
+
+
+/* 10.6 Page - Search Result Setting */
+
+.search-container {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    position: relative;
+    margin-bottom: 20px;
+}
+.search-container.search-container-inverse {
+    background: #3C454D;
+}
+.search-container.search-container-inverse .form-control {
+    color: #fff;
+}
+.search-container .search-icon {
+    float: left;
+    width: 60px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+}
+.search-container .search-input {
+    margin-left: 60px;
+    margin-right: 360px;
+}
+.search-container .search-input .form-control {
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    background: none;
+}
+.search-container .search-item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 360px;
+    padding: 0 20px;
+}
+.search-container .search-item .search-item-link {
+    color: #8d9aa5;
+    font-size: 14px;
+    line-height: 50px;
+    display: block;
+    font-weight: normal;
+}
+.search-container .search-item .search-item-link:hover,
+.search-container .search-item .search-item-link:focus {
+    color: #30373e;
+    text-decoration: none;
+}
+.search-container.search-container-inverse .search-item .search-item-link:hover,
+.search-container.search-container-inverse .search-item .search-item-link:focus {
+    color: #fff;
+}
+.search-container .search-item .search-item-link i {
+    color: #bec3c6;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.search-container .search-item .dropdown-menu {
+    margin-top: -10px;
+}
+@media (max-width: 767px) {
+    .search-container .search-icon {
+        width: auto;
+        text-align: center;
+        position: absolute;
+        right: 0;
+        padding-right: 20px;
+    }
+    .search-container .search-input {
+        margin: 0;
+        padding-left: 20px;
+        padding-right: 45px;
+    }
+    .search-container .search-item {
+        padding: 0;
+        position: relative;
+        width: auto;
+    }
+    .search-container .search-item .search-item-link {
+        line-height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-top: 2px solid #EAEDEF;
+    }
+    .search-container .search-item .search-item-link i {
+        float: right;
+        line-height: 40px;
+    }
+}
+.search-result-total {
+    float: right;
+    padding: 0 20px;
+    line-height: 48px;
+}
+.search-result-container {
+    border: none;
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+.search-result-header {
+    border-radius: 5px 5px 0 0;
+}
+.search-result-header .nav.nav-tabs {
+    border-bottom: none;
+}
+.search-result-header .nav.nav-tabs > li:after {
+    bottom: -1px;
+}
+.search-result-header .nav.nav-tabs.nav-tabs-white > li > a {
+    color: rgba(255,255,255,0.5);
+}
+.search-result-header .nav.nav-tabs.nav-tabs-white > li.active > a,
+.search-result-header .nav.nav-tabs.nav-tabs-white > li > a:hover,
+.search-result-header .nav.nav-tabs.nav-tabs-white > li > a:focus {
+    color: #fff;
+}
+@media (max-width: 767px) {
+    .search-result-header .nav.nav-tabs > li:after {
+        bottom: -2px;
+    }
+}
+
+
+/* 10.7 Page - Timeline Setting */
+
+.timeline {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    width: 3px;
+    background: #ebeced;
+    left: 20%;
+    margin-left: -1.5px;
+}
+.timeline > li:before,
+.timeline > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.timeline > li {
+    position: relative;
+}
+.timeline > li + li {
+    margin-top: 20px;
+}
+.timeline .timeline-body {
+    margin-left: 25%;
+    margin-right: 10%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+}
+.timeline .timeline-time {
+    font-size: 24px;
+    width: 15%;
+    float: left;
+    text-align: right;
+}
+.timeline .timeline-time .date,
+.timeline .timeline-time .time {
+    display: block;
+}
+.timeline .timeline-time .date {
+    font-size: 13px;
+}
+.timeline .timeline-icon {
+    position: absolute;
+    left: 15%;
+    width: 10%;
+    text-align: center;
+}
+.timeline .timeline-icon a {
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-radius: 42px;
+    line-height: 32px;
+    font-size: 14px;
+    border: 5px solid #d5d8da;
+    background: #ebeced;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+    color: #3C454D;
+}
+.timeline .timeline-icon a:hover,
+.timeline .timeline-icon a:focus {
+    color: #fff;
+    background: #3C454D;
+}
+.timeline .timeline-title {
+    width: 40%;
+    float: left;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px 0;
+    background: #d5d8da;
+}
+.timeline-header {
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+}
+.timeline-header .userimage {
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+.timeline-header .userimage img {
+    max-width: 100%;
+}
+.timeline-header .username,
+.timeline-header .userimage,
+.timeline-header .username small {
+    display: block;
+}
+.timeline-header .username {
+    margin-left: 50px;
+    font-size: 16px;
+    padding: 2px 0;
+}
+.timeline-header .username small {
+    font-size: 13px;
+    color: #aab3ba;
+    line-height: 14px;
+}
+.timeline-header .pull-right > a {
+    font-size: 20px;
+    line-height: 22px;
+    padding: 0 5px;
+    color: #aab3ba;
+}
+.timeline-header .pull-right > a:hover,
+.timeline-header .pull-right > a:focus {
+    color: #3C454D;
+}
+.timeline-content:before,
+.timeline-content:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.timeline-content p {
+    margin: 0;
+}
+.timeline-content p + p {
+    margin-top: 10px;
+}
+.timeline-content .timeline-main-image {
+    height: 300px;
+    overflow: hidden;
+}
+.timeline-content .timeline-sub-image {
+    height: 148px;
+    overflow: hidden;
+}
+.timeline-content .timeline-sub-image + .timeline-sub-image {
+    margin-top: 2px;
+}
+.timeline-content img {
+    max-width: 100%;
+}
+.timeline-content .timeline-main-image img,
+.timeline-content .timeline-sub-image img {
+    min-width: 100%;
+    min-height: 100%;
+}
+.timeline-footer {
+    border-top: 2px solid #dfe0e1;
+    margin: 15px 0 -20px;
+    padding: 15px 0;
+}
+.timeline-footer a {
+    color: #aab3ba;
+}
+@media (max-width: 991px) {
+    .timeline-content .timeline-main-image {
+        height: 150px;
+    }
+    .timeline-content .timeline-sub-image {
+        height: 74px;
+    }
+    .timeline-content .timeline-main-image img,
+    .timeline-content .timeline-sub-image img {
+        
+    }
+}
+@media (max-width: 767px) {
+    .timeline:before {
+        left: 50%;
+    }
+    .timeline .timeline-body {
+        width: auto;
+        margin: 0;
+    }
+    .timeline .timeline-title {
+        float: none;
+        width: auto;
+        background: #d5d8da;
+    }
+    .timeline .timeline-time {
+        float: none;
+        width: auto;
+        background: #D5D8DA;
+        padding-top: 5px;
+        text-align: center;
+        margin-bottom: -5px;
+    }
+    .timeline .timeline-time .date {
+        margin-bottom: -5px;
+    }
+    .timeline .timeline-icon {
+        width: auto;
+        position: relative;
+        left: 0;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* 10.8 Page - Email Inbox Setting */
+
+
+.mail-box {
+    position: relative;
+    height: 100%;
+}
+.mail-box-sidebar {
+    height: 100%;
+    float: left;
+    width: 250px;
+    background: #f9f9f9;
+}
+.mail-box-wrapper {
+    padding: 25px;
+}
+.mail-box-content {
+    height: 100%;
+    margin-left: 250px;
+}
+.mail-box-menu {
+    list-style-type: none;
+    margin: 0 -25px 25px;
+    padding: 0;
+}
+.mail-box-menu > li > a {
+    color: #fff;
+    font-weight: 300;
+    font-size: 13px;
+    display: block;
+    color: rgb(129, 137, 144);
+    line-height: 30px;
+    text-decoration: none;
+    padding: 0 25px;
+}
+.mail-box-menu > li > a:hover,
+.mail-box-menu > li > a:focus {
+    color: #30373e;
+}
+.mail-box-menu > li.active > a {
+    background: url(../img/transparent/black-0.1.png);
+    background: rgba(0,0,0,0.1);
+    color: #30373e;
+}
+.mail-box-menu > li > a b {
+    font-size: 13px;
+    margin-left: 3px;
+    color: #30373e;
+}
+.mail-box-sidebar .title {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+.mail-box-user-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.mail-box-user-list > li:before,
+.mail-box-user-list > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.mail-box-user-list > li + li {
+    margin-top: 10px;
+}
+.mail-box-user-list img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    float: left;
+    margin-right: 10px;
+}
+.mail-box-user-list i {
+    font-size: 8px;
+    position: absolute;
+    top: 2px;
+    left: 24px;
+}
+.mail-box-user-list > li a {
+    display: block;
+    line-height: 30px;
+    color: #818990;
+    text-decoration: none;
+    position: relative;
+}
+.mail-box-user-list > li a:hover,
+.mail-box-user-list > li a:focus {
+    color: #404952;
+}
+.mail-box-header {
+    padding: 15px 25px 0;
+}
+.mail-box-mobile-toggler { 
+    display: none;
+}
+.mail-box-content {
+    position: relative;
+}
+.mail-box-toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    background: #ebeced;
+}
+.mail-box-container {
+    height: 100%;
+    padding: 58px 0 0;
+    background: #fff;
+}
+.table-email {
+    width: 100%;
+    max-width: 100%;
+}
+.table-email > tbody > tr + tr td {
+    border-top: 1px solid #ebeced;
+}
+.table-email > tbody > tr > td {
+    padding: 12px 20px;
+}
+.table-email > tbody > tr:hover,
+.table-email > tbody > tr:focus {
+    background: #f4f4f4;
+}
+.table-email .email-checkbox a,
+.table-email .email-sender a,
+.table-email .email-message a,
+.table-email .email-attachment a,
+.table-email .email-date a {
+    display: block;
+    padding: 12px 20px;
+    margin: -12px -20px;
+    color: #30373e;
+    line-height: 20px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.table-email .email-checkbox {
+    width: 1%;
+    font-size: 20px;
+}
+.table-email .email-checkbox input {
+    display: none;
+}
+.table-email .email-checkbox a {
+    color: #aab3ba;
+}
+.table-email .checked,
+.table-email .checked:hover,
+.table-email .checked:focus {
+    background: #ffc;
+}
+.table-email .checked .email-checkbox a i:before {
+    content: '\f046';
+    color: #30373e;
+}
+.table-email .email-checkbox a:hover,
+.table-email .email-checkbox a:focus {
+    color: #888f95;
+}
+.table-email .email-sender a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+}
+.table-email .email-title {
+    height: 20px;
+    overflow: hidden;
+    display: block;
+}
+.table-email .unread .email-sender a,
+.table-email .unread .email-title {
+    font-weight: normal;
+}
+.table-email .email-desc {
+    color: #8d9aa5;
+    font-weight: 300;
+}
+.table-email .email-attachment a {
+    font-size: 18px;
+    color: #aab3ba;
+}
+.table-email .email-date {
+    white-space: nowrap;
+}
+@media (min-width: 768px) {
+    .email-sidebar.dropdown-menu {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        box-shadow: none;
+        background: none;
+        position: relative;
+        top: 0;
+    }
+}
+@media (max-width: 767px) {
+    .mail-box-sidebar {
+        float: none;
+        height: auto;
+        width: auto;
+    }
+    .mail-box-mobile-toggler {
+        padding: 10px 20px;
+        text-align: center;
+        display: block;
+    }
+    .mail-box-content {
+        margin: 0;
+    }
+    .mail-box-container,
+    .mail-box-container > div {
+        height: auto !important;
+    }
+    
+    .email-sidebar.dropdown-menu {
+        height: auto !important;
+        left: 50px;
+        right: 50px;
+    }
+    .open .mail-box-mobile-toggler:before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -7px;
+        border: 7px solid transparent;
+        border-bottom-color: #fff;
+        margin-top: -12px;
+        z-index: 1020;
+    }
+    .table-email > tbody > tr {
+        position: relative;
+        display: block;
+    }
+    .table-email > tbody > tr + tr {
+        border-top: 1px solid #ebeced;
+    }
+    .table-email > tbody > tr > td {
+        display: block;
+        padding: 0 !important;
+        border: none !important;
+    }
+    .table-email .email-checkbox a, 
+    .table-email .email-sender a, 
+    .table-email .email-message a, 
+    .table-email .email-attachment a, 
+    .table-email .email-date a {
+        margin: 0 !important;
+        padding: 12px 0 !important;
+    }
+    .table-email .email-checkbox {
+        float: left;
+        width: 40px;
+    }
+    .table-email .email-checkbox a {
+        width: 40px;
+        text-align: right;
+    }
+    .table-email .email-sender,
+    .table-email .email-message {
+        margin-left: 40px;
+    }
+    .table-email .email-sender a {
+        padding: 12px 95px 0px 10px !important;
+        width: auto !important;
+        height: 30px !important;
+    }
+    .table-email .email-message a {
+        padding: 0 20px 12px 10px !important;
+        height: 30px !important;
+    }
+    .table-email .email-attachment {
+        position: absolute;
+        right: 70px;
+        top: 0;
+    }
+    .table-email .email-date {
+        position: absolute;
+        right: 20px;
+        top: 0;
+    }
+}
+
+
+/* 10.9 Page - Email Detail Setting */
+
+.mail-box-container {
+    height: 100%;
+    padding: 58px 0 0;
+    background: #fff;
+}
+.mail-detail-header,
+.mail-detail-info,
+.mail-detail-body,
+.mail-detail-attachment {
+    padding: 15px 20px;
+}
+.mail-detail-header,
+.mail-detail-info,
+.mail-detail-attachment {
+    border-bottom: 1px solid #ebeced;
+}
+.mail-detail-header .mail-subject {
+    margin: 0;
+}
+.mail-detail-info .media .pull-left {
+    padding-right: 15px;
+}
+.mail-detail-info .media-object {
+    width: 60px;
+    height: 60px;
+    background: #ebeced;
+    color: #8d9aa5;
+    border-radius: 60px;
+    overflow: hidden;
+    text-align: center;
+    display: block;
+    font-size: 36px;
+    line-height: 50px;
+}
+.mail-detail-info .email-from {
+    font-size: 16px;
+    font-weight: normal;
+}
+.mail-detail-info .email-to,
+.mail-detail-info .email-date {
+    font-size: 13px;
+    font-weight: 300;
+}
+.mail-detail-attachment {
+    padding-bottom: 5px;
+}
+.mail-attachment {
+    height: 80px;
+    width: 100px;
+    background: #ebeced;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.mail-attachment:hover,
+.mail-attachment:focus {
+    background: #bcbdbe;
+}
+.mail-attachment a {
+    color: #30373e;
+    text-decoration: none;
+    display: block;
+}
+.mail-attachment .document-file {
+    height: 60px;
+    line-height: 63px;
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    overflow: hidden;
+}
+.mail-attachment .document-file img {
+    max-width: 100%;
+    display: block;
+}
+.mail-attachment .document-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    line-height: 20px;
+    background: url(../img/transparent/black-0.1.png);
+    background: rgba(0,0,0,0.1);
+}
+
+
+/* 10.10 Page - Email Compose Setting */
+
+.mail-to-box,
+.mail-subject-box {
+    border-bottom: 1px solid #ebeced;
+}
+.mail-input-box {
+    position: relative;
+}
+.mail-to-box .form-control,
+.mail-subject-box .form-control {
+    border: none;
+    padding: 10px 20px;
+    height: 46px;
+    line-height: 26px;
+}
+.mail-to-box label + .form-control {
+    padding-left: 55px;
+}
+.mail-input-box + .mail-input-box {
+    border-left: 1px solid #ebeced;
+}
+.mail-input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 46px;
+    width: 55px;
+    padding: 0 10px 0 20px;
+}
+.mail-box .note-editor,
+.mail-box .note-toolbar.panel-heading {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+@media (max-width: 767px) {
+    .mail-input-box + .mail-input-box {
+        border-left: none;
+        border-top: 1px solid #ebeced;
+    }
+}
+

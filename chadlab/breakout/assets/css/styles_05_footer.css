@@ -1,0 +1,92 @@
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
+
+    
+::  5.0  Footer Setting
+-------------------------------------------
+    5.1  Footer Element
+    5.2  Footer Setting - Page with Fixed Footer
+    5.3  Footer Setting - Page Sidebar Minified
+    5.4  Footer Setting - Page with Right Sidebar
+    5.5  Footer Setting - Page with Two Sidebar
+    5.6  Footer Setting - Page without Sidebar
+
+
+
+/* -------------------------------
+   5.0 Footer Setting
+------------------------------- */
+
+/* 5.1 Footer Element */
+
+.footer {
+    color: #657380;
+    font-size: 12px;
+    border-top: 2px solid rgba(0, 0, 0, 0.06);
+    padding: 15px 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.footer a {
+    color: #657380;
+}
+.footer a:hover,
+.footer a:focus {
+    color: #30373e;
+    text-decoration: none;
+}
+.footer b {
+    color: #30373e;
+    font-weight: normal;
+}
+@media (max-width: 767px) {
+    .footer {
+        padding: 15px 20px;
+    }
+}
+
+
+/* 5.2 Footer Setting - Page with Fixed Footer */
+
+.page-footer-fixed .footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 250px;
+    margin: 0 !important;
+    background: #d5d8da;
+}
+.page-footer-fixed.page-sidebar-minified .footer {
+    left: 70px;
+}
+.page-footer-fixed.page-with-right-sidebar.page-sidebar-minified .footer { 
+    right: 70px;
+    left: 0;
+}
+.page-footer-fixed.page-with-right-sidebar .footer {
+    left: 0;
+    right: 250px;
+}
+.page-footer-fixed.page-with-two-sidebar.page-right-sidebar-toggled .footer {
+    right: 250px;
+}
+.page-footer-fixed.page-without-sidebar .footer {
+    left: 0;
+}
+@media (max-width: 767px) {
+    .footer {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+    }
+}
+

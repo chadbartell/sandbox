@@ -1,0 +1,950 @@
+/* 
+Template Name: Source Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 1.2.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/source-admin-v1.2/admin/
+
+    
+::  11.0 Widgets
+-------------------------------------------
+    11.1  Widget - Basic Element Setting
+    11.2  Widget - Loader Setting
+    11.3  Widget - Stat Setting
+    11.4  Widget - Blog Setting
+    11.5  Widget - Gallery List Setting
+    11.6  Widget - Image Setting
+    11.7  Widget - Chart Setting
+    11.8  Widget - Chat History Setting
+    11.9  Widget - Todolist Setting
+    11.10 Widget - Task List Setting
+    11.11 Widget - Theme Panel Setting
+
+
+    11.12 Widget - Stat Progress // previously from 12.1 
+
+/* -------------------------------
+   11.0 Widgets
+------------------------------- */
+
+/* 11.1 Widget - Basic Element Setting */
+
+.widget {
+    border: none;
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    display: block;
+}
+.widget-header {
+    margin: -20px -20px 0;
+    padding: 15px 20px;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+.widget-header h4 {
+    margin: 0;
+    font-size: 14px;
+}
+.widget-header p {
+    margin-bottom: 0;
+}
+.widget-header-btn {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.widget-header-btn > li {
+    float: left;
+}
+.widget-header-btn > li + li {
+    margin-left: 5px;
+}
+.widget-header-btn a {
+    padding: 0px;
+    display: block;
+    line-height: 26px;
+    text-align: center;
+    font-size: 14px;
+    width: 28px;
+    height: 26px;
+    box-shadow: none !important;
+}
+.widget-header + .widget-body {
+    margin-top: 0;
+}
+.widget-body {
+    margin: -20px;
+    padding: 20px;
+    position: relative;
+}
+
+
+/* 11.2 Widget - Loader Setting */
+
+.widget-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1020;
+    background: url(../img/transparent/white-0.9.png);
+    background: rgba(255,255,255,0.95);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #30373e;
+}
+
+
+/* 11.3 Widget - Stat Setting */
+
+.widget.widget-stat {
+    text-align: center;
+}
+.widget-stat-number {
+    font-size: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.widget-stat-text {
+    opacity: 0.8;
+}
+.widget-stat-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1000;
+}
+.widget-stat-btn a {
+    color: #000;
+    opacity: 0.3;
+    display: block;
+    text-decoration: none;
+}
+.widget-stat-btn a:hover,
+.widget-stat-btn a:focus {
+    opacity: 0.5;
+}
+.widget-stat-btn a .fa {
+    display: block;
+}
+.widget-stat-icon {
+    width: 50px;
+    float: left;
+    font-size: 40px;
+    color: #000;
+    opacity: 0.5;
+}
+.widget-stat-info {
+    margin-left: 70px;
+    text-align: left;
+}
+.widget-stat-text,
+.widget-stat-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.widget-stat-cover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+.widget-stat-cover img {
+    min-height: 100%;
+    max-width: 100%;
+}
+.widget-stat-cover:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.3;
+}
+.widget-stat-content {
+    position: relative;
+    text-align: left;
+}
+.widget-stat-chart {
+    margin: 0 -20px -20px;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+}
+.widget-stat-header {
+    margin: -20px -20px 20px;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+
+/* 11.4 Widget - Blog Setting */
+
+.widget-blog-cover {
+    position: relative;
+    border-radius: 5px 5px 0 0;
+    margin: -20px -20px 20px;
+    overflow: hidden;
+    padding-top: 60%;
+}
+.widget-blog-cover img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    min-height: 100%;
+}
+.animation-grow-hover { 
+    transition: all .1s ease-in-out; 
+}
+.animation-grow-hover:hover { 
+    transform: scale(1.1); 
+}
+.widget-blog-author {
+    margin: -20px -20px 0px;
+    padding: 10px 20px;
+}
+.widget-blog-author-info {
+    padding-left: 75px;
+}
+.widget-blog-author-image {
+    float: left;
+    margin-top: -30px;
+    padding: 5px;
+    border-radius: 70px;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    position: relative;
+}
+.widget-blog-author-image img {
+    max-width: 100%;
+    border-radius: 70px;
+}
+.widget-blog-content h5 {
+    margin: 5px 0;
+}
+.widget-blog-content p {
+    margin: 0;
+}
+.widget-blog .widget-blog-cover img {
+    transition: all .1s ease-in-out; 
+}
+.widget-blog:hover .widget-blog-cover img { 
+    max-width: 110%;
+    min-height: 110%;
+    margin-left: -5%;
+    margin-top: -5%;
+}
+
+
+/* 11.5 Widget - Gallery List Setting */
+
+.widget-gallery-header {
+    margin: -20px -20px 0;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+}
+.widget-gallery-header h5,
+.widget-gallery-header p {
+    margin: 0;
+}
+.widget-gallery-header p {
+    font-size: 12px;
+}
+.widget-gallery-list {
+    list-style-type: none;
+    margin: -5px -20px -20px;
+    padding: 3px 0 0 3px;
+}
+.widget-gallery-list > li {
+    width: 25%;
+    position: relative;
+    padding-top: 25%;
+    overflow: hidden;
+    float: left;
+}
+.widget-gallery-list > li.empty a,
+.widget-gallery-list > li.add a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 3px;
+    bottom: 3px;
+    max-height: 100%;
+    text-align: center;
+}
+.widget-gallery-list > li i {
+    position: absolute;
+    top: 50%;
+    line-height: 28px;
+    margin-top: -14px;
+    font-size: 28px;
+    left: 0;
+    right: 0;
+}
+.widget-gallery-list > li img {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    max-height: 100%;
+}
+.widget-gallery-list > li a:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    transition: all .2s ease-in-out; 
+    background: transparent;
+    z-index: 1020;
+    border-radius: 50%;
+}
+.widget-gallery-list > li:hover a:before { 
+    content: '';
+    left: 0;
+    right: 3px;
+    top: 0;
+    bottom: 3px;
+    background: url(../img/transparent/black-0.3.png);
+    background: rgba(0,0,0,0.3);
+    border-radius: 0%;
+}
+
+.widget-gallery-list > li a {
+    background: #EAEDEF;
+    color: #aab3ba;
+    text-decoration: none;
+}
+
+
+/* 11.6 Widget - Image Setting */
+
+.widget.widget-image {
+    overflow: hidden;
+}
+.widget-image-cover {
+    margin: -20px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #3C454D;
+    padding-top: 100%;
+    position: relative;
+}
+.widget-image-cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    max-width: 100%;
+}
+.widget-image .widget-image-cover img {
+    transition: all .1s ease-in-out; 
+}
+.widget-image:hover .widget-image-cover img { 
+    max-width: 110%;
+    min-height: 110%;
+    margin-left: -5%;
+    margin-top: -5%;
+}
+.widget-image-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 75%);
+    padding: 20px;
+    color: #fff;
+}
+.widget-image-info h5 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.widget-image-info p {
+    color: #fff;
+    color: rgba(255,255,255,0.9);
+}
+.widget-image-info .sub-title {
+    color: #fff;
+}
+.widget-image-user .widget-image-user-image {
+    border-radius: 36px;
+    float: left;
+    width: 36px;
+    background: #fff;
+}
+.widget-image-user .widget-image-user-image img {
+    max-width: 100%;
+    border-radius: 36px;
+}
+.widget-image-user .widget-image-user-info {
+    margin-left: 46px;
+}
+.widget-image-user .widget-image-user-info span {
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+    font-size: 11px;
+}
+.widget-image-rating {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.widget-image-rating > li {
+    display: inline;
+}
+.widget-image-rating-text {
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+    font-size: 11px;
+}
+.widget-image-rating > li.active {
+    color: #fcaf41;
+}
+
+
+/* 11.7 Widget - Chart Setting */
+
+.widget-chart-placeholder {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.widget-chart-placeholder.inline > li {
+    display: inline;
+}
+.widget-chart-placeholder.inline > li + li {
+    margin-left: 15px;
+}
+.widget-chart-placeholder > li {
+    position: relative;
+    padding-left: 18px;
+    line-height: 20px;
+}
+.widget-chart-placeholder  > li .legend-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+
+/* 11.8 Widget - Chat History Setting */
+
+.widget-chat {
+    position: relative;
+    overflow: hidden;
+}
+.widget-chat .widget-header a:hover,
+.widget-chat .widget-header a:focus {
+    color: #aab3ba;
+    text-decoration: none;
+}
+.widget-body .widget-chat-list {
+    margin: -20px;
+}
+.widget-chat-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.widget-chat-list li + li {
+    margin-top: -1px;
+}
+.widget-chat-list > li:before,
+.widget-chat-list > li:after,
+.widget-chat-list > li a:before,
+.widget-chat-list > li a:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.widget-chat-list a {
+    text-decoration: none;
+    color: #30373e;
+    display: block;
+    padding: 0 20px;
+    transition: background .1s linear;
+}
+.widget-chat-list li:last-child a {
+    border-radius: 0 0 5px 5px;
+}
+.widget-chat-list a:hover,
+.widget-chat-list a:focus {
+    background: #ebeced;
+}
+.widget-chat-list .chat-image {
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.widget-chat-list .chat-image img {
+    display: block;
+    max-width: 100%;
+}
+.widget-chat-list .chat-info {
+    margin-left: 63px;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.widget-chat-list li + li .chat-info {
+    border-top: 1px solid #ebeced;
+}
+.widget-chat-list .chat-info h4 {
+    margin: 5px 0;
+    font-size: 14px;
+    padding-right: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.widget-chat-list .chat-info p {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    color: #8a8f94;
+}
+.widget-chat-list .chat-info .chat-time {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    font-size: 11px;
+    color: #aab3ba;
+}
+.widget-chat-detail {
+    position: absolute;
+    left: 100%;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    transition: all .2s ease-in-out;
+    background: #ebeced;
+}
+.widget-chat-detail-toggled .widget-chat-detail {
+    left: 0;
+    right: 0;
+}
+.widget-chat-detail-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.widget-chat-detail-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 54px;
+}
+.widget-chat-detail-list > li {
+    padding: 20px;
+}
+.widget-chat-detail-list > li + li {
+    padding-top: 0;
+}
+.widget-chat-detail-list > li.time {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.widget-chat-detail-list > li .time {
+    float: right;
+    font-size: 11px;
+    color: #aab3ba;
+    margin-top: 2px;
+}
+.widget-chat-detail-list > li.time span {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 11px;
+    font-weight: normal;
+}
+.widget-chat-detail-list > li:before,
+.widget-chat-detail-list > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.widget-chat-detail-list > li .image {
+    float: left;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    overflow: hidden;
+}
+.widget-chat-detail-list > li .image img {
+    display: block;
+    max-width: 100%;
+}
+.widget-chat-detail-list > li .chat-info {
+    margin-left: 38px;
+}
+.widget-chat-detail-list > li .message {
+    padding: 7px 10px;
+    border-radius: 5px;
+    background: #fff;
+    margin-top: 3px;
+    position: relative;
+}
+.widget-chat-detail-list > li .message:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    border: 5px solid transparent;
+    border-right-color: #fff;
+}
+.widget-chat-detail-list > li.right .image {
+    float: right;
+}
+.widget-chat-detail-list > li.right {
+    text-align: right;
+}
+.widget-chat-detail-list > li.right .chat-info {
+    margin-left: 0;
+    margin-right: 38px;
+}
+.widget-chat-detail-list > li.right .message {
+    background: #2184DA;
+    color: #fff;
+    text-align: left;
+}
+.widget-chat-detail-list > li.right .message:before {
+    right: -10px;
+    left: auto;
+    border-right-color: transparent;
+    border-left-color: #2184DA;
+}
+.widget-chat-detail-list > li.right .time {
+    float: left;
+}
+.widget-chat-input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: #fff;
+    z-index: 1020;
+    border-radius: 0 0 5px 5px;
+}
+.widget-chat-detail .widget-header {
+    position: absolute;
+    left: 0;
+    top: -45px;
+    right: 0;
+    margin: 0;
+}
+.widget-map-left {
+    border-radius: 5px 0 0 5px;
+    overflow: hidden;
+}
+.widget-map-right {
+    border-radius: 0 5px 5px 0;
+    overflow: hidden;
+}
+@media (max-width: 991px) {
+    .widget-map-left {
+        border-radius: 5px 5px 0 0;
+    }
+    .widget-map-right {
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+
+/* 11.9 Widget - Todolist Setting */
+
+.widget-todolist-header-title {
+    margin: 0;
+}
+.widget-todolist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.widget .widget-todolist {
+    margin:  0 -20px -20px -20px;
+}
+.widget-todolist > li {
+    padding: 10px 20px;
+    position: relative;
+}
+.widget-todolist > li.widget-todolist-title + li,
+.widget-todolist > li + li.widget-todolist-title {
+    border-top: none;
+}
+.widget-todolist > li + li {
+    border-top: 2px solid #ebeced;
+}
+.widget-todolist > li:last-child {
+    border-radius: 0 0 5px 5px;
+}
+.widget-todolist > li.widget-todolist-title {
+    background: #ebeced;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+.widget-todolist .checkbox {
+    float: left;
+    font-size: 18px;
+    color: #30373e;
+    margin: 0;
+    width: 18px;
+}
+.widget-todolist > li.completed .checkbox .fa:before {
+    content: '\f14a';
+}
+.widget-todolist > li.completed .info {
+    text-decoration: line-through;
+}
+.widget-todolist > li.completed .info {
+    opacity: 0.5;
+}
+.widget-todolist .checkbox label {
+    padding: 0;
+    margin: 0;
+}
+.widget-todolist .checkbox input {
+    display: none;
+}
+.widget-todolist .info {
+    margin-left: 28px;
+    padding-right: 38px;
+}
+.widget-todolist .info h4 {
+    margin: 4px 0 2px;
+    font-size: 13px;
+}
+.widget-todolist .info p {
+    font-size: 12px;
+    color: #aab3ba;
+    margin-bottom: 0;
+}
+.widget-todolist .action {
+    font-size: 18px;
+    width: 28px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #aab3ba;
+}
+.widget-todolist .action > a {
+    display: block;
+    text-align: center;
+    color: #EBECED;
+}
+.widget-todolist .action > a:hover,
+.widget-todolist .action > a:focus {
+    color: #bcbdbe;
+}
+
+
+/* 11.10 Widget - Task List Setting */
+
+.widget-task-list {
+    list-style-type: none;
+    margin: 0 -20px -20px;
+    padding: 0;
+}
+.widget-task-list > li:before,
+.widget-task-list > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.widget-task-list > li {
+    padding: 15px 20px;
+}
+.widget-task-list > li + li {
+    border-top: 2px solid #ebeced;
+}
+.widget-task-list > li h4 {
+    font-size: 13px;
+    margin: 0 0 3px;
+}
+.widget-task-list > li p {
+    font-size: 11px;
+    color: #aab3ba;
+    margin: 0 0 6px;
+}
+.widget-task-list > li .progress {
+    margin: 0;
+}
+.widget-body .widget-task-list {
+    margin: 0;
+}
+
+
+/* 11.11 Widget - Theme Panel Setting */
+
+.theme-panel {
+    position: fixed;
+    right: -280px;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.theme-panel.expand {
+    right: 0;
+}
+.theme-panel .theme-collapse-btn {
+    width: 36px;
+    height: 36px;
+    color: #30373e;
+    text-align: center;
+    line-height: 40px;
+    display: block;
+    position: absolute;
+    left: -36px;
+    top: 190px;
+    background: #fff;
+    background: rgba(255,255,255,0.98);
+    border-radius: 6px 0 0 6px;
+    font-size: 18px;
+}
+.theme-panel .horizontal-divider {
+    margin: 20px -20px;
+}
+.theme-panel-content {
+    width: 280px;
+    border-radius: 6px 0 0 6px;
+    background: #fff;
+    background: rgba(255,255,255,0.98);
+    padding: 20px;
+    height: 100%;
+    overflow: scroll;
+}
+.theme-list {
+    list-style-type: none;
+    margin: 0 -8px -8px 0;
+    padding: 0;
+}
+.theme-list > li {
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    position: relative;
+}
+.theme-list > li.active a:after {
+    content: '\f00c';
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 34px;
+    top: 0;
+    font-size: 18px;
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+    z-index: 1020;
+}
+.theme-list > li.active a.bg-white:after {
+    color: #fff;
+    color: rgba(48, 55, 62, 0.8);
+}
+.theme-list > li > a {
+    display: block;
+    width: 33px;
+    height: 33px;
+    text-decoration: none;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    -webkit-transition: opacity ease .1s;
+    -moz-transition: opacity ease .1s;
+    transition: opacity ease .1s;
+}
+.theme-list > li > a.bg-white {
+    background: #EFF0F1 !important;
+}
+.theme-list > li > a:hover,
+.theme-list > li > a:focus {
+    opacity: 0.8;
+}
+.theme-list > li > a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+}
+
+
+/* 11.12 Widget - Stat Progress */
+
+.widget-stat-right .widget-stat-icon {
+    float: right;
+}
+.widget-stat-right .widget-stat-info {
+    margin-left: 0;
+    margin-right: 70px;
+}
+.widget-stat-right .widget-stat-info .widget-stat-title {
+    margin-bottom: 5px;
+}
+.widget-stat-right .widget-stat-footer {
+    margin: -10px 0;
+    text-align: left;
+    color: #fff;
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+}
+.widget-stat-progress {
+    margin: 10px -20px;
+}
+.widget-stat-progress .progress {
+    background: url(../img/transparent/black-0.5.png);
+    background: rgba(0,0,0,0.5);
+    height: 2px;
+}
+.widget-stat-progress .progress .progress-bar {
+    background: #fff;
+}
